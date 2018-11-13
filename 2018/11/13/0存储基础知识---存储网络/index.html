@@ -1,183 +1,290 @@
 <!DOCTYPE html>
 <html>
 <head><meta name="generator" content="Hexo 3.8.0">
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-
-    
-
-    <title>
-       | Sea crab Fried rice 
-    </title>
-
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    
-      <meta name="author" content="Weico Li">
-    
-    
-
-    <meta name="description" content="存储与服务器的连接方式对比（DAS,NAS,SAN）存储分类简介&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;磁盘存储市场上，存储分类根据服务器类型分为：封闭系统的存储和开放系统的存储，封闭系统主要指大型机，AS400等服务器，开放系统指基于包括Windows、UNIX、Linux等操作系统的服务器；开放系统的存储分为：内置存储和外挂存储；开放系统的外挂存储根据连接的方式分为：直连式存储（Dir">
+  <meta charset="utf-8">
+  <title>Sea crab Fried rice</title>
+  <meta name="keywords" content="">
+  <meta name="description" content="Sea crab Fried rice">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="命令行擴展、被括起來的集合命令行擴展：$( )或把一個命令的輸出打印給另一個命令的參數1234[root@centos7 ~]# echo &quot;This system&apos;s name is $(hostname)&quot;        This system&apos;s name is centos7.weico.com[root@centos7 ~]# echo &quot;I am `whoami`&quot;">
+<meta name="keywords" content="基础">
 <meta property="og:type" content="article">
-<meta property="og:title" content=" | Sea crab Fried rice">
-<meta property="og:url" content="http://yoursite.com/2018/11/13/0存储基础知识---存储网络/index.html">
+<meta property="og:title" content="8.20181004堅持不定時更新原則--命令行擴展、被括起來的集合--tab键--獲取幫助">
+<meta property="og:url" content="http://yoursite.com/2018/11/13/8.20181004堅持不定時更新原則--命令行擴展、被括起來的集合--tab键--獲取幫助--命令幫助/index.html">
 <meta property="og:site_name" content="Sea crab Fried rice">
-<meta property="og:description" content="存储与服务器的连接方式对比（DAS,NAS,SAN）存储分类简介&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;磁盘存储市场上，存储分类根据服务器类型分为：封闭系统的存储和开放系统的存储，封闭系统主要指大型机，AS400等服务器，开放系统指基于包括Windows、UNIX、Linux等操作系统的服务器；开放系统的存储分为：内置存储和外挂存储；开放系统的外挂存储根据连接的方式分为：直连式存储（Dir">
+<meta property="og:description" content="命令行擴展、被括起來的集合命令行擴展：$( )或把一個命令的輸出打印給另一個命令的參數1234[root@centos7 ~]# echo &quot;This system&apos;s name is $(hostname)&quot;        This system&apos;s name is centos7.weico.com[root@centos7 ~]# echo &quot;I am `whoami`&quot;">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1537693438695&di=4a6e73e0f21636dcd4df549dee729f0c&imgtype=0&src=http%3A%2F%2Fs6.sinaimg.cn%2Fmiddle%2F69cc971949820ebe4e1e5%26amp%3B690">
-<meta property="og:image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1538288960&di=08711dd7bceb40ffa06637d2bf6b9688&imgtype=jpg&er=1&src=http%3A%2F%2Fimg.pconline.com.cn%2Fimages%2Fupload%2Fupc%2Ftx%2Fitbbs%2F1309%2F03%2Fc37%2F25228544_1378215787240_1024x1024.png">
-<meta property="og:image" content="https://gss1.bdstatic.com/9vo3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike72%2C5%2C5%2C72%2C24/sign=09c24c6b57e736d14c1e845afa3924a7/43a7d933c895d1431c87e69470f082025baf0797.jpg">
-<meta property="og:image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1537696023209&di=4e444575c9fa52bcab15677ac5d15252&imgtype=0&src=http%3A%2F%2Fwww.ithov.com%2Fuploads%2Fallimg%2F200809%2F20080922131129508.gif">
-<meta property="og:image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1537694047200&di=f58fb2f2fc577f6ef31332ce4d03473d&imgtype=0&src=http%3A%2F%2Fimage.mamicode.com%2Finfo%2F201803%2F20180331162133429118.png">
-<meta property="og:updated_time" content="2018-09-23T07:02:27.180Z">
+<meta property="og:updated_time" content="2018-10-04T06:15:27.089Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content=" | Sea crab Fried rice">
-<meta name="twitter:description" content="存储与服务器的连接方式对比（DAS,NAS,SAN）存储分类简介&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;磁盘存储市场上，存储分类根据服务器类型分为：封闭系统的存储和开放系统的存储，封闭系统主要指大型机，AS400等服务器，开放系统指基于包括Windows、UNIX、Linux等操作系统的服务器；开放系统的存储分为：内置存储和外挂存储；开放系统的外挂存储根据连接的方式分为：直连式存储（Dir">
-<meta name="twitter:image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1537693438695&di=4a6e73e0f21636dcd4df549dee729f0c&imgtype=0&src=http%3A%2F%2Fs6.sinaimg.cn%2Fmiddle%2F69cc971949820ebe4e1e5%26amp%3B690">
-    
-    
-    
-      <link rel="icon" type="image/x-icon" href="/favicon.png">
-    
-    <link rel="stylesheet" href="/css/uno.css">
-    <link rel="stylesheet" href="/css/highlight.css">
-    <link rel="stylesheet" href="/css/archive.css">
-    <link rel="stylesheet" href="/css/china-social-icon.css">
+<meta name="twitter:title" content="8.20181004堅持不定時更新原則--命令行擴展、被括起來的集合--tab键--獲取幫助">
+<meta name="twitter:description" content="命令行擴展、被括起來的集合命令行擴展：$( )或把一個命令的輸出打印給另一個命令的參數1234[root@centos7 ~]# echo &quot;This system&apos;s name is $(hostname)&quot;        This system&apos;s name is centos7.weico.com[root@centos7 ~]# echo &quot;I am `whoami`&quot;">
+
+
+<link rel="icon" href="/img/avatar.jpg">
+
+<link rel="stylesheet" href="/css/style.css">
+
+<link rel="stylesheet" href="/css/hl_theme/atom-light.css">
+
+<link href="//cdn.bootcss.com/animate.css/3.5.2/animate.min.css" rel="stylesheet">
+<link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+<link href="//cdn.bootcss.com/photoswipe/4.1.2/photoswipe.min.css" rel="stylesheet">
+<link href="//cdn.bootcss.com/photoswipe/4.1.2/default-skin/default-skin.min.css" rel="stylesheet">
+
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script src="/js/jquery.autocomplete.min.js"></script>
+<script src="//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+
+<script src="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.js"></script>
+
+
+
+<script src="//cdn.bootcss.com/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
 
 </head>
+<div style="display: none">
+  <input class="theme_disqus_on" value="false">
+  <input class="theme_preload_comment" value="false">
+</div>
 <body>
+<aside class="nav">
+    <div class="nav-left">
+        <a href="/" class="avatar_target">
+    <img class="avatar" src="/img/avatar.jpg">
+</a>
+<div class="author">
+    <span>Weico Li</span>
+</div>
 
-    <span class="mobile btn-mobile-menu">
-        <i class="icon icon-list btn-mobile-menu__icon"></i>
-        <i class="icon icon-x-circle btn-mobile-close__icon hidden"></i>
-    </span>
-
+<div class="icon">
     
-
-<header class="panel-cover panel-cover--collapsed">
-
-
-  <div class="panel-main">
-
-  
-    <div class="panel-main__inner panel-inverted">
-    <div class="panel-main__content">
-
-        
-
-        <h1 class="panel-cover__title panel-title"><a href="/" title="link to homepage">Sea crab Fried rice</a></h1>
-        <hr class="panel-cover__divider">
-
-        
-
-        <div class="navigation-wrapper">
-
-          <nav class="cover-navigation cover-navigation--primary">
-            <ul class="navigation">
-
-              
-                
-                <li class="navigation__item"><a href="/#blog" title="" class="blog-button">首页</a></li>
-              
-                
-                <li class="navigation__item"><a href="/about" title="" class="">关于</a></li>
-              
-                
-                <li class="navigation__item"><a href="/archive" title="" class="">归档</a></li>
-              
-
-            </ul>
-          </nav>
-
-          <!-- ----------------------------
-To add a new social icon simply duplicate one of the list items from below
-and change the class in the <i> tag to match the desired social network
-and then add your link to the <a>. Here is a full list of social network
-classes that you can use:
-
-    icon-social-500px
-    icon-social-behance
-    icon-social-delicious
-    icon-social-designer-news
-    icon-social-deviant-art
-    icon-social-digg
-    icon-social-dribbble
-    icon-social-facebook
-    icon-social-flickr
-    icon-social-forrst
-    icon-social-foursquare
-    icon-social-github
-    icon-social-google-plus
-    icon-social-hi5
-    icon-social-instagram
-    icon-social-lastfm
-    icon-social-linkedin
-    icon-social-medium
-    icon-social-myspace
-    icon-social-path
-    icon-social-pinterest
-    icon-social-rdio
-    icon-social-reddit
-    icon-social-skype
-    icon-social-spotify
-    icon-social-stack-overflow
-    icon-social-steam
-    icon-social-stumbleupon
-    icon-social-treehouse
-    icon-social-tumblr
-    icon-social-twitter
-    icon-social-vimeo
-    icon-social-xbox
-    icon-social-yelp
-    icon-social-youtube
-    icon-social-zerply
-    icon-mail
-
--------------------------------->
-
-<!-- add social info here -->
+    <a class="rss" title="rss" href="/atom.xml" target="_blank"></a>
+    
+    
+    <a class="github" title="github" href="https://github.com/yelog" target="_blank"></a>
+    
+    
+    <a class="facebook" title="facebook" href="https://www.facebook.com/faker.tops" target="_blank"></a>
+    
+    
+    
+    <a class="linkedin" title="linkedin" href="https://www.linkedin.com/in/%E7%8E%89%E6%9D%B0-%E6%9D%A8-13a40a103/" target="_blank"></a>
+    
+    
+    
+    <a class="reddit" title="reddit" href="https://www.reddit.com/user/yelog/" target="_blank"></a>
+    
+    
+    <a class="weibo" title="weibo" href="http://weibo.com/u/2307534817" target="_blank"></a>
+    
+    
+    <a class="email" title="email" href="mailto:jaytp@qq.com"></a>
+    
+</div>
 
 
 
-        </div>
-
-      </div>
-
+<ul>
+    <li class="all active">全部文章</li>
+    
+    <li data-rel="linux"> linux </li>
+    
+</ul>
+<div class="left-bottom">
+    <div class="menus">
+    
+    
+    
+    
     </div>
+    <div><a style="border-right: 1px solid #fff; width: 49%" class="about site_url" href="/about">关于</a><a style="width: 50%" class="friends">友链</a></div>
+</div>
+<input type="hidden" id="yelog_site_posts_number" value="16">
 
-    <div class="panel-cover--overlay"></div>
-  </div>
-</header>
-
-    <div class="content-wrapper">
-        <div class="content-wrapper__inner entry">
+<div style="display: none">
+    <span id="busuanzi_value_site_uv"></span>
+    <span id="busuanzi_value_site_pv"></span>
+</div>
+    </div>
+    <div class="nav-right">
+        <div class="friends-area">
+    <div class="friends-title">
+        友情链接
+        <i class="back-title-list"></i>
+    </div>
+    <div class="friends-content">
+        <ul>
             
-
-<article class="post-container post-container--single">
-
-  <header class="post-header">
+            <li><a target="_blank" href="http://yelog.org/">叶落阁</a></li>
+            
+        </ul>
+    </div>
+</div>
+        <div class="title-list">
+    <form onkeydown="if(event.keyCode==13){return false;}">
+        <input class="search" type="text" placeholder="Search..." autocomplete="off" id="local-search-input">
+        <i class="cross"></i>
+        <span>
+        <label for="tagswitch">Tags:</label>
+        <input id="tagswitch" type="checkbox">
+    </span>
+    </form>
+    <div class="tags-list">
     
-    <h1 class="post-title"></h1>
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">基础</a>
+    </li>
+    
+    <div class="clearfix"></div>
+</div>
 
     
-
-    <div class="post-meta">
-      <time datetime="2018-11-13" class="post-meta__date date">2018-11-13</time> 
-
-      <span class="post-meta__tags tags">
-
-          
-
-          
-
-      </span>
+    <nav id="title-list-nav">
+        
+        <a class="linux " href="/2018/11/13/10.20181004堅持不定時更新原則--history命令--bash快捷鍵/" data-tag="基础" data-author="">
+            <span class="post-title" title="10.20181004堅持不定時更新原則--history命令--bash快捷鍵">10.20181004堅持不定時更新原則--history命令--bash快捷鍵</span>
+            <span class="post-date" title="2018-11-13 11:26:44">2018/11/13</span>
+        </a>
+        
+        <a class="linux " href="/2018/11/13/11.20181006堅持不定時更新原則--文件系統和目錄結構/" data-tag="基础" data-author="">
+            <span class="post-title" title="11.20181006堅持不定時更新原則--文件系統與目錄結構">11.20181006堅持不定時更新原則--文件系統與目錄結構</span>
+            <span class="post-date" title="2018-11-13 11:26:44">2018/11/13</span>
+        </a>
+        
+        <a class="linux " href="/2018/11/13/13.20181006堅持不定時更新原則--查看文件狀態--創建空文件和刷新時間/" data-tag="基础" data-author="">
+            <span class="post-title" title="13.20181006堅持不定時更新原則--查看文件狀態--創建空文件和刷新時間">13.20181006堅持不定時更新原則--查看文件狀態--創建空文件和刷新時間</span>
+            <span class="post-date" title="2018-11-13 11:26:44">2018/11/13</span>
+        </a>
+        
+        <a class="linux " href="/2018/11/13/14.20181006堅持不定時更新原則--複製文件和目錄cp/" data-tag="基础" data-author="">
+            <span class="post-title" title="14.20181006堅持不定時更新原則--複製文件和目錄cp">14.20181006堅持不定時更新原則--複製文件和目錄cp</span>
+            <span class="post-date" title="2018-11-13 11:26:44">2018/11/13</span>
+        </a>
+        
+        <a class="linux " href="/2018/11/13/3.20181003堅持不定時更新原則--命令提示符PS1/" data-tag="基础" data-author="">
+            <span class="post-title" title="3.20181003堅持不定時更新原則--命令提示符">3.20181003堅持不定時更新原則--命令提示符</span>
+            <span class="post-date" title="2018-11-13 11:26:44">2018/11/13</span>
+        </a>
+        
+        <a class="linux " href="/2018/11/13/2.20181003堅持不定時更新原則--用戶登錄--終端terminal--交互式接口--shell簡單介紹/" data-tag="基础" data-author="">
+            <span class="post-title" title="2.20181003堅持不定時更新原則--用戶登錄--終端terminal--交互式接口--shell簡單介紹">2.20181003堅持不定時更新原則--用戶登錄--終端terminal--交互式接口--shell簡單介紹</span>
+            <span class="post-date" title="2018-11-13 11:26:44">2018/11/13</span>
+        </a>
+        
+        <a class="linux " href="/2018/11/13/4.20181003堅持不定時更新原則--執行命令--Hash命令/" data-tag="基础" data-author="">
+            <span class="post-title" title="4.20181003堅持不定時更新原則--執行命令">4.20181003堅持不定時更新原則--執行命令</span>
+            <span class="post-date" title="2018-11-13 11:26:44">2018/11/13</span>
+        </a>
+        
+        <a class="linux " href="/2018/11/13/5.20181003堅持不定時更新原則--命名別名--命令格式/" data-tag="基础" data-author="">
+            <span class="post-title" title="5.20181003堅持不定時更新原則--命名別名--命令格式">5.20181003堅持不定時更新原則--命名別名--命令格式</span>
+            <span class="post-date" title="2018-11-13 11:26:44">2018/11/13</span>
+        </a>
+        
+        <a class="linux " href="/2018/11/13/6.20181003堅持不定時更新原則--日期和時間--關機命令--用戶登錄信息/" data-tag="基础" data-author="">
+            <span class="post-title" title="6.20181003堅持不定時更新原則--日期和時間--關機命令--用戶登錄信息">6.20181003堅持不定時更新原則--日期和時間--關機命令--用戶登錄信息</span>
+            <span class="post-date" title="2018-11-13 11:26:44">2018/11/13</span>
+        </a>
+        
+        <a class="linux " href="/2018/11/13/7.20181003堅持不定時更新原則--screen命令--echo命令--字符集和編碼/" data-tag="基础" data-author="">
+            <span class="post-title" title="7.20181003堅持不定時更新原則--screen命令--echo命令--字符集和編碼">7.20181003堅持不定時更新原則--screen命令--echo命令--字符集和編碼</span>
+            <span class="post-date" title="2018-11-13 11:26:44">2018/11/13</span>
+        </a>
+        
+        <a class="linux " href="/2018/11/13/9.20181003堅持不定時更新原則--命令行歷史/" data-tag="基础" data-author="">
+            <span class="post-title" title="9.20181003堅持不定時更新原則--命令行歷史">9.20181003堅持不定時更新原則--命令行歷史</span>
+            <span class="post-date" title="2018-11-13 11:26:44">2018/11/13</span>
+        </a>
+        
+        <a class="" href="/2018/11/13/00计算机硬件知识/" data-tag="" data-author="">
+            <span class="post-title" title=""></span>
+            <span class="post-date" title="2018-11-13 11:26:44">2018/11/13</span>
+        </a>
+        
+        <a class="linux " href="/2018/11/13/1.20181001堅持不定時更新原則--Linux操作系统介绍/" data-tag="基础" data-author="">
+            <span class="post-title" title="1.操作系统介紹">1.操作系统介紹</span>
+            <span class="post-date" title="2018-11-13 11:26:44">2018/11/13</span>
+        </a>
+        
+        <a class="" href="/2018/11/13/0存储基础知识---存储网络/" data-tag="" data-author="">
+            <span class="post-title" title=""></span>
+            <span class="post-date" title="2018-11-13 11:26:44">2018/11/13</span>
+        </a>
+        
+        <a class="linux " href="/2018/11/13/12.20181006堅持不定時更新原則--顯示當前工作目錄--絕對和相對路徑--更改目錄--文件通配符/" data-tag="基础" data-author="">
+            <span class="post-title" title="12.20181006堅持不定時更新原則--顯示當前工作目錄--絕對和相對路徑--更改目錄--文件通配符">12.20181006堅持不定時更新原則--顯示當前工作目錄--絕對和相對路徑--更改目錄--文件通配符</span>
+            <span class="post-date" title="2018-11-13 11:26:44">2018/11/13</span>
+        </a>
+        
+        <a class="linux " href="/2018/11/13/8.20181004堅持不定時更新原則--命令行擴展、被括起來的集合--tab键--獲取幫助--命令幫助/" data-tag="基础" data-author="">
+            <span class="post-title" title="8.20181004堅持不定時更新原則--命令行擴展、被括起來的集合--tab键--獲取幫助">8.20181004堅持不定時更新原則--命令行擴展、被括起來的集合--tab键--獲取幫助</span>
+            <span class="post-date" title="2018-11-13 11:26:44">2018/11/13</span>
+        </a>
+        
+    </nav>
+</div>
+    </div>
+    <div class="hide-list">
+        <div class="semicircle">
+            <div class="brackets first"><</div>
+            <div class="brackets">&gt;</div>
+        </div>
+    </div>
+</aside>
+<div class="post">
+    <div class="pjax">
+        <article id="post-0存储基础知识---存储网络" class="article article-type-post" itemscope="" itemprop="blogPost">
+    
+    <div class="article-meta">
+        
+        
+        
+        
+    </div>
+    <div class="article-meta">
+        
+        创建时间:<time class="date" title="更新时间: 2018-09-23 15:02:27">2018-11-13 11:26</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        
+        <span id="busuanzi_container_page_pv">
+            阅读:<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
     </div>
     
+    <div class="toc-ref">
     
-
-  </header>
-
-  <section id="post-content" class="article-content post">
-    <h1 id="存储与服务器的连接方式对比（DAS-NAS-SAN）"><a href="#存储与服务器的连接方式对比（DAS-NAS-SAN）" class="headerlink" title="存储与服务器的连接方式对比（DAS,NAS,SAN）"></a>存储与服务器的连接方式对比（DAS,NAS,SAN）</h1><h2 id="存储分类简介"><a href="#存储分类简介" class="headerlink" title="存储分类简介"></a>存储分类简介</h2><p>&ensp;&ensp;&ensp;&ensp;磁盘存储市场上，存储分类根据服务器类型分为：封闭系统的存储和开放系统的存储，封闭系统主要指大型机，AS400等服务器，开放系统指基于包括Windows、UNIX、Linux等操作系统的服务器；开放系统的存储分为：内置存储和外挂存储；开放系统的外挂存储根据连接的方式分为：<strong>直连式存储（Direct-Attached Storage，简称DAS）和网络化存储（Fabric-AttachedStorage，简称FAS）</strong>；开放系统的网络化存储根据传输协议又分为：<strong>网络接入存储（Network-Attached Storage，简称NAS）和存储区域网络（Storage Area Network，简称SAN）</strong>。</p>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#存储与服务器的连接方式对比（DAS-NAS-SAN）"><span class="toc-text">存储与服务器的连接方式对比（DAS,NAS,SAN）</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#存储分类简介"><span class="toc-text">存储分类简介</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#一些名词"><span class="toc-text">一些名词</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#简单对比"><span class="toc-text">简单对比</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#详细介绍"><span class="toc-text">详细介绍</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#DAS详细介绍"><span class="toc-text">DAS详细介绍</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#结构："><span class="toc-text">结构：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#优点："><span class="toc-text">优点：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#局限："><span class="toc-text">局限：</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#SAN详细介绍"><span class="toc-text">SAN详细介绍</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#结构：-1"><span class="toc-text">结构：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#优点：-1"><span class="toc-text">优点：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#局限：-1"><span class="toc-text">局限：</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#NAS详细介绍"><span class="toc-text">NAS详细介绍</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#结构：-2"><span class="toc-text">结构：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#优点：-2"><span class="toc-text">优点：</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#局限：-2"><span class="toc-text">局限：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#DAS-NAS-SAN协议对比"><span class="toc-text">DAS/NAS/SAN协议对比:</span></a></li></ol></li></ol></li></ol>
+    
+<style>
+    .left-col .switch-btn,
+    .left-col .switch-area {
+        display: none;
+    }
+    .toc-level-3 i,
+    .toc-level-3 ol {
+        display: none !important;
+    }
+</style>
+</div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="存储与服务器的连接方式对比（DAS-NAS-SAN）"><a href="#存储与服务器的连接方式对比（DAS-NAS-SAN）" class="headerlink" title="存储与服务器的连接方式对比（DAS,NAS,SAN）"></a>存储与服务器的连接方式对比（DAS,NAS,SAN）</h1><h2 id="存储分类简介"><a href="#存储分类简介" class="headerlink" title="存储分类简介"></a>存储分类简介</h2><p>&ensp;&ensp;&ensp;&ensp;磁盘存储市场上，存储分类根据服务器类型分为：封闭系统的存储和开放系统的存储，封闭系统主要指大型机，AS400等服务器，开放系统指基于包括Windows、UNIX、Linux等操作系统的服务器；开放系统的存储分为：内置存储和外挂存储；开放系统的外挂存储根据连接的方式分为：<strong>直连式存储（Direct-Attached Storage，简称DAS）和网络化存储（Fabric-AttachedStorage，简称FAS）</strong>；开放系统的网络化存储根据传输协议又分为：<strong>网络接入存储（Network-Attached Storage，简称NAS）和存储区域网络（Storage Area Network，简称SAN）</strong>。</p>
 <p><img src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1537693438695&amp;di=4a6e73e0f21636dcd4df549dee729f0c&amp;imgtype=0&amp;src=http%3A%2F%2Fs6.sinaimg.cn%2Fmiddle%2F69cc971949820ebe4e1e5%26amp%3B690" alt="存储分类">  </p>
 <h2 id="一些名词"><a href="#一些名词" class="headerlink" title="一些名词"></a>一些名词</h2><p>&ensp;&ensp;&ensp;&ensp;SCSI：小型计算机系统接口（Small Computer System Interface），SCSI是一种智能的通用接口标准。它是各种计算机与外部设备之间的接口标准。<br>&ensp;&ensp;&ensp;&ensp;SAS：即串行连接SCSI (Serial Attached SCSI)，是新一代的SCSI技术，兼容SATA。  </p>
 <h2 id="简单对比"><a href="#简单对比" class="headerlink" title="简单对比"></a>简单对比</h2><ol>
@@ -197,63 +304,545 @@ classes that you can use:
 <li>数据备份操作复杂。  <h3 id="SAN详细介绍"><a href="#SAN详细介绍" class="headerlink" title="SAN详细介绍"></a>SAN详细介绍</h3><h4 id="结构：-1"><a href="#结构：-1" class="headerlink" title="结构："></a>结构：</h4>&ensp;&ensp;&ensp;&ensp;SAN实际是一种专门为存储建立的独立于TCP/IP网络之外的专用网络。目前一般的SAN提供2Gb/S到4Gb/S的传输数率，同时SAN网络独立于数据网络存在，因此存取速度很快，另外SAN一般采用高端的RAID阵列，使SAN的性能在几种专业存储方案中傲视群雄。<br>&ensp;&ensp;&ensp;&ensp;SAN由于其基础是一个专用网络，因此扩展性很强，不管是在一个SAN系统中增加一定的存储空间还是增加几台使用存储空间的服务器都非常方便。通过SAN接口的磁带机，SAN系统可以方便高效的实现数据的集中备份。<br>&ensp;&ensp;&ensp;&ensp;目前常见的SAN有FC-SAN和IP-SAN，其中FC-SAN为通过光纤通道协议转发SCSI协议，IP-SAN通过TCP协议转发SCSI协议。<br><img src="https://gss1.bdstatic.com/9vo3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike72%2C5%2C5%2C72%2C24/sign=09c24c6b57e736d14c1e845afa3924a7/43a7d933c895d1431c87e69470f082025baf0797.jpg" alt="SAN">  <h4 id="优点：-1"><a href="#优点：-1" class="headerlink" title="优点："></a>优点：</h4>&ensp;&ensp;&ensp;&ensp;SAN提供了一种与现有LAN连接的简易方法，并且通过同一物理通道支持广泛使用的SCSI和IP协议。SAN不受现今主流的、基于SCSI存储结构的布局限制。特别重要的是，随着存储容量的爆炸性增长，SAN允许企业独立地增加它们的存储容量。<br>&ensp;&ensp;&ensp;&ensp;SAN的结构允许任何服务器连接到任何存储阵列，这样不管数据置放在那里，服务器都可直接存取所需的数据。因为采用了光纤接口，SAN还具有更高的带宽。<br>&ensp;&ensp;&ensp;&ensp;因为SAN解决方案是从基本功能剥离出存储功能，所以运行备份操作就无需考虑它们对网络总体性能的影响。SAN方案也使得管理及集中控制实现简化，特别是对于全部存储设备都集群在一起的时候。最后一点，光纤接口提供了10公里的连接长度，这使得实现物理上分离的、不在机房的存储变得非常容易。  <h4 id="局限：-1"><a href="#局限：-1" class="headerlink" title="局限："></a>局限：</h4>&ensp;&ensp;&ensp;&ensp;成本和复杂性，特别是在光纤信道中这些缺陷尤其明显。使用光纤信道的情况下，合理的成本大约是1千兆或者两千兆大概需要五万到六万美金。从另一个角度来看，虽然新推出的基于iSCSI的SAN解决方案大约只需要两万到三万美金，但是其性能却无法和光纤信道相比较。在价格上的差别主要是由于iSCSI技术使用的是现在已经大量生产的吉比特以太网硬件，而光纤通道技术要求特定的价格昂贵的设备。  <h3 id="NAS详细介绍"><a href="#NAS详细介绍" class="headerlink" title="NAS详细介绍"></a>NAS详细介绍</h3><h4 id="结构：-2"><a href="#结构：-2" class="headerlink" title="结构："></a>结构：</h4>&ensp;&ensp;&ensp;&ensp;NAS实际是一种带有瘦服务器的存储设备。这个瘦服务器实际是一台网络文件服务器。NAS设备直接连接到TCP/IP网络上，网络服务器通过TCP/IP 网络存取管理数据。NAS 作为一种瘦服务器系统，易于安装和部署，管理使用也很方便。同时由于可以允许客户机不通过服务器直接在NAS中存取数据，因此对服务器来说可以减少系统开销。NAS 为异构平台使用统一存储系统提供了解决方案。由于NAS只需要在一个基本的磁盘阵列柜外增加一套瘦服务器系统，对硬件要求很低，软件成本也不高，甚至可以使用免费的LINUX解决方案，成本只比直接附加存储略高。<br><img src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1537696023209&amp;di=4e444575c9fa52bcab15677ac5d15252&amp;imgtype=0&amp;src=http%3A%2F%2Fwww.ithov.com%2Fuploads%2Fallimg%2F200809%2F20080922131129508.gif" alt="NAS">  <h4 id="优点：-2"><a href="#优点：-2" class="headerlink" title="优点："></a>优点：</h4>&ensp;&ensp;&ensp;&ensp;NAS产品是真正即插即用的产品。NAS设备一般支持多计算机平台，用户通过网络支持协议可进入相同的文档，因而NAS设备无需改造即可用于混合Unix/Windows NT局域网内。<br>&ensp;&ensp;&ensp;&ensp;NAS设备的物理位置同样是灵活的。它们可放置在工作组内，靠近数据中心的应用服务器，或者也可放在其他地点，通过物理链路与网络连接起来。无需应用服务器的干预，NAS设备允许用户在网络上存取数据，这样既可减小CPU的开销，也能显著改善网络的性能。  <h3 id="局限：-2"><a href="#局限：-2" class="headerlink" title="局限："></a>局限：</h3>&ensp;&ensp;&ensp;&ensp;NAS没有解决与文件服务器相关的一个关键性问题，即备份过程中的带宽消耗。与将备份数据流从LAN中转移出去的存储区域网（SAN）不同，NAS仍使用网络进行备份和恢复。NAS 的一个缺点是它将存储事务由并行SCSI连接转移到了网络上。这就是说LAN除了必须处理正常的最终用户传输流外，还必须处理包括备份操作的存储磁盘请求。<br>&ensp;&ensp;&ensp;&ensp; 由于存储数据通过普通数据网络传输，因此易受网络上其它流量的影响。当网络上有其它大数据流量时会严重影响系统性能；<br>&ensp;&ensp;&ensp;&ensp;由于存储数据通过普通数据网络传输，因此容易产生数据泄漏等安全问题；<br>&ensp;&ensp;&ensp;&ensp;存储只能以文件方式访问，而不能像普通文件系统一样直接访问物理数据块，因此会在某些情况下严重影响系统效率，比如大型数据库就不能使用NAS。  <h3 id="DAS-NAS-SAN协议对比"><a href="#DAS-NAS-SAN协议对比" class="headerlink" title="DAS/NAS/SAN协议对比:"></a>DAS/NAS/SAN协议对比:</h3>&ensp;&ensp;&ensp;&ensp;NAS：用户通过TCP/IP协议访问数据，采用业界标准文件共享协议如：NFS、HTTP、CIFS实现共享。<br>&ensp;&ensp;&ensp;&ensp;SAN：通过专用光纤通道交换机访问数据，采用SCSI、FC-AL接口。<br>&ensp;&ensp;&ensp;&ensp;NAS和SAN最本质的不同就是文件管理系统在哪里，SAN结构中，文件管理系统（FS）还是分别在每一个应用服务器上；而NAS则是每个应用服务器通过网络共享协议（如：NFS、CIFS）使用同一个文件管理系统。换句话说：NAS和SAN存储系统的区别是NAS有自己的文件系统管理。<br><img src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1537694047200&amp;di=f58fb2f2fc577f6ef31332ce4d03473d&amp;imgtype=0&amp;src=http%3A%2F%2Fimage.mamicode.com%2Finfo%2F201803%2F20180331162133429118.png" alt="DAS/NAS/SAN协议对比"> </li>
 </ol>
 
-  </section>
-
-  <section class="post-comments">
-
-    <!-- 将评论系统（例如Disqus、多说、友言、畅言等）提供的代码片段粘贴在这里 -->
-    
-</section>
-
-
+      
+       <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 jaytp@qq.com </span>
+    </div>
 </article>
 
 
-            <footer class="footer">
+<p>
+    <a href="javascript:void(0)" class="dashang" onclick="dashangToggle()">赏</a>
+</p>
 
-    <span class="footer__copyright">&copy; 2014-2015. | 由<a href="https://hexo.io/">Hexo</a>强力驱动 | 主题<a href="https://github.com/someus/huno">Huno</a></span>
+
+<div class="article_copyright">
+    <p><span>文章标题:</span></p>
     
-</footer>
+    <p><span>本文作者:</span><a href="javascript:void(0)" title="Weico Li">Weico Li</a></p>
+    <p><span>发布时间:</span>2018-11-13, 11:26:44</p>
+    <p><span>最后更新:</span>2018-09-23, 15:02:27</p>
+    <span>原始链接:</span><a class="post-url" href="/2018/11/13/0存储基础知识---存储网络/" title="">http://yoursite.com/2018/11/13/0存储基础知识---存储网络/</a>
+    <p>
+        <span>版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target="_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+    </p>
+</div>
+
+
+
+
+    
+
+    </div>
+    <div class="copyright">
+        <p class="footer-entry">©2017 Yelog</p>
+<p class="footer-entry">Buit with <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank">3-hexo</a> theme</p>
+
+    </div>
+    <div class="full-toc">
+        <button class="full"><span class="min "></span></button>
+<button class="post-toc-menu"><span class="post-toc-menu-icons"></span></button>
+<div class="post-toc"><span class="post-toc-title">目录</span>
+    <div class="post-toc-content">
+
+    </div>
+</div>
+<a class="" id="rocket" href="javascript:void(0)"></a>
+    </div>
+</div>
+<div class="acParent"></div>
+
+<div class="hide_box" onclick="dashangToggle()"></div>
+<div class="shang_box">
+    <a class="shang_close" href="javascript:void(0)" onclick="dashangToggle()">×</a>
+    <div class="shang_tit">
+        <p>喜欢就点赞,疼爱就打赏</p>
+    </div>
+    <div class="shang_payimg">
+        <div class="pay_img">
+            <img src="/img/alipay.jpg" class="alipay" title="扫码支持">
+            <img src="/img/weixin.jpg" class="weixin" title="扫码支持">
         </div>
     </div>
-
-    <!-- js files -->
-    <script src="/js/jquery.min.js"></script>
-    <script src="/js/main.js"></script>
-    <script src="/js/scale.fix.js"></script>
-    
-
-    
-
-    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/javascript"> 
-        $(document).ready(function(){
-            MathJax.Hub.Config({ 
-                tex2jax: {inlineMath: [['[latex]','[/latex]'], ['\\(','\\)']]} 
-            });
-        });
-    </script>
-
-
-    
-
-    <script src="/js/awesome-toc.min.js"></script>
-    <script>
-        $(document).ready(function(){
-            $.awesome_toc({
-                overlay: true,
-                contentId: "post-content",
-            });
-        });
-    </script>
-
-
-    
-    
-    <!--kill ie6 -->
-<!--[if IE 6]>
-  <script src="//letskillie6.googlecode.com/svn/trunk/2/zh_CN.js"></script>
-<![endif]-->
+    <div class="shang_payselect">
+        <span><label><input type="radio" name="pay" checked value="alipay">支付宝</label></span><span><label><input type="radio" name="pay" value="weixin">微信</label></span>
+    </div>
+</div>
 
 </body>
+<script src="//cdn.bootcss.com/jquery.pjax/2.0.1/jquery.pjax.min.js"></script>
+
+<script src="//cdn.bootcss.com/photoswipe/4.1.2/photoswipe.min.js"></script>
+<script src="//cdn.bootcss.com/photoswipe/4.1.2/photoswipe-ui-default.min.js"></script>
+
+<script src="/js/script.js"></script>
+<script>
+    var img_resize = 'photoSwipe';
+    /*作者、标签的自动补全*/
+    $(function () {
+        $('.search').AutoComplete({
+            'data': ['#基础',],
+            'itemHeight': 20,
+            'width': 418
+        }).AutoComplete('show');
+    })
+    function initArticle() {
+        /*渲染对应的表格样式*/
+        
+            $(".post .pjax table").addClass("green_title");
+        
+
+        /*渲染打赏样式*/
+        
+        $("input[name=pay]").on("click", function () {
+            if($("input[name=pay]:checked").val()=="weixin"){
+                $(".shang_box .shang_payimg .pay_img").addClass("weixin_img");
+            } else {
+                $(".shang_box .shang_payimg .pay_img").removeClass("weixin_img");
+            }
+        })
+        
+
+        /*高亮代码块行号*/
+        
+        $('pre code').each(function(){
+            var lines = $(this).text().split('\n').length - 1;
+            var $numbering = $('<ul/>').addClass('pre-numbering').attr("unselectable","on");
+            $(this).addClass('has-numbering')
+                    .parent()
+                    .append($numbering);
+            for(i=1;i<=lines;i++){
+                $numbering.append($('<li/>').text(i));
+            }
+        });
+        
+
+        /*访问数量*/
+        
+        $.getScript("//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js");
+        
+
+        /*代码高亮，行号对齐*/
+        $('.pre-numbering').css('line-height',$('.has-numbering').css('line-height'));
+
+        
+
+        // PhotoSwipe
+        $('article').each(function(i){
+            $(this).find('img').each(function(){
+                if ($(this).closest('figure').hasClass('article-gallery-img')) {
+                    return;
+                }
+                var alt = this.alt;
+                $(this)
+                    .wrap('<figure class="article-gallery-img" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject"></figure>')
+                    .wrap('<a href="' + this.src + '" title="' + alt + '"></a>');
+                $(this).after('<div class="img_alt"><span>' + (alt || '') + '</span></div>');
+            });
+        });
+
+        var pswpElement = document.querySelectorAll('.pswp')[0];
+        if (pswpElement) {
+            var gallerySelector = '.article-gallery, article';
+
+            var initPhotoSwipeFromDOM = function(gallerySelector) {
+
+                // parse slide data (url, title, size ...) from DOM elements
+                // (children of gallerySelector)
+                var parseThumbnailElements = function(el) {
+                    var thumbElements = $(el).find('figure.article-gallery-img').toArray(),
+                        numNodes = thumbElements.length,
+                        items = [],
+                        figureEl,
+                        linkEl,
+                        size,
+                        imgEl,
+                        item;
+
+                    for (var i = 0; i < numNodes; i++) {
+
+                        figureEl = thumbElements[i]; // <figure> element
+
+                        // include only element nodes
+                        if (figureEl.nodeType !== 1) {
+                            continue;
+                        }
+
+                        linkEl = figureEl.children[0]; // <a> element
+                        imgEl = linkEl.children[0]; // <img>
+
+                        size = linkEl.getAttribute('data-size');
+                        size = size && size.split('x');
+
+                        // create slide object
+                        item = {
+                            src: linkEl.getAttribute('href'),
+                            w: size && parseInt(size[0], 10) || imgEl.width,
+                            h: size && parseInt(size[1], 10) || imgEl.height
+                        };
+
+                        if (figureEl.children.length > 1) {
+                            // <figcaption> content
+                            item.title = figureEl.children[1].innerHTML;
+                        }
+
+                        if (linkEl.children.length > 0) {
+                            // <img> thumbnail element, retrieving thumbnail url
+                            item.msrc = linkEl.children[0].getAttribute('src');
+                        }
+
+                        item.el = figureEl; // save link to element for getThumbBoundsFn
+                        items.push(item);
+                    }
+
+                    return items;
+                };
+
+                // find nearest parent element
+                var closest = function closest(el, fn) {
+                    return el && (fn(el) ? el : closest(el.parentNode, fn));
+                };
+
+                // triggers when user clicks on thumbnail
+                var onThumbnailsClick = function(e) {
+                    e = e || window.event;
+
+                    var eTarget = e.target || e.srcElement;
+
+                    // find root element of slide
+                    var clickedListItem = closest(eTarget, function(el) {
+                        return (el.tagName && el.tagName.toUpperCase() === 'FIGURE');
+                    });
+
+                    if (!clickedListItem) {
+                        return;
+                    }
+
+                    if (e.preventDefault) {
+                        e.preventDefault();
+                    } else {
+                        e.returnValue = false;
+                    }
+
+                    // find index of clicked item by looping through all child nodes
+                    // alternatively, you may define index via data- attribute
+                    var clickedGallery = $(clickedListItem).closest(gallerySelector)[0],
+                        childNodes = $(clickedGallery).find('figure.article-gallery-img').toArray(),
+                        numChildNodes = childNodes.length,
+                        nodeIndex = 0,
+                        index;
+
+                    for (var i = 0; i < numChildNodes; i++) {
+                        if (childNodes[i].nodeType !== 1) {
+                            continue;
+                        }
+
+                        if (childNodes[i] === clickedListItem) {
+                            index = nodeIndex;
+                            break;
+                        }
+                        nodeIndex++;
+                    }
+
+
+
+                    if (index >= 0) {
+                        // open PhotoSwipe if valid index found
+                        openPhotoSwipe(index, clickedGallery);
+                    }
+                    return false;
+                };
+
+                // parse picture index and gallery index from URL (#&pid=1&gid=2)
+                var photoswipeParseHash = function() {
+                    var hash = window.location.hash.substring(1),
+                        params = {};
+
+                    if (hash.length < 5) {
+                        return params;
+                    }
+
+                    var vars = hash.split('&');
+                    for (var i = 0; i < vars.length; i++) {
+                        if (!vars[i]) {
+                            continue;
+                        }
+                        var pair = vars[i].split('=');
+                        if (pair.length < 2) {
+                            continue;
+                        }
+                        params[pair[0]] = pair[1];
+                    }
+
+                    if (params.gid) {
+                        params.gid = parseInt(params.gid, 10);
+                    }
+
+                    return params;
+                };
+
+                var openPhotoSwipe = function(index, galleryElement, disableAnimation, fromURL) {
+                    var pswpElement = document.querySelectorAll('.pswp')[0],
+                        gallery,
+                        options,
+                        items;
+
+                    items = parseThumbnailElements(galleryElement);
+
+                    // define options (if needed)
+                    options = {
+
+                        // define gallery index (for URL)
+                        galleryUID: galleryElement.getAttribute('data-pswp-uid'),
+
+                        getThumbBoundsFn: function(index) {
+                            // See Options -> getThumbBoundsFn section of documentation for more info
+                            var thumbnail = items[index].el.getElementsByTagName('img')[0], // find thumbnail
+                                pageYScroll = window.pageYOffset || document.documentElement.scrollTop,
+                                rect = thumbnail.getBoundingClientRect();
+
+                            return {
+                                x: rect.left,
+                                y: rect.top + pageYScroll,
+                                w: rect.width
+                            };
+                        }
+                    };
+
+                    // PhotoSwipe opened from URL
+                    if (fromURL) {
+                        if (options.galleryPIDs) {
+                            // parse real index when custom PIDs are used
+                            // http://photoswipe.com/documentation/faq.html#custom-pid-in-url
+                            for (var j = 0; j < items.length; j++) {
+                                if (items[j].pid == index) {
+                                    options.index = j;
+                                    break;
+                                }
+                            }
+                        } else {
+                            // in URL indexes start from 1
+                            options.index = parseInt(index, 10) - 1;
+                        }
+                    } else {
+                        options.index = parseInt(index, 10);
+                    }
+
+                    // exit if index not found
+                    if (isNaN(options.index)) {
+                        return;
+                    }
+
+                    if (disableAnimation) {
+                        options.showAnimationDuration = 0;
+                    }
+
+                    // Pass data to PhotoSwipe and initialize it
+                    gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, options);
+
+                    gallery.listen('imageLoadComplete', function(index, item) {
+                        var linkEl = item.el.children[0];
+                        var img = item.container.children[0];
+                        if (!linkEl.getAttribute('data-size')) {
+                            linkEl.setAttribute('data-size', img.naturalWidth + 'x' + img.naturalHeight);
+                            item.w = img.naturalWidth;
+                            item.h = img.naturalHeight;
+                            gallery.invalidateCurrItems();
+                            gallery.updateSize(true);
+                        }
+                    });
+
+                    gallery.init();
+                };
+
+                // loop through all gallery elements and bind events
+                var galleryElements = document.querySelectorAll(gallerySelector);
+
+                for (var i = 0, l = galleryElements.length; i < l; i++) {
+                    galleryElements[i].setAttribute('data-pswp-uid', i + 1);
+                    galleryElements[i].onclick = onThumbnailsClick;
+                }
+
+                // Parse URL and open gallery if it contains #&pid=3&gid=1
+                var hashData = photoswipeParseHash();
+                if (hashData.pid && hashData.gid) {
+                    openPhotoSwipe(hashData.pid, galleryElements[hashData.gid - 1], true, true);
+                }
+            };
+
+            // execute above function
+            initPhotoSwipeFromDOM(gallerySelector);
+        }
+        
+    }
+
+    /*打赏页面隐藏与展示*/
+    
+    function dashangToggle() {
+        $(".shang_box").fadeToggle();
+        $(".hide_box").fadeToggle();
+    }
+    
+
+</script>
+
+<!--加入行号的高亮代码块样式-->
+
+<style>
+    pre{
+        position: relative;
+        margin-bottom: 24px;
+        border-radius: 10px;
+        border: 2px solid #e2dede;
+        background: #FFF;
+        overflow: hidden;
+    }
+    code.has-numbering{
+        margin-left: 30px;
+    }
+    .pre-numbering{
+        margin: 0px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 20px;
+        padding: 0.5em 3px 0.7em 5px;
+        border-right: 1px solid #C3CCD0;
+        text-align: right;
+        color: #AAA;
+        background-color: #fafafa;
+    }
+</style>
+
+<!--自定义样式设置-->
+<style>
+    
+    .nav-right nav a.hover, #local-search-result a.hover{
+        background-color: #e2e0e0;
+    }
+    
+    
+
+    /*列表样式*/
+    
+    .post .pjax article .article-entry>ol, .post .pjax article .article-entry>ul, .post .pjax article>ol, .post .pjax article>ul{
+        border: #e2dede solid 2px;
+        border-radius: 10px;
+        padding: 10px 32px 10px 56px;
+    }
+    .post .pjax article .article-entry li>ol, .post .pjax article .article-entry li>ul,.post .pjax article li>ol, .post .pjax article li>ul{
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    .post .pjax article .article-entry>ol>li, .post .pjax article .article-entry>ul>li,.post .pjax article>ol>li, .post .pjax article>ul>li{
+        margin-bottom: auto;
+        margin-left: auto;
+    }
+    .post .pjax article .article-entry li>ol>li, .post .pjax article .article-entry li>ul>li,.post .pjax article li>ol>li, .post .pjax article li>ul>li{
+        margin-bottom: auto;
+        margin-left: auto;
+    }
+    
+
+    /*引用块样式*/
+    
+    .post .pjax article blockquote {
+        padding: 10px 20px;
+        background-color: white;
+        border: none;
+        border-left: 4px solid #42b983;
+        border-right: 4px solid #42b983;
+        border-radius: 10px;
+    }
+    
+
+    /*文章列表背景图*/
+    
+    .nav-right:before {
+        content: ' ';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.1;
+        background: url("http://oncj6b2vl.bkt.clouddn.com/FlSExUGfRSaqxkK5v42CpuI-tXAL.jpg");
+        background-repeat: no-repeat;
+        background-position: 50% 0;
+        -ms-background-size: cover;
+        -o-background-size: cover;
+        -moz-background-size: cover;
+        -webkit-background-size: cover;
+        background-size: cover;
+    }
+    
+</style>
+
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe.
+         It's a separate element, as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. PhotoSwipe keeps only 3 slides in DOM to save memory. -->
+        <!-- don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <!-- Preloader demo https://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+
+
 </html>
