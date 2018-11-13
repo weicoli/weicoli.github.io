@@ -1,299 +1,98 @@
-<!DOCTYPE html>
+
+ <!DOCTYPE HTML>
 <html>
 <head><meta name="generator" content="Hexo 3.8.0">
-  <meta charset="utf-8">
-  <title>4.執行命令 | Sea crab Fried rice</title>
-  <meta name="keywords" content=" 基础 ">
-  <meta name="description" content="4.執行命令 | Sea crab Fried rice">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<meta name="description" content="命令行擴展、被括起來的集合命令行擴展：$( )或把一個命令的輸出打印給另一個命令的參數1234[root@centos7 ~]# echo &quot;This system&apos;s name is $(hostname)&quot;        This system&apos;s name is centos7.weico.com[root@centos7 ~]# echo &quot;I am `whoami`&quot;">
-<meta name="keywords" content="基础">
-<meta property="og:type" content="article">
-<meta property="og:title" content="8.命令行擴展、被括起來的集合--tab键--獲取幫助">
-<meta property="og:url" content="http://yoursite.com/2018/11/13/8.20181004堅持不定時更新原則--命令行擴展、被括起來的集合--tab键--獲取幫助--命令幫助/index.html">
-<meta property="og:site_name" content="Sea crab Fried rice">
-<meta property="og:description" content="命令行擴展、被括起來的集合命令行擴展：$( )或把一個命令的輸出打印給另一個命令的參數1234[root@centos7 ~]# echo &quot;This system&apos;s name is $(hostname)&quot;        This system&apos;s name is centos7.weico.com[root@centos7 ~]# echo &quot;I am `whoami`&quot;">
-<meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-11-13T04:50:35.060Z">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="8.命令行擴展、被括起來的集合--tab键--獲取幫助">
-<meta name="twitter:description" content="命令行擴展、被括起來的集合命令行擴展：$( )或把一個命令的輸出打印給另一個命令的參數1234[root@centos7 ~]# echo &quot;This system&apos;s name is $(hostname)&quot;        This system&apos;s name is centos7.weico.com[root@centos7 ~]# echo &quot;I am `whoami`&quot;">
+  <meta charset="UTF-8">
+  
+    <title>4.執行命令 | Sea crab Fried rice</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3, minimum-scale=1">
+    
+    <meta name="author" content="Weico Li">
+    
+    <meta name="description" content="執行命令輸入命令后回車&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;提請Shell程序找到鍵入命令所對應的可執行程序或代碼，并由其分析后提交給內核分配資源將其運行起來。  
+在Shell中可執行的命令有兩類內部命令：由Shell自帶的，而且通過某命令形式提供  
 
-
-<link rel="icon" href="/img/avatar.jpg">
-
-<link rel="stylesheet" href="/css/style.css">
-
-<link rel="stylesheet" href="/css/hl_theme/atom-light.css">
-
-<link href="//cdn.bootcss.com/animate.css/3.5.2/animate.min.css" rel="stylesheet">
-<link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-
-<link href="//cdn.bootcss.com/photoswipe/4.1.2/photoswipe.min.css" rel="stylesheet">
-<link href="//cdn.bootcss.com/photoswipe/4.1.2/default-skin/default-skin.min.css" rel="stylesheet">
-
-<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
-<script src="/js/jquery.autocomplete.min.js"></script>
-<script src="//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
-<script>
-    hljs.initHighlightingOnLoad();
-</script>
-
-<script src="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.js"></script>
-
-
-
-<script src="//cdn.bootcss.com/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
-
+help內部命令列表enable">
+    
+    
+    
+    
+    
+    <link rel="icon" href="/img/favicon.ico">
+    
+    
+    <link rel="apple-touch-icon" href="/img/pacman.jpg">
+    <link rel="apple-touch-icon-precomposed" href="/img/pacman.jpg">
+    
+    <link rel="stylesheet" href="/css/style.css">
 </head>
-<div style="display: none">
-  <input class="theme_disqus_on" value="false">
-  <input class="theme_preload_comment" value="false">
-</div>
-<body>
-<aside class="nav">
-    <div class="nav-left">
-        <a href="/" class="avatar_target">
-    <img class="avatar" src="/img/avatar.jpg">
-</a>
-<div class="author">
-    <span>Weico Li</span>
-</div>
-
-<div class="icon">
-    
-    <a class="rss" title="rss" href="/atom.xml" target="_blank"></a>
-    
-    
-    <a class="github" title="github" href="https://github.com/yelog" target="_blank"></a>
-    
-    
-    <a class="facebook" title="facebook" href="https://www.facebook.com/faker.tops" target="_blank"></a>
-    
-    
-    
-    <a class="linkedin" title="linkedin" href="https://www.linkedin.com/in/%E7%8E%89%E6%9D%B0-%E6%9D%A8-13a40a103/" target="_blank"></a>
-    
-    
-    
-    <a class="reddit" title="reddit" href="https://www.reddit.com/user/yelog/" target="_blank"></a>
-    
-    
-    <a class="weibo" title="weibo" href="http://weibo.com/u/2307534817" target="_blank"></a>
-    
-    
-    <a class="email" title="email" href="mailto:jaytp@qq.com"></a>
-    
-</div>
-
-
-
-<ul>
-    <li class="all active">全部文章</li>
-    
-    <li data-rel="linux"> linux </li>
-    
-</ul>
-<div class="left-bottom">
-    <div class="menus">
-    
-    
-    
-    
-    </div>
-    <div><a style="border-right: 1px solid #fff; width: 49%" class="about site_url" href="/about">关于</a><a style="width: 50%" class="friends">友链</a></div>
-</div>
-<input type="hidden" id="yelog_site_posts_number" value="15">
-
-<div style="display: none">
-    <span id="busuanzi_value_site_uv"></span>
-    <span id="busuanzi_value_site_pv"></span>
-</div>
-    </div>
-    <div class="nav-right">
-        <div class="friends-area">
-    <div class="friends-title">
-        友情链接
-        <i class="back-title-list"></i>
-    </div>
-    <div class="friends-content">
-        <ul>
-            
-            <li><a target="_blank" href="http://yelog.org/">叶落阁</a></li>
-            
-        </ul>
-    </div>
-</div>
-        <div class="title-list">
-    <form onkeydown="if(event.keyCode==13){return false;}">
-        <input class="search" type="text" placeholder="Search..." autocomplete="off" id="local-search-input">
-        <i class="cross"></i>
-        <span>
-        <label for="tagswitch">Tags:</label>
-        <input id="tagswitch" type="checkbox">
-    </span>
-    </form>
-    <div class="tags-list">
-    
-    <li class="article-tag-list-item">
-        <a href="javascript:" class="color3">基础</a>
-    </li>
-    
-    <div class="clearfix"></div>
+</html>
+  <body>
+    <header>
+      <div>
+		
+			<div id="imglogo">
+				<a href="/"><img src="/img/logo.svg" alt="Sea crab Fried rice" title="Sea crab Fried rice"></a>
+			</div>
+			
+			<div id="textlogo">
+				<h1 class="site-name"><a href="/" title="Sea crab Fried rice">Sea crab Fried rice</a></h1>
+				<h2 class="blog-motto"></h2>
+			</div>
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="Menu">
+			</a></div>
+			<nav class="animated">
+				<ul>
+					<ul>
+					 
+						<li><a href="/">Home</a></li>
+					
+						<li><a href="/archives">Archives</a></li>
+					
+					<li>
+					
+					<form class="search" action="//baidu.com/s" method="get" accept-charset="utf-8">
+						<label>Search</label>
+						<input type="text" id="search" name="wd" autocomplete="off" maxlength="20" placeholder="Search">
+                        <input name="tn" type="hidden" value="bds">
+                        <input name="cl" type="hidden" value="3">
+                        <input name="ct" type="hidden" value="2097152">
+						<input type="hidden" name="si" value="yoursite.com">
+					</form>
+					
+					</li>
+				</ul>
+			</ul></nav>			
 </div>
 
+    </header>
+    <div id="container">
+      <div id="main" class="post" itemscope="" itemprop="blogPost">
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
+  <h1 itemprop="name">
     
-    <nav id="title-list-nav">
-        
-        <a class="linux " href="/2018/11/13/10.20181004堅持不定時更新原則--history命令--bash快捷鍵/" data-tag="基础" data-author="">
-            <span class="post-title" title="10.history命令--bash快捷鍵">10.history命令--bash快捷鍵</span>
-            <span class="post-date" title="2018-11-13 11:26:44">2018/11/13</span>
-        </a>
-        
-        <a class="linux " href="/2018/11/13/11.20181006堅持不定時更新原則--文件系統和目錄結構/" data-tag="基础" data-author="">
-            <span class="post-title" title="11.文件系統與目錄結構">11.文件系統與目錄結構</span>
-            <span class="post-date" title="2018-11-13 11:26:44">2018/11/13</span>
-        </a>
-        
-        <a class="linux " href="/2018/11/13/13.20181006堅持不定時更新原則--查看文件狀態--創建空文件和刷新時間/" data-tag="基础" data-author="">
-            <span class="post-title" title="13.查看文件狀態--創建空文件和刷新時間">13.查看文件狀態--創建空文件和刷新時間</span>
-            <span class="post-date" title="2018-11-13 11:26:44">2018/11/13</span>
-        </a>
-        
-        <a class="linux " href="/2018/11/13/3.20181003堅持不定時更新原則--命令提示符PS1/" data-tag="基础" data-author="">
-            <span class="post-title" title="3.命令提示符">3.命令提示符</span>
-            <span class="post-date" title="2018-11-13 11:26:44">2018/11/13</span>
-        </a>
-        
-        <a class="linux " href="/2018/11/13/2.20181003堅持不定時更新原則--用戶登錄--終端terminal--交互式接口--shell簡單介紹/" data-tag="基础" data-author="">
-            <span class="post-title" title="2.用戶登錄--終端terminal--交互式接口--shell簡單介紹">2.用戶登錄--終端terminal--交互式接口--shell簡單介紹</span>
-            <span class="post-date" title="2018-11-13 11:26:44">2018/11/13</span>
-        </a>
-        
-        <a class="linux " href="/2018/11/13/4.20181003堅持不定時更新原則--執行命令--Hash命令/" data-tag="基础" data-author="">
-            <span class="post-title" title="4.執行命令">4.執行命令</span>
-            <span class="post-date" title="2018-11-13 11:26:44">2018/11/13</span>
-        </a>
-        
-        <a class="linux " href="/2018/11/13/5.20181003堅持不定時更新原則--命名別名--命令格式/" data-tag="基础" data-author="">
-            <span class="post-title" title="5.命名別名--命令格式">5.命名別名--命令格式</span>
-            <span class="post-date" title="2018-11-13 11:26:44">2018/11/13</span>
-        </a>
-        
-        <a class="linux " href="/2018/11/13/6.20181003堅持不定時更新原則--日期和時間--關機命令--用戶登錄信息/" data-tag="基础" data-author="">
-            <span class="post-title" title="6.日期和時間--關機命令--用戶登錄信息">6.日期和時間--關機命令--用戶登錄信息</span>
-            <span class="post-date" title="2018-11-13 11:26:44">2018/11/13</span>
-        </a>
-        
-        <a class="linux " href="/2018/11/13/7.20181003堅持不定時更新原則--screen命令--echo命令--字符集和編碼/" data-tag="基础" data-author="">
-            <span class="post-title" title="7.screen命令--echo命令--字符集和編碼">7.screen命令--echo命令--字符集和編碼</span>
-            <span class="post-date" title="2018-11-13 11:26:44">2018/11/13</span>
-        </a>
-        
-        <a class="linux " href="/2018/11/13/9.20181003堅持不定時更新原則--命令行歷史/" data-tag="基础" data-author="">
-            <span class="post-title" title="9.命令行歷史">9.命令行歷史</span>
-            <span class="post-date" title="2018-11-13 11:26:44">2018/11/13</span>
-        </a>
-        
-        <a class="linux " href="/2018/11/13/1.20181001堅持不定時更新原則--Linux操作系统介绍/" data-tag="基础" data-author="">
-            <span class="post-title" title="1.操作系统介紹">1.操作系统介紹</span>
-            <span class="post-date" title="2018-11-13 11:26:44">2018/11/13</span>
-        </a>
-        
-        <a class="linux " href="/2018/11/13/12.20181006堅持不定時更新原則--顯示當前工作目錄--絕對和相對路徑--更改目錄--文件通配符/" data-tag="基础" data-author="">
-            <span class="post-title" title="12.顯示當前工作目錄--絕對和相對路徑--更改目錄--文件通配符">12.顯示當前工作目錄--絕對和相對路徑--更改目錄--文件通配符</span>
-            <span class="post-date" title="2018-11-13 11:26:44">2018/11/13</span>
-        </a>
-        
-        <a class="linux " href="/2018/11/13/8.20181004堅持不定時更新原則--命令行擴展、被括起來的集合--tab键--獲取幫助--命令幫助/" data-tag="基础" data-author="">
-            <span class="post-title" title="8.命令行擴展、被括起來的集合--tab键--獲取幫助">8.命令行擴展、被括起來的集合--tab键--獲取幫助</span>
-            <span class="post-date" title="2018-11-13 11:26:44">2018/11/13</span>
-        </a>
-        
-        <a class="linux " href="/2018/11/13/0.20181001堅持不定時更新原則--存储基础知识---存储网络/" data-tag="基础" data-author="">
-            <span class="post-title" title="0.存储基础知识---存储网络">0.存储基础知识---存储网络</span>
-            <span class="post-date" title="2018-11-13 11:26:44">2018/11/13</span>
-        </a>
-        
-        <a class="linux " href="/2018/11/13/00.20181001堅持不定時更新原則--计算机硬件知识/" data-tag="基础" data-author="">
-            <span class="post-title" title="00.计算机硬件知识">00.计算机硬件知识</span>
-            <span class="post-date" title="2018-11-13 11:26:44">2018/11/13</span>
-        </a>
-        
-    </nav>
-</div>
-    </div>
-    <div class="hide-list">
-        <div class="semicircle">
-            <div class="brackets first"><</div>
-            <div class="brackets">&gt;</div>
-        </div>
-    </div>
-</aside>
-<div class="post">
-    <div class="pjax">
-        <article id="post-4.20181003堅持不定時更新原則--執行命令--Hash命令" class="article article-type-post" itemscope="" itemprop="blogPost">
+      <a href="/2018/11/13/4.20181003堅持不定時更新原則--執行命令--Hash命令/" title="4.執行命令" itemprop="url">4.執行命令</a>
+  </h1>
+  <p class="article-author">By
     
-        <h1 class="article-title">4.執行命令</h1>
+      <a href="http://yoursite.com" title="Weico Li">Weico Li</a>
+    </p>
+  <p class="article-time">
+    <time datetime="2018-11-13T03:26:44.765Z" itemprop="datePublished">2018-11-13</time>
     
-    <div class="article-meta">
-        
-        
-        
-        <span class="book">
-            
-            <a href="javascript:" data-rel="linux">linux</a>
-            
-        </span>
-        
-        
-        <span class="tag">
-            
-            <a href="javascript:" class="color3">基础</a>
-            
-        </span>
-        
-    </div>
-    <div class="article-meta">
-        
-        创建时间:<time class="date" title="更新时间: 2018-11-13 12:50:06">2018-11-13 11:26</time>
-        
-    </div>
-    <div class="article-meta">
-        
-        
-        <span id="busuanzi_container_page_pv">
-            阅读:<span id="busuanzi_value_page_pv">
-                <span class="count-comment">
-                    <span class="spinner">
-                      <div class="cube1"></div>
-                      <div class="cube2"></div>
-                    </span>
-                </span>
-            </span>
-        </span>
-        
-        
-    </div>
-    
-    <div class="toc-ref">
-    
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#執行命令"><span class="toc-text">執行命令</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#輸入命令后回車"><span class="toc-text">輸入命令后回車</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#在Shell中可執行的命令有兩類"><span class="toc-text">在Shell中可執行的命令有兩類</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#區別指定的命令是內部或外部命令"><span class="toc-text">區別指定的命令是內部或外部命令</span></a></li></ol></li></ol><li class="toc-item toc-level-2"><a class="toc-link" href="#執行外部命令"><span class="toc-text">執行外部命令</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Hash常見用法"><span class="toc-text">Hash常見用法</span></a></li></ol></li>
-    
-<style>
-    .left-col .switch-btn,
-    .left-col .switch-area {
-        display: none;
-    }
-    .toc-level-3 i,
-    .toc-level-3 ol {
-        display: none !important;
-    }
-</style>
-</div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="執行命令"><a href="#執行命令" class="headerlink" title="執行命令"></a>執行命令</h1><h4 id="輸入命令后回車"><a href="#輸入命令后回車" class="headerlink" title="輸入命令后回車"></a>輸入命令后回車</h4><p>&ensp;&ensp;&ensp;&ensp;提請Shell程序找到鍵入命令所對應的可執行程序或代碼，并由其分析后提交給內核分配資源將其運行起來。  </p>
+  </p>
+</header>
+
+	<div class="article-content">
+		
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">Contents</strong>
+		<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#執行命令"><span class="toc-number">1.</span> <span class="toc-text">執行命令</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#輸入命令后回車"><span class="toc-number">1.0.0.1.</span> <span class="toc-text">輸入命令后回車</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#在Shell中可執行的命令有兩類"><span class="toc-number">1.0.0.2.</span> <span class="toc-text">在Shell中可執行的命令有兩類</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#區別指定的命令是內部或外部命令"><span class="toc-number">1.0.0.3.</span> <span class="toc-text">區別指定的命令是內部或外部命令</span></a></li></ol></li></ol><li class="toc-item toc-level-2"><a class="toc-link" href="#執行外部命令"><span class="toc-number">1.1.</span> <span class="toc-text">執行外部命令</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Hash常見用法"><span class="toc-number">1.1.0.1.</span> <span class="toc-text">Hash常見用法</span></a></li></ol></li>
+		</div>
+		
+		<h1 id="執行命令"><a href="#執行命令" class="headerlink" title="執行命令"></a>執行命令</h1><h4 id="輸入命令后回車"><a href="#輸入命令后回車" class="headerlink" title="輸入命令后回車"></a>輸入命令后回車</h4><p>&ensp;&ensp;&ensp;&ensp;提請Shell程序找到鍵入命令所對應的可執行程序或代碼，并由其分析后提交給內核分配資源將其運行起來。  </p>
 <h4 id="在Shell中可執行的命令有兩類"><a href="#在Shell中可執行的命令有兩類" class="headerlink" title="在Shell中可執行的命令有兩類"></a>在Shell中可執行的命令有兩類</h4><p>內部命令：由Shell自帶的，而且通過某命令形式提供  </p>
 <blockquote>
 <p>help內部命令列表<br>enable cmd 啟動內部命令<br>enable -n cmd 禁用內部命令<br>enable-n 查看禁用的內部命令<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[root@centos7 ~]<span class="variable">$enable</span> -n <span class="built_in">pwd</span></span><br><span class="line">[root@centos7 ~]<span class="variable">$enable</span> -n</span><br><span class="line"><span class="built_in">enable</span> -n <span class="built_in">pwd</span></span><br><span class="line">[root@centos7 ~]<span class="variable">$enable</span> <span class="built_in">pwd</span></span><br></pre></td></tr></table></figure></p>
@@ -312,546 +111,229 @@
 <p><strong>5.hash –p path name 将命令全路径path起别名为name</strong><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">[root@centos7 ~]<span class="variable">$hash</span> </span><br><span class="line">hits    <span class="built_in">command</span></span><br><span class="line">   0    /usr/bin/ls</span><br><span class="line">[root@centos7 ~]<span class="variable">$hash</span> -l</span><br><span class="line"><span class="built_in">builtin</span> <span class="built_in">hash</span> -p /usr/bin/ls ls</span><br><span class="line">[root@centos7 ~]<span class="variable">$hash</span> -p /usr/bin/ls lsls</span><br><span class="line">[root@centos7 ~]<span class="variable">$hash</span> -l</span><br><span class="line"><span class="built_in">builtin</span> <span class="built_in">hash</span> -p /usr/bin/ls lsls</span><br><span class="line"><span class="built_in">builtin</span> <span class="built_in">hash</span> -p /usr/bin/ls ls</span><br><span class="line">[root@centos7 ~]<span class="variable">$lsls</span></span><br><span class="line">[root@centos7 ~]<span class="variable">$hash</span> -d lsls</span><br></pre></td></tr></table></figure></p>
 <p><strong>6.hash –t name 打印缓存中name的路径</strong><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[root@centos7 ~]<span class="variable">$hash</span> </span><br><span class="line">hits    <span class="built_in">command</span></span><br><span class="line">   0    /usr/bin/ls</span><br><span class="line">[root@centos7 ~]<span class="variable">$hash</span> -t ls</span><br><span class="line">/usr/bin/ls</span><br></pre></td></tr></table></figure></p>
 <p><strong>7.緩存cache：將剛用硬盤的數據放在內存中，下次用此數據，不需要從硬盤找，直接從內存取Hash。</strong>  </p>
+  
+	</div>
+		<footer class="article-footer clearfix">
 
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/基础/">基础</a>
+  </div>
+
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/linux/">linux</a>
+</div>
+
+
+
+<div class="article-share" id="share">
+
+  <div data-url="http://yoursite.com/2018/11/13/4.20181003堅持不定時更新原則--執行命令--Hash命令/" data-title="4.執行命令 | Sea crab Fried rice" data-tsina="" class="share clearfix">
+  </div>
+
+</div>
+</footer>   	       
+	</article>
+	
+<nav class="article-nav clearfix">
+ 
+ <div class="prev">
+ <a href="/2018/11/13/5.20181003堅持不定時更新原則--命名別名--命令格式/" title="5.命名別名--命令格式">
+  <strong>PREVIOUS:</strong><br>
+  <span>
+  5.命名別名--命令格式</span>
+</a>
+</div>
+
+
+<div class="next">
+<a href="/2018/11/13/3.20181003堅持不定時更新原則--命令提示符PS1/" title="3.命令提示符">
+ <strong>NEXT:</strong><br> 
+ <span>3.命令提示符
+</span>
+</a>
+</div>
+
+</nav>
+
+	
+</div>  
+      <div class="openaside"><a class="navbutton" href="#" title="Show Sidebar"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">Contents</strong>
+  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#執行命令"><span class="toc-number">1.</span> <span class="toc-text">執行命令</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#輸入命令后回車"><span class="toc-number">1.0.0.1.</span> <span class="toc-text">輸入命令后回車</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#在Shell中可執行的命令有兩類"><span class="toc-number">1.0.0.2.</span> <span class="toc-text">在Shell中可執行的命令有兩類</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#區別指定的命令是內部或外部命令"><span class="toc-number">1.0.0.3.</span> <span class="toc-text">區別指定的命令是內部或外部命令</span></a></li></ol></li></ol><li class="toc-item toc-level-2"><a class="toc-link" href="#執行外部命令"><span class="toc-number">1.1.</span> <span class="toc-text">執行外部命令</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Hash常見用法"><span class="toc-number">1.1.0.1.</span> <span class="toc-text">Hash常見用法</span></a></li></ol></li>
+  </div>
+
+<div id="asidepart">
+<div class="closeaside"><a class="closebutton" href="#" title="Hide Sidebar"></a></div>
+<aside class="clearfix">
+
+  
+<div class="categorieslist">
+	<p class="asidetitle">Categories</p>
+		<ul>
+		
+			<li><a href="/categories/linux/" title="linux">linux<sup>15</sup></a></li>
+		
+		</ul>
+</div>
+
+
+  
+<div class="tagslist">
+	<p class="asidetitle">Tags</p>
+		<ul class="clearfix">
+		
+			<li><a href="/tags/基础/" title="基础">基础<sup>15</sup></a></li>
+		
+		</ul>
+</div>
+
+
+</aside>
+</div>
+    </div>
+    <footer><div id="footer">
+	
+	<div class="line">
+		<span></span>
+		<div class="author"></div>
+	</div>
+	
+	
+	<div class="social-font">
+		
+		
+		
+		
+	</div>
+		<p class="copyright">Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wizicer/iceman" target="_blank" title="Iceman">Iceman</a> © 2018 
+		
+		<a href="http://yoursite.com" target="_blank" title="Weico Li">Weico Li</a>
+		
+		</p>
+</div>
+</footer>
+    <script src="/js/jquery-2.1.0.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      o = $('.openaside');
+  $(window).resize(function(){
+    getSize(); 
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else
+    {
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
       
-       <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 jaytp@qq.com </span>
-    </div>
-</article>
-
-
-<p>
-    <a href="javascript:void(0)" class="dashang" onclick="dashangToggle()">赏</a>
-</p>
-
-
-<div class="article_copyright">
-    <p><span>文章标题:</span>4.執行命令</p>
-    
-    <p><span>本文作者:</span><a href="javascript:void(0)" title="Weico Li">Weico Li</a></p>
-    <p><span>发布时间:</span>2018-11-13, 11:26:44</p>
-    <p><span>最后更新:</span>2018-11-13, 12:50:06</p>
-    <span>原始链接:</span><a class="post-url" href="/2018/11/13/4.20181003堅持不定時更新原則--執行命令--Hash命令/" title="4.執行命令">http://yoursite.com/2018/11/13/4.20181003堅持不定時更新原則--執行命令--Hash命令/</a>
-    <p>
-        <span>版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target="_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
-    </p>
-</div>
-
-
-
-
-    
-
-    </div>
-    <div class="copyright">
-        <p class="footer-entry">©2017 Yelog</p>
-<p class="footer-entry">Buit with <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank">3-hexo</a> theme</p>
-
-    </div>
-    <div class="full-toc">
-        <button class="full"><span class="min "></span></button>
-<button class="post-toc-menu"><span class="post-toc-menu-icons"></span></button>
-<div class="post-toc"><span class="post-toc-title">目录</span>
-    <div class="post-toc-content">
-
-    </div>
-</div>
-<a class="" id="rocket" href="javascript:void(0)"></a>
-    </div>
-</div>
-<div class="acParent"></div>
-
-<div class="hide_box" onclick="dashangToggle()"></div>
-<div class="shang_box">
-    <a class="shang_close" href="javascript:void(0)" onclick="dashangToggle()">×</a>
-    <div class="shang_tit">
-        <p>喜欢就点赞,疼爱就打赏</p>
-    </div>
-    <div class="shang_payimg">
-        <div class="pay_img">
-            <img src="/img/alipay.jpg" class="alipay" title="扫码支持">
-            <img src="/img/weixin.jpg" class="weixin" title="扫码支持">
-        </div>
-    </div>
-    <div class="shang_payselect">
-        <span><label><input type="radio" name="pay" checked value="alipay">支付宝</label></span><span><label><input type="radio" name="pay" value="weixin">微信</label></span>
-    </div>
-</div>
-
-</body>
-<script src="//cdn.bootcss.com/jquery.pjax/2.0.1/jquery.pjax.min.js"></script>
-
-<script src="//cdn.bootcss.com/photoswipe/4.1.2/photoswipe.min.js"></script>
-<script src="//cdn.bootcss.com/photoswipe/4.1.2/photoswipe-ui-default.min.js"></script>
-
-<script src="/js/script.js"></script>
-<script>
-    var img_resize = 'photoSwipe';
-    /*作者、标签的自动补全*/
-    $(function () {
-        $('.search').AutoComplete({
-            'data': ['#基础',],
-            'itemHeight': 20,
-            'width': 418
-        }).AutoComplete('show');
-    })
-    function initArticle() {
-        /*渲染对应的表格样式*/
-        
-            $(".post .pjax table").addClass("green_title");
-        
-
-        /*渲染打赏样式*/
-        
-        $("input[name=pay]").on("click", function () {
-            if($("input[name=pay]:checked").val()=="weixin"){
-                $(".shang_box .shang_payimg .pay_img").addClass("weixin_img");
-            } else {
-                $(".shang_box .shang_payimg .pay_img").removeClass("weixin_img");
-            }
-        })
-        
-
-        /*高亮代码块行号*/
-        
-        $('pre code').each(function(){
-            var lines = $(this).text().split('\n').length - 1;
-            var $numbering = $('<ul/>').addClass('pre-numbering').attr("unselectable","on");
-            $(this).addClass('has-numbering')
-                    .parent()
-                    .append($numbering);
-            for(i=1;i<=lines;i++){
-                $numbering.append($('<li/>').text(i));
-            }
-        });
-        
-
-        /*访问数量*/
-        
-        $.getScript("//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js");
-        
-
-        /*代码高亮，行号对齐*/
-        $('.pre-numbering').css('line-height',$('.has-numbering').css('line-height'));
-
-        
-
-        // PhotoSwipe
-        $('article').each(function(i){
-            $(this).find('img').each(function(){
-                if ($(this).closest('figure').hasClass('article-gallery-img')) {
-                    return;
-                }
-                var alt = this.alt;
-                $(this)
-                    .wrap('<figure class="article-gallery-img" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject"></figure>')
-                    .wrap('<a href="' + this.src + '" title="' + alt + '"></a>');
-                $(this).after('<div class="img_alt"><span>' + (alt || '') + '</span></div>');
-            });
-        });
-
-        var pswpElement = document.querySelectorAll('.pswp')[0];
-        if (pswpElement) {
-            var gallerySelector = '.article-gallery, article';
-
-            var initPhotoSwipeFromDOM = function(gallerySelector) {
-
-                // parse slide data (url, title, size ...) from DOM elements
-                // (children of gallerySelector)
-                var parseThumbnailElements = function(el) {
-                    var thumbElements = $(el).find('figure.article-gallery-img').toArray(),
-                        numNodes = thumbElements.length,
-                        items = [],
-                        figureEl,
-                        linkEl,
-                        size,
-                        imgEl,
-                        item;
-
-                    for (var i = 0; i < numNodes; i++) {
-
-                        figureEl = thumbElements[i]; // <figure> element
-
-                        // include only element nodes
-                        if (figureEl.nodeType !== 1) {
-                            continue;
-                        }
-
-                        linkEl = figureEl.children[0]; // <a> element
-                        imgEl = linkEl.children[0]; // <img>
-
-                        size = linkEl.getAttribute('data-size');
-                        size = size && size.split('x');
-
-                        // create slide object
-                        item = {
-                            src: linkEl.getAttribute('href'),
-                            w: size && parseInt(size[0], 10) || imgEl.width,
-                            h: size && parseInt(size[1], 10) || imgEl.height
-                        };
-
-                        if (figureEl.children.length > 1) {
-                            // <figcaption> content
-                            item.title = figureEl.children[1].innerHTML;
-                        }
-
-                        if (linkEl.children.length > 0) {
-                            // <img> thumbnail element, retrieving thumbnail url
-                            item.msrc = linkEl.children[0].getAttribute('src');
-                        }
-
-                        item.el = figureEl; // save link to element for getThumbBoundsFn
-                        items.push(item);
-                    }
-
-                    return items;
-                };
-
-                // find nearest parent element
-                var closest = function closest(el, fn) {
-                    return el && (fn(el) ? el : closest(el.parentNode, fn));
-                };
-
-                // triggers when user clicks on thumbnail
-                var onThumbnailsClick = function(e) {
-                    e = e || window.event;
-
-                    var eTarget = e.target || e.srcElement;
-
-                    // find root element of slide
-                    var clickedListItem = closest(eTarget, function(el) {
-                        return (el.tagName && el.tagName.toUpperCase() === 'FIGURE');
-                    });
-
-                    if (!clickedListItem) {
-                        return;
-                    }
-
-                    if (e.preventDefault) {
-                        e.preventDefault();
-                    } else {
-                        e.returnValue = false;
-                    }
-
-                    // find index of clicked item by looping through all child nodes
-                    // alternatively, you may define index via data- attribute
-                    var clickedGallery = $(clickedListItem).closest(gallerySelector)[0],
-                        childNodes = $(clickedGallery).find('figure.article-gallery-img').toArray(),
-                        numChildNodes = childNodes.length,
-                        nodeIndex = 0,
-                        index;
-
-                    for (var i = 0; i < numChildNodes; i++) {
-                        if (childNodes[i].nodeType !== 1) {
-                            continue;
-                        }
-
-                        if (childNodes[i] === clickedListItem) {
-                            index = nodeIndex;
-                            break;
-                        }
-                        nodeIndex++;
-                    }
-
-
-
-                    if (index >= 0) {
-                        // open PhotoSwipe if valid index found
-                        openPhotoSwipe(index, clickedGallery);
-                    }
-                    return false;
-                };
-
-                // parse picture index and gallery index from URL (#&pid=1&gid=2)
-                var photoswipeParseHash = function() {
-                    var hash = window.location.hash.substring(1),
-                        params = {};
-
-                    if (hash.length < 5) {
-                        return params;
-                    }
-
-                    var vars = hash.split('&');
-                    for (var i = 0; i < vars.length; i++) {
-                        if (!vars[i]) {
-                            continue;
-                        }
-                        var pair = vars[i].split('=');
-                        if (pair.length < 2) {
-                            continue;
-                        }
-                        params[pair[0]] = pair[1];
-                    }
-
-                    if (params.gid) {
-                        params.gid = parseInt(params.gid, 10);
-                    }
-
-                    return params;
-                };
-
-                var openPhotoSwipe = function(index, galleryElement, disableAnimation, fromURL) {
-                    var pswpElement = document.querySelectorAll('.pswp')[0],
-                        gallery,
-                        options,
-                        items;
-
-                    items = parseThumbnailElements(galleryElement);
-
-                    // define options (if needed)
-                    options = {
-
-                        // define gallery index (for URL)
-                        galleryUID: galleryElement.getAttribute('data-pswp-uid'),
-
-                        getThumbBoundsFn: function(index) {
-                            // See Options -> getThumbBoundsFn section of documentation for more info
-                            var thumbnail = items[index].el.getElementsByTagName('img')[0], // find thumbnail
-                                pageYScroll = window.pageYOffset || document.documentElement.scrollTop,
-                                rect = thumbnail.getBoundingClientRect();
-
-                            return {
-                                x: rect.left,
-                                y: rect.top + pageYScroll,
-                                w: rect.width
-                            };
-                        }
-                    };
-
-                    // PhotoSwipe opened from URL
-                    if (fromURL) {
-                        if (options.galleryPIDs) {
-                            // parse real index when custom PIDs are used
-                            // http://photoswipe.com/documentation/faq.html#custom-pid-in-url
-                            for (var j = 0; j < items.length; j++) {
-                                if (items[j].pid == index) {
-                                    options.index = j;
-                                    break;
-                                }
-                            }
-                        } else {
-                            // in URL indexes start from 1
-                            options.index = parseInt(index, 10) - 1;
-                        }
-                    } else {
-                        options.index = parseInt(index, 10);
-                    }
-
-                    // exit if index not found
-                    if (isNaN(options.index)) {
-                        return;
-                    }
-
-                    if (disableAnimation) {
-                        options.showAnimationDuration = 0;
-                    }
-
-                    // Pass data to PhotoSwipe and initialize it
-                    gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, options);
-
-                    gallery.listen('imageLoadComplete', function(index, item) {
-                        var linkEl = item.el.children[0];
-                        var img = item.container.children[0];
-                        if (!linkEl.getAttribute('data-size')) {
-                            linkEl.setAttribute('data-size', img.naturalWidth + 'x' + img.naturalHeight);
-                            item.w = img.naturalWidth;
-                            item.h = img.naturalHeight;
-                            gallery.invalidateCurrItems();
-                            gallery.updateSize(true);
-                        }
-                    });
-
-                    gallery.init();
-                };
-
-                // loop through all gallery elements and bind events
-                var galleryElements = document.querySelectorAll(gallerySelector);
-
-                for (var i = 0, l = galleryElements.length; i < l; i++) {
-                    galleryElements[i].setAttribute('data-pswp-uid', i + 1);
-                    galleryElements[i].onclick = onThumbnailsClick;
-                }
-
-                // Parse URL and open gallery if it contains #&pid=3&gid=1
-                var hashData = photoswipeParseHash();
-                if (hashData.pid && hashData.gid) {
-                    openPhotoSwipe(hashData.pid, galleryElements[hashData.gid - 1], true, true);
-                }
-            };
-
-            // execute above function
-            initPhotoSwipeFromDOM(gallerySelector);
-        }
+      $('#toc.toc-aside').css('display', 'none');
         
     }
-
-    /*打赏页面隐藏与展示*/
-    
-    function dashangToggle() {
-        $(".shang_box").fadeToggle();
-        $(".hide_box").fadeToggle();
-    }
-    
-
+  });
+  c.click(function(){
+    a.addClass('fadeOut').css('display', 'none');
+    o.css('display', 'block').addClass('fadeIn');
+    m.addClass('moveMain');
+  });
+  o.click(function(){
+    o.css('display', 'none').removeClass('beforeFadeIn');
+    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
+    m.removeClass('moveMain');
+  });
+  $(window).scroll(function(){
+    o.css("top",Math.max(80,260-$(this).scrollTop()));
+  });
+});
 </script>
 
-<!--加入行号的高亮代码块样式-->
-
-<style>
-    pre{
-        position: relative;
-        margin-bottom: 24px;
-        border-radius: 10px;
-        border: 2px solid #e2dede;
-        background: #FFF;
-        overflow: hidden;
-    }
-    code.has-numbering{
-        margin-left: 30px;
-    }
-    .pre-numbering{
-        margin: 0px;
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 20px;
-        padding: 0.5em 3px 0.7em 5px;
-        border-right: 1px solid #C3CCD0;
-        text-align: right;
-        color: #AAA;
-        background-color: #fafafa;
-    }
-</style>
-
-<!--自定义样式设置-->
-<style>
-    
-    .nav-right nav a.hover, #local-search-result a.hover{
-        background-color: #e2e0e0;
-    }
-    
-    
-
-    /*列表样式*/
-    
-    .post .pjax article .article-entry>ol, .post .pjax article .article-entry>ul, .post .pjax article>ol, .post .pjax article>ul{
-        border: #e2dede solid 2px;
-        border-radius: 10px;
-        padding: 10px 32px 10px 56px;
-    }
-    .post .pjax article .article-entry li>ol, .post .pjax article .article-entry li>ul,.post .pjax article li>ol, .post .pjax article li>ul{
-        padding-top: 5px;
-        padding-bottom: 5px;
-    }
-    .post .pjax article .article-entry>ol>li, .post .pjax article .article-entry>ul>li,.post .pjax article>ol>li, .post .pjax article>ul>li{
-        margin-bottom: auto;
-        margin-left: auto;
-    }
-    .post .pjax article .article-entry li>ol>li, .post .pjax article .article-entry li>ul>li,.post .pjax article li>ol>li, .post .pjax article li>ul>li{
-        margin-bottom: auto;
-        margin-left: auto;
-    }
-    
-
-    /*引用块样式*/
-    
-    .post .pjax article blockquote {
-        padding: 10px 20px;
-        background-color: white;
-        border: none;
-        border-left: 4px solid #42b983;
-        border-right: 4px solid #42b983;
-        border-radius: 10px;
-    }
-    
-
-    /*文章列表背景图*/
-    
-    .nav-right:before {
-        content: ' ';
-        display: block;
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        opacity: 0.1;
-        background: url("http://oncj6b2vl.bkt.clouddn.com/FlSExUGfRSaqxkK5v42CpuI-tXAL.jpg");
-        background-repeat: no-repeat;
-        background-position: 50% 0;
-        -ms-background-size: cover;
-        -o-background-size: cover;
-        -moz-background-size: cover;
-        -webkit-background-size: cover;
-        background-size: cover;
-    }
-    
-</style>
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      h  = $('article h2')
+      ah = $('article h2'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  if(ah.length==0){
+    t.css('display','none');
+  }else{
+    c.click(function(){
+      ta.css('display', 'block').addClass('fadeIn');
+    });
+    o.click(function(){
+      ta.css('display', 'none');
+    });
+    $(window).scroll(function(){
+      ta.css("top",Math.max(140,320-$(this).scrollTop()));
+    });
+  };
+});
+</script>
 
 
-<!-- Root element of PhotoSwipe. Must have class pswp. -->
-<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
-
-    <!-- Background of PhotoSwipe.
-         It's a separate element, as animating opacity is faster than rgba(). -->
-    <div class="pswp__bg"></div>
-
-    <!-- Slides wrapper with overflow:hidden. -->
-    <div class="pswp__scroll-wrap">
-
-        <!-- Container that holds slides. PhotoSwipe keeps only 3 slides in DOM to save memory. -->
-        <!-- don't modify these 3 pswp__item elements, data is added later on. -->
-        <div class="pswp__container">
-            <div class="pswp__item"></div>
-            <div class="pswp__item"></div>
-            <div class="pswp__item"></div>
-        </div>
-
-        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
-        <div class="pswp__ui pswp__ui--hidden">
-
-            <div class="pswp__top-bar">
-
-                <!--  Controls are self-explanatory. Order can be changed. -->
-
-                <div class="pswp__counter"></div>
-
-                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
-
-                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
-
-                <!-- Preloader demo https://codepen.io/dimsemenov/pen/yyBWoR -->
-                <!-- element will get class pswp__preloader--active when preloader is running -->
-                <div class="pswp__preloader">
-                    <div class="pswp__preloader__icn">
-                        <div class="pswp__preloader__cut">
-                            <div class="pswp__preloader__donut"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-                <div class="pswp__share-tooltip"></div>
-            </div>
-
-            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
-            </button>
-
-            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
-            </button>
-
-            <div class="pswp__caption">
-                <div class="pswp__caption__center"></div>
-            </div>
-
-        </div>
-
-    </div>
-
-</div>
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina');
+  var html = [
+  '<a href="#" class="overlay" id="qrcode"></a>',
+  '<div class="qrcode clearfix"><span>扫描二维码分享到微信朋友圈</span><a class="qrclose" href="#share"></a><strong>Loading...Please wait</strong><img id="qrcode-pic" data-src="http://s.jiathis.com/qrcode.php?url=' + encodedUrl + '"/></div>',
+  '<a href="#textlogo" class="article-back-to-top" title="Top"></a>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="QRcode"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="Weibo"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+  $('.article-share-qrcode').click(function(){
+    var imgSrc = $('#qrcode-pic').attr('data-src');
+    $('#qrcode-pic').attr('src', imgSrc);
+    $('#qrcode-pic').load(function(){
+        $('.qrcode strong').text(' ');
+    });
+  });
+});     
+</script>
 
 
 
 
 
+
+
+
+
+  </body>
 </html>
+
