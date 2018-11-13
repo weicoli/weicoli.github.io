@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    
+
+    <title>
+      2.20181003堅持不定時更新原則--用戶登錄--終端terminal--交互式接口--shell簡單介紹 | Sea crab Fried rice 
+    </title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    
+      <meta name="author" content="Weico Li">
+    
+    
+
+    <meta name="description" content="登錄用戶root用戶一個特殊的管理用戶也被稱為超級用戶root已接近完整的系統控制對系統損害幾乎有無限的能力除非必要，不要登錄為root   普通（非特權）用戶權限有限造成損害的能力比較有限   終端terminal&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;在Linux系统中，终端是一种字符型设备，它有多种类型，通常使用tty来简称各种类型的终端设备。tty是Teletype的缩写，Tele">
+<meta name="keywords" content="基础">
+<meta property="og:type" content="article">
+<meta property="og:title" content="2.20181003堅持不定時更新原則--用戶登錄--終端terminal--交互式接口--shell簡單介紹 | Sea crab Fried rice">
+<meta property="og:url" content="http://yoursite.com/2018/11/13/2.20181003堅持不定時更新原則--用戶登錄--終端terminal--交互式接口--shell簡單介紹/index.html">
+<meta property="og:site_name" content="Sea crab Fried rice">
+<meta property="og:description" content="登錄用戶root用戶一個特殊的管理用戶也被稱為超級用戶root已接近完整的系統控制對系統損害幾乎有無限的能力除非必要，不要登錄為root   普通（非特權）用戶權限有限造成損害的能力比較有限   終端terminal&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;在Linux系统中，终端是一种字符型设备，它有多种类型，通常使用tty来简称各种类型的终端设备。tty是Teletype的缩写，Tele">
+<meta property="og:locale" content="default">
+<meta property="og:image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1538543951232&di=da037d8f601a3dbc3af42c9d0d5b4b01&imgtype=jpg&src=http%3A%2F%2Fimg3.imgtn.bdimg.com%2Fit%2Fu%3D3582207643%2C799150222%26fm%3D214%26gp%3D0.jpg">
+<meta property="og:image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1538544979513&di=156699971e381fb495a7668bec0ac239&imgtype=0&src=http%3A%2F%2Fimg1.51cto.com%2Fattachment%2F201405%2F18%2F8926377_1400408376p8az.png">
+<meta property="og:updated_time" content="2018-10-03T06:13:40.409Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="2.20181003堅持不定時更新原則--用戶登錄--終端terminal--交互式接口--shell簡單介紹 | Sea crab Fried rice">
+<meta name="twitter:description" content="登錄用戶root用戶一個特殊的管理用戶也被稱為超級用戶root已接近完整的系統控制對系統損害幾乎有無限的能力除非必要，不要登錄為root   普通（非特權）用戶權限有限造成損害的能力比較有限   終端terminal&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;在Linux系统中，终端是一种字符型设备，它有多种类型，通常使用tty来简称各种类型的终端设备。tty是Teletype的缩写，Tele">
+<meta name="twitter:image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1538543951232&di=da037d8f601a3dbc3af42c9d0d5b4b01&imgtype=jpg&src=http%3A%2F%2Fimg3.imgtn.bdimg.com%2Fit%2Fu%3D3582207643%2C799150222%26fm%3D214%26gp%3D0.jpg">
+    
+    
+    
+      <link rel="icon" type="image/x-icon" href="/favicon.png">
+    
+    <link rel="stylesheet" href="/css/uno.css">
+    <link rel="stylesheet" href="/css/highlight.css">
+    <link rel="stylesheet" href="/css/archive.css">
+    <link rel="stylesheet" href="/css/china-social-icon.css">
+
+</head>
+<body>
+
+    <span class="mobile btn-mobile-menu">
+        <i class="icon icon-list btn-mobile-menu__icon"></i>
+        <i class="icon icon-x-circle btn-mobile-close__icon hidden"></i>
+    </span>
+
+    
+
+<header class="panel-cover panel-cover--collapsed">
+
+
+  <div class="panel-main">
+
+  
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+
+        
+
+        <h1 class="panel-cover__title panel-title"><a href="/" title="link to homepage">Sea crab Fried rice</a></h1>
+        <hr class="panel-cover__divider">
+
+        
+
+        <div class="navigation-wrapper">
+
+          <nav class="cover-navigation cover-navigation--primary">
+            <ul class="navigation">
+
+              
+                
+                <li class="navigation__item"><a href="/#blog" title="" class="blog-button">首页</a></li>
+              
+                
+                <li class="navigation__item"><a href="/about" title="" class="">关于</a></li>
+              
+                
+                <li class="navigation__item"><a href="/archive" title="" class="">归档</a></li>
+              
+
+            </ul>
+          </nav>
+
+          <!-- ----------------------------
+To add a new social icon simply duplicate one of the list items from below
+and change the class in the <i> tag to match the desired social network
+and then add your link to the <a>. Here is a full list of social network
+classes that you can use:
+
+    icon-social-500px
+    icon-social-behance
+    icon-social-delicious
+    icon-social-designer-news
+    icon-social-deviant-art
+    icon-social-digg
+    icon-social-dribbble
+    icon-social-facebook
+    icon-social-flickr
+    icon-social-forrst
+    icon-social-foursquare
+    icon-social-github
+    icon-social-google-plus
+    icon-social-hi5
+    icon-social-instagram
+    icon-social-lastfm
+    icon-social-linkedin
+    icon-social-medium
+    icon-social-myspace
+    icon-social-path
+    icon-social-pinterest
+    icon-social-rdio
+    icon-social-reddit
+    icon-social-skype
+    icon-social-spotify
+    icon-social-stack-overflow
+    icon-social-steam
+    icon-social-stumbleupon
+    icon-social-treehouse
+    icon-social-tumblr
+    icon-social-twitter
+    icon-social-vimeo
+    icon-social-xbox
+    icon-social-yelp
+    icon-social-youtube
+    icon-social-zerply
+    icon-mail
+
+-------------------------------->
+
+<!-- add social info here -->
+
+
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="panel-cover--overlay"></div>
+  </div>
+</header>
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner entry">
+            
+
+<article class="post-container post-container--single">
+
+  <header class="post-header">
+    
+    <h1 class="post-title">2.20181003堅持不定時更新原則--用戶登錄--終端terminal--交互式接口--shell簡單介紹</h1>
+
+    
+
+    <div class="post-meta">
+      <time datetime="2018-11-13" class="post-meta__date date">2018-11-13</time> 
+
+      <span class="post-meta__tags tags">
+
+          
+            <font class="categories">
+            &#8226; 分类:
+            <a class="categories-link" href="/categories/linux/">linux</a>
+            </font>
+          
+
+          
+             &#8226; 标签:
+            <font class="tags">
+              <a class="tags-link" href="/tags/基础/">基础</a>
+            </font>
+          
+
+      </span>
+    </div>
+    
+    
+
+  </header>
+
+  <section id="post-content" class="article-content post">
+    <h1 id="登錄用戶"><a href="#登錄用戶" class="headerlink" title="登錄用戶"></a>登錄用戶</h1><h2 id="root用戶"><a href="#root用戶" class="headerlink" title="root用戶"></a>root用戶</h2><p>一個特殊的管理用戶<br>也被稱為超級用戶<br>root已接近完整的系統控制<br>對系統損害幾乎有無限的能力<br>除非必要，不要登錄為root  </p>
+<h2 id="普通（非特權）用戶"><a href="#普通（非特權）用戶" class="headerlink" title="普通（非特權）用戶"></a>普通（非特權）用戶</h2><p>權限有限<br>造成損害的能力比較有限  </p>
+<h1 id="終端terminal"><a href="#終端terminal" class="headerlink" title="終端terminal"></a>終端terminal</h1><p>&ensp;&ensp;&ensp;&ensp;在Linux系统中，终端是一种字符型设备，它有多种类型，通常使用tty来简称各种类型的终端设备。tty是Teletype的缩写，Teletype是最早出现的一种终端设备，很像电传打字机，是由Teletype公司生产的。Linux中包含如下几类终端设备：<br><img src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1538543951232&amp;di=da037d8f601a3dbc3af42c9d0d5b4b01&amp;imgtype=jpg&amp;src=http%3A%2F%2Fimg3.imgtn.bdimg.com%2Fit%2Fu%3D3582207643%2C799150222%26fm%3D214%26gp%3D0.jpg" alt="終端">   </p>
+<h3 id="設備終端"><a href="#設備終端" class="headerlink" title="設備終端"></a><strong>設備終端</strong></h3><p>鍵盤鼠標顯示器  </p>
+<h3 id="物理終端（控制台終端-dev-console"><a href="#物理終端（控制台終端-dev-console" class="headerlink" title="物理終端（控制台終端/dev/console)"></a><strong>物理終端</strong>（控制台終端/dev/console)</h3><p>&ensp;&ensp;&ensp;&ensp;如果当前进程有控制终端（Controlling Terminal）的话，那么/dev/tty就是当前进程的控制终端的设备特殊文件。可以使用命令“ps –ax”来查看进程与哪个控制终端相连使用命令“tty”可以查看它具体对应哪个实际终端设备。/dev/tty有些类似于到实际所使用终端设备的一个联接。<br>&ensp;&ensp;&ensp;&ensp;在UNIX系统中，计算机显示器通常被称为控制台终端（Console）。它仿真了类型为Linux的一种终端（TERM=Linux），并且有一些设备特殊文件与之相关联：tty0、tty1、tty2等。当用户在控制台上登录时，使用的是tty1。使用Alt+[F1—F6]组合键时，我们就可以切换到tty2、tty3等上面去。tty1–tty6等称为虚拟终端，而tty0则是当前所使用虚拟终端的一个别名，系统所产生的信息会发送到该终端上。因此不管当前正在使用哪个虚拟终端，系统信息都会发送到控制台终端上。用户可以登录到不同的虚拟终端上去，因而可以让系统同时有几个不同的会话期存在。只有系统或超级用户root可以向/dev/tty0进行写操作。在Linux 中，可以在系统启动命令行里指定当前的输出终端，格式如下：console=device, optionsdevice指代的是终端设备，可以是tty0（前台的虚拟终端）、ttyX（第X个虚拟终端）、ttySX（第X个串口）、lp0（第一个并口）等。options指代对device进行的设置，它取决于具体的设备驱动。对于串口设备，参数用来定义为：波特率、校验位、位数，格式为BBBBPN，其中BBBB表示波特率，P表示校验（n/o/e），N表示位数，默认options是9600n8。    用户可以在内核命令行中同时设定多个终端，这样输出将会在所有的终端上显示，而当用户调用open()打开/dev/console时，最后一个终端将会返回作为当前值。例如：console=ttyS1, 9600 console=tty0定义了2个终端，而调用open()打开/dev/console时，将使用虚拟终端tty0。但是内核消息会在tty0 VGA虚拟终端和串口ttyS1上同时显示。<br>&ensp;&ensp;&ensp;&ensp;通过查看/proc/tty/drivers文件可以获知什么类型的tty设备存在以及什么驱动被加载到内核，这个文件包括一个当前存在的不同 tty 驱动的列表，包括驱动名、缺省的节点名、驱动的主编号、这个驱动使用的次编号范围，以及 tty 驱动的类型。  </p>
+<h3 id="虛擬終端（tty：teletypewriters，-dev-tty-為-1-6"><a href="#虛擬終端（tty：teletypewriters，-dev-tty-為-1-6" class="headerlink" title="虛擬終端（tty：teletypewriters，/dev/tty# #為[1-6])"></a><strong>虛擬終端</strong>（tty：teletypewriters，/dev/tty# #為[1-6])</h3><p>&ensp;&ensp;&ensp;&ensp;tty0、tty1、tty2等。当用户在控制台上登录时，使用的是tty1。使用Alt+[F1—F6]组合键时，我们就可以切换到tty2、tty3等上面去。tty1–tty6等称为虚拟终端，而tty0则是当前所使用虚拟终端的一个别名，系统所产生的信息会发送到该终端上。因此不管当前正在使用哪个虚拟终端，系统信息都会发送到控制台终端上。 </p>
+<h3 id="圖形終端（-dev-tty7-startx-xwindows"><a href="#圖形終端（-dev-tty7-startx-xwindows" class="headerlink" title="圖形終端（/dev/tty7)startx,xwindows"></a><strong>圖形終端</strong>（/dev/tty7)startx,xwindows</h3><p>CentOS6:Crtl+Alt+F7<br>CentOS7:在哪個終端啟動，即為于哪個虛擬終端  </p>
+<h3 id="串行終端（-dev-ttyS"><a href="#串行終端（-dev-ttyS" class="headerlink" title="串行終端（/dev/ttyS#)"></a><strong>串行終端</strong>（/dev/ttyS#)</h3><p>&ensp;&ensp;&ensp;&ensp;串行端口终端（Serial Port Terminal）是使用计算机串行端口连接的终端设备。计算机把每个串行端口都看作是一个字符设备。这些串行端口所对应的设备名称是 /dev/ttyS0（或/dev/tts/0）、/dev/ttyS1（或/dev/tts/1）等，设备号分别是（4,0）、（4,1）等。    在命令行上把标准输出重定向到端口对应的设备文件名上就可以通过该端口发送数据，例如，在命令行提示符下键入： echo test &gt; /dev/ttyS1会把单词“test”发送到连接在ttyS1端口的设备上。   </p>
+<h3 id="偽終端（pty-pseudo-tty-dev-pts"><a href="#偽終端（pty-pseudo-tty-dev-pts" class="headerlink" title="偽終端（pty:pseudo-tty,/dev/pts/#)"></a><strong>偽終端</strong>（pty:pseudo-tty,/dev/pts/#)</h3><p>&ensp;&ensp;&ensp;&ensp;伪终端（Pseudo Terminal）是成对的逻辑终端设备，并存在成对的设备文件，如/dev/ptyp3和/dev/ttyp3，它们与实际物理设备并不直接相关。如果一个程序把ttyp3看作是一个串行端口设备，则它对该端口的读/写操作会反映在该逻辑终端设备对应的ptyp3上，而ptyp3则是另一个程序用于读写操作的逻辑设备。这样，两个程序就可以通过这种逻辑设备进行互相交流，使用ttyp3的程序会认为自己正在与一个串行端口进行通信。<br>&ensp;&ensp;&ensp;&ensp;以telnet 为例，如果某人在使用telnet程序连接到Linux系统，则telnet程序就可能会开始连接到设备ptyp2上，而此时一个getty程序会运行在对应的ttyp2端口上。当telnet从远端获取了一个字符时，该字符就会通过ptyp2、ttyp2传递给 getty程序，而getty程序则会通过ttyp2、ptyp2和telnet程序返回“login:”字符串信息。这样，登录程序与telnet程序 就通过伪终端进行通信。通过使用适当的软件，可以把2个或多个伪终端设备连接到同一个物理串行端口上。  </p>
+<h3 id="查看當前的終端設備："><a href="#查看當前的終端設備：" class="headerlink" title="查看當前的終端設備："></a><strong>查看當前的終端設備</strong>：</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@centos7 ~]<span class="comment"># tty</span></span><br><span class="line">/dev/pts/0</span><br></pre></td></tr></table></figure>
+<h1 id="交互式接口"><a href="#交互式接口" class="headerlink" title="交互式接口"></a>交互式接口</h1><p>&ensp;&ensp;&ensp;&ensp;交互式接口：啟動終端后，在終端設備附加一個交互式應用程序。<br>GUI:Graphic User Interdace<br>X protocol,window manager,desktop<br>Desktop:<br>Gnome(C,圖形庫gtk)，<br>KDE（C++，圖形庫qt）<br>XFCE(輕量級桌面)<br>CLI:Command Line Interdace<br>Shell程序：sh(bourn史蒂夫·伯恩)csh  tcsh  ksh(korn)  bash(bourn again shell)GPL zsh  </p>
+<h1 id="什麼是shell"><a href="#什麼是shell" class="headerlink" title="什麼是shell"></a>什麼是shell</h1><p>&ensp;&ensp;&ensp;&ensp;shell是linux系統的用戶界面，提供了用戶與內核進行交互操作的一種接口，她接收用戶輸入的命令并把它送入內核去執行。<br>&ensp;&ensp;&ensp;&ensp;shell也被稱為linux的命令解釋器（command interperter)<br>&ensp;&ensp;&ensp;&ensp;shell是一種高級程序設計語言<br><img src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1538544979513&amp;di=156699971e381fb495a7668bec0ac239&amp;imgtype=0&amp;src=http%3A%2F%2Fimg1.51cto.com%2Fattachment%2F201405%2F18%2F8926377_1400408376p8az.png" alt="shell">  </p>
+<h2 id="bash-shell"><a href="#bash-shell" class="headerlink" title="bash shell"></a>bash shell</h2><p>&ensp;&ensp;&ensp;&ensp;GNU Bourne-Again Shell(bash)是GNU計劃中重要的工具軟件之一，目前也是linux標準的shell，與sh兼容。<br>&ensp;&ensp;&ensp;&ensp;CentOS默認使用<br>顯示當前使用的shell<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@centos7 ~]<span class="comment"># echo $&#123;SHELL&#125;</span></span><br><span class="line">/bin/bash</span><br></pre></td></tr></table></figure></p>
+<p>顯示當前系統使用的所有shell<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">[root@centos7 ~]<span class="comment"># cat /etc/shells</span></span><br><span class="line">/bin/sh</span><br><span class="line">/bin/bash</span><br><span class="line">/sbin/nologin</span><br><span class="line">/usr/bin/sh</span><br><span class="line">/usr/bin/bash</span><br><span class="line">/usr/sbin/nologin</span><br><span class="line">/bin/tcsh</span><br><span class="line">/bin/csh</span><br></pre></td></tr></table></figure></p>
+
+  </section>
+
+  <section class="post-comments">
+
+    <!-- 将评论系统（例如Disqus、多说、友言、畅言等）提供的代码片段粘贴在这里 -->
+    
+</section>
+
+
+</article>
+
+
+            <footer class="footer">
+
+    <span class="footer__copyright">&copy; 2014-2015. | 由<a href="https://hexo.io/">Hexo</a>强力驱动 | 主题<a href="https://github.com/someus/huno">Huno</a></span>
+    
+</footer>
+        </div>
+    </div>
+
+    <!-- js files -->
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/scale.fix.js"></script>
+    
+
+    
+
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript"> 
+        $(document).ready(function(){
+            MathJax.Hub.Config({ 
+                tex2jax: {inlineMath: [['[latex]','[/latex]'], ['\\(','\\)']]} 
+            });
+        });
+    </script>
+
+
+    
+
+    <script src="/js/awesome-toc.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $.awesome_toc({
+                overlay: true,
+                contentId: "post-content",
+            });
+        });
+    </script>
+
+
+    
+    
+    <!--kill ie6 -->
+<!--[if IE 6]>
+  <script src="//letskillie6.googlecode.com/svn/trunk/2/zh_CN.js"></script>
+<![endif]-->
+
+</body>
+</html>

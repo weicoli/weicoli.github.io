@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    
+
+    <title>
+      9.20181003堅持不定時更新原則--命令行歷史 | Sea crab Fried rice 
+    </title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    
+      <meta name="author" content="Weico Li">
+    
+    
+
+    <meta name="description" content="命令行歷史保存你輸入的命令歷史。可以用它來重複執行命令登錄Shell時，會讀取命令歷史文件中記錄下的命令~/.bash_history登錄進Shell后新執行的命令只會記錄在緩存中；這些命令會用戶退出時“追加”至命令歷史文件中   1. 重複前一個命令，有4中方法: 重複前一個命令使用上方向鍵，并回車執行   按！！并回車執行   1234567[root@centos7 ~]# lsanacon">
+<meta name="keywords" content="基础">
+<meta property="og:type" content="article">
+<meta property="og:title" content="9.20181003堅持不定時更新原則--命令行歷史 | Sea crab Fried rice">
+<meta property="og:url" content="http://yoursite.com/2018/11/13/9.20181003堅持不定時更新原則--命令行歷史/index.html">
+<meta property="og:site_name" content="Sea crab Fried rice">
+<meta property="og:description" content="命令行歷史保存你輸入的命令歷史。可以用它來重複執行命令登錄Shell時，會讀取命令歷史文件中記錄下的命令~/.bash_history登錄進Shell后新執行的命令只會記錄在緩存中；這些命令會用戶退出時“追加”至命令歷史文件中   1. 重複前一個命令，有4中方法: 重複前一個命令使用上方向鍵，并回車執行   按！！并回車執行   1234567[root@centos7 ~]# lsanacon">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-10-03T12:17:59.348Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="9.20181003堅持不定時更新原則--命令行歷史 | Sea crab Fried rice">
+<meta name="twitter:description" content="命令行歷史保存你輸入的命令歷史。可以用它來重複執行命令登錄Shell時，會讀取命令歷史文件中記錄下的命令~/.bash_history登錄進Shell后新執行的命令只會記錄在緩存中；這些命令會用戶退出時“追加”至命令歷史文件中   1. 重複前一個命令，有4中方法: 重複前一個命令使用上方向鍵，并回車執行   按！！并回車執行   1234567[root@centos7 ~]# lsanacon">
+    
+    
+    
+      <link rel="icon" type="image/x-icon" href="/favicon.png">
+    
+    <link rel="stylesheet" href="/css/uno.css">
+    <link rel="stylesheet" href="/css/highlight.css">
+    <link rel="stylesheet" href="/css/archive.css">
+    <link rel="stylesheet" href="/css/china-social-icon.css">
+
+</head>
+<body>
+
+    <span class="mobile btn-mobile-menu">
+        <i class="icon icon-list btn-mobile-menu__icon"></i>
+        <i class="icon icon-x-circle btn-mobile-close__icon hidden"></i>
+    </span>
+
+    
+
+<header class="panel-cover panel-cover--collapsed">
+
+
+  <div class="panel-main">
+
+  
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+
+        
+
+        <h1 class="panel-cover__title panel-title"><a href="/" title="link to homepage">Sea crab Fried rice</a></h1>
+        <hr class="panel-cover__divider">
+
+        
+
+        <div class="navigation-wrapper">
+
+          <nav class="cover-navigation cover-navigation--primary">
+            <ul class="navigation">
+
+              
+                
+                <li class="navigation__item"><a href="/#blog" title="" class="blog-button">首页</a></li>
+              
+                
+                <li class="navigation__item"><a href="/about" title="" class="">关于</a></li>
+              
+                
+                <li class="navigation__item"><a href="/archive" title="" class="">归档</a></li>
+              
+
+            </ul>
+          </nav>
+
+          <!-- ----------------------------
+To add a new social icon simply duplicate one of the list items from below
+and change the class in the <i> tag to match the desired social network
+and then add your link to the <a>. Here is a full list of social network
+classes that you can use:
+
+    icon-social-500px
+    icon-social-behance
+    icon-social-delicious
+    icon-social-designer-news
+    icon-social-deviant-art
+    icon-social-digg
+    icon-social-dribbble
+    icon-social-facebook
+    icon-social-flickr
+    icon-social-forrst
+    icon-social-foursquare
+    icon-social-github
+    icon-social-google-plus
+    icon-social-hi5
+    icon-social-instagram
+    icon-social-lastfm
+    icon-social-linkedin
+    icon-social-medium
+    icon-social-myspace
+    icon-social-path
+    icon-social-pinterest
+    icon-social-rdio
+    icon-social-reddit
+    icon-social-skype
+    icon-social-spotify
+    icon-social-stack-overflow
+    icon-social-steam
+    icon-social-stumbleupon
+    icon-social-treehouse
+    icon-social-tumblr
+    icon-social-twitter
+    icon-social-vimeo
+    icon-social-xbox
+    icon-social-yelp
+    icon-social-youtube
+    icon-social-zerply
+    icon-mail
+
+-------------------------------->
+
+<!-- add social info here -->
+
+
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="panel-cover--overlay"></div>
+  </div>
+</header>
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner entry">
+            
+
+<article class="post-container post-container--single">
+
+  <header class="post-header">
+    
+    <h1 class="post-title">9.20181003堅持不定時更新原則--命令行歷史</h1>
+
+    
+
+    <div class="post-meta">
+      <time datetime="2018-11-13" class="post-meta__date date">2018-11-13</time> 
+
+      <span class="post-meta__tags tags">
+
+          
+            <font class="categories">
+            &#8226; 分类:
+            <a class="categories-link" href="/categories/linux/">linux</a>
+            </font>
+          
+
+          
+             &#8226; 标签:
+            <font class="tags">
+              <a class="tags-link" href="/tags/基础/">基础</a>
+            </font>
+          
+
+      </span>
+    </div>
+    
+    
+
+  </header>
+
+  <section id="post-content" class="article-content post">
+    <h1 id="命令行歷史"><a href="#命令行歷史" class="headerlink" title="命令行歷史"></a>命令行歷史</h1><p>保存你輸入的命令歷史。可以用它來重複執行命令<br>登錄Shell時，會讀取命令歷史文件中記錄下的命令~/.bash_history<br>登錄進Shell后新執行的命令只會記錄在緩存中；這些命令會用戶退出時“追加”至命令歷史文件中  </p>
+<h4 id="1-重複前一個命令，有4中方法"><a href="#1-重複前一個命令，有4中方法" class="headerlink" title="1. 重複前一個命令，有4中方法:"></a><strong>1. 重複前一個命令，有4中方法</strong>:</h4><ol>
+<li>重複前一個命令使用上方向鍵，并回車執行  </li>
+<li><p>按！！并回車執行  </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">[root@centos7 ~]<span class="comment"># ls</span></span><br><span class="line">anaconda-ks.cfg  Documents  initial-setup-ks.cfg  Pictures  Templates</span><br><span class="line">Desktop          Downloads  Music                 Public    Videos</span><br><span class="line">[root@centos7 ~]<span class="comment"># !!</span></span><br><span class="line">ls</span><br><span class="line">anaconda-ks.cfg  Documents  initial-setup-ks.cfg  Pictures  Templates</span><br><span class="line">Desktop          Downloads  Music                 Public    Videos</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>輸入!-1并回車執行  </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">[root@centos7 ~]<span class="comment"># ls</span></span><br><span class="line">anaconda-ks.cfg  Documents  initial-setup-ks.cfg  Pictures  Templates</span><br><span class="line">Desktop          Downloads  Music                 Public    Videos</span><br><span class="line">[root@centos7 ~]<span class="comment"># !-1</span></span><br><span class="line">ls</span><br><span class="line">anaconda-ks.cfg  Documents  initial-setup-ks.cfg  Pictures  Templates</span><br><span class="line">Desktop          Downloads  Music                 Public    Videos</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>按Ctrl+p并回車執行  </p>
+<h4 id="2-0-執行前一條命令（去除參數）"><a href="#2-0-執行前一條命令（去除參數）" class="headerlink" title="2. !:0 執行前一條命令（去除參數）"></a>2. !:0 執行前一條命令（去除參數）</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">[root@centos7 ~]<span class="comment"># ls -a</span></span><br><span class="line">.                .bash_profile  .dbus      .ICEauthority         Public</span><br><span class="line">..               .bashrc        Desktop    initial-setup-ks.cfg  .tcshrc</span><br><span class="line">anaconda-ks.cfg  .cache         Documents  .<span class="built_in">local</span>                Templates</span><br><span class="line">.bash_history    .config        Downloads  Music                 Videos</span><br><span class="line">.bash_logout     .cshrc         .esd_auth  Pictures</span><br><span class="line">[root@centos7 ~]<span class="comment"># !:0</span></span><br><span class="line">ls</span><br><span class="line">anaconda-ks.cfg  Documents  initial-setup-ks.cfg  Pictures  Templates</span><br><span class="line">Desktop          Downloads  Music                 Public    Videos</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h4 id="3-Ctrl-n顯示當前歷史中的下一條命令，但不執行"><a href="#3-Ctrl-n顯示當前歷史中的下一條命令，但不執行" class="headerlink" title="3. Ctrl+n顯示當前歷史中的下一條命令，但不執行"></a>3. Ctrl+n顯示當前歷史中的下一條命令，但不執行</h4><h4 id="4-Ctrl-j執行當前命令"><a href="#4-Ctrl-j執行當前命令" class="headerlink" title="4. Ctrl+j執行當前命令"></a>4. Ctrl+j執行當前命令</h4><h4 id="5-n執行history命令輸出對應序號n的命令"><a href="#5-n執行history命令輸出對應序號n的命令" class="headerlink" title="5. !n執行history命令輸出對應序號n的命令"></a>5. !n執行history命令輸出對應序號n的命令</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[root@centos7 ~]<span class="comment"># !83</span></span><br><span class="line">ls</span><br><span class="line">anaconda-ks.cfg  Documents  initial-setup-ks.cfg  Pictures  Templates</span><br><span class="line">Desktop          Downloads  Music                 Public    Videos</span><br></pre></td></tr></table></figure>
+<h4 id="6-n執行history命令中倒數第n個命令"><a href="#6-n執行history命令中倒數第n個命令" class="headerlink" title="6. !-n執行history命令中倒數第n個命令"></a>6. !-n執行history命令中倒數第n個命令</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">[root@centos7 ~]<span class="comment"># !-5</span></span><br><span class="line">ls -a</span><br><span class="line">.                .bash_profile  .dbus      .ICEauthority         Public</span><br><span class="line">..               .bashrc        Desktop    initial-setup-ks.cfg  .tcshrc</span><br><span class="line">anaconda-ks.cfg  .cache         Documents  .<span class="built_in">local</span>                Templates</span><br><span class="line">.bash_history    .config        Downloads  Music                 Videos</span><br><span class="line">.bash_logout     .cshrc         .esd_auth  Pictures</span><br></pre></td></tr></table></figure>
+<h4 id="7-string-重複前一個以“string”開頭的命令"><a href="#7-string-重複前一個以“string”開頭的命令" class="headerlink" title="7. !string 重複前一個以“string”開頭的命令"></a>7. !string 重複前一個以“string”開頭的命令</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[root@centos7 ~]<span class="comment"># !man</span></span><br><span class="line">man -f <span class="built_in">local</span></span><br><span class="line"><span class="built_in">local</span> (1)            - bash built-in commands, see bash(1)</span><br><span class="line"><span class="built_in">local</span> (8)            - Postfix <span class="built_in">local</span> mail delivery</span><br></pre></td></tr></table></figure>
+<h4 id="8-string-重複前一個包含string的命令"><a href="#8-string-重複前一個包含string的命令" class="headerlink" title="8. !?string 重複前一個包含string的命令"></a>8. !?string 重複前一個包含string的命令</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[root@centos7 ~]<span class="comment"># !?-f</span></span><br><span class="line">man -f <span class="built_in">local</span></span><br><span class="line"><span class="built_in">local</span> (1)            - bash built-in commands, see bash(1)</span><br><span class="line"><span class="built_in">local</span> (8)            - Postfix <span class="built_in">local</span> mail delivery</span><br></pre></td></tr></table></figure>
+<h4 id="9-string-p-僅打印命令歷史，而不執行"><a href="#9-string-p-僅打印命令歷史，而不執行" class="headerlink" title="9. !string:p 僅打印命令歷史，而不執行"></a>9. !string:p 僅打印命令歷史，而不執行</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@centos7 ~]<span class="comment"># !man:p</span></span><br><span class="line">man -f <span class="built_in">local</span></span><br></pre></td></tr></table></figure>
+<h4 id="10-p-打印輸出-（上一條命令的最後參數）的內容"><a href="#10-p-打印輸出-（上一條命令的最後參數）的內容" class="headerlink" title="10. !$:p 打印輸出!$（上一條命令的最後參數）的內容"></a>10. !$:p 打印輸出!$（上一條命令的最後參數）的內容</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">[root@centos7 ~]<span class="comment"># ls /etc/fstab /etc/motd</span></span><br><span class="line">/etc/fstab  /etc/motd</span><br><span class="line">[root@centos7 ~]<span class="comment"># ll !$:p</span></span><br><span class="line">ll /etc/motd</span><br><span class="line">[root@centos7 ~]<span class="comment"># ll !$</span></span><br><span class="line">ll /etc/motd</span><br><span class="line">-rw-r--r--. 1 root root 0 Jun  7  2013 /etc/motd</span><br></pre></td></tr></table></figure>
+<h4 id="11-p-打印輸出-上一條命令中的所有參數-的內容"><a href="#11-p-打印輸出-上一條命令中的所有參數-的內容" class="headerlink" title="11. !:p 打印輸出!(上一條命令中的所有參數)的內容"></a>11. !<em>:p 打印輸出!</em>(上一條命令中的所有參數)的內容</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[root@centos7 ~]<span class="comment"># ls /etc/fstab /etc/motd</span></span><br><span class="line">/etc/fstab  /etc/motd</span><br><span class="line">[root@centos7 ~]<span class="comment"># !*:p </span></span><br><span class="line">/etc/fstab /etc/motd</span><br></pre></td></tr></table></figure>
+<h4 id="12-string-刪除上一條命令中的第一個string"><a href="#12-string-刪除上一條命令中的第一個string" class="headerlink" title="12. ^string 刪除上一條命令中的第一個string"></a>12. ^string 刪除上一條命令中的第一個string</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[root@centos7 ~]<span class="comment"># echo abc123 abcdef</span></span><br><span class="line">abc123 abcdef</span><br><span class="line">[root@centos7 ~]<span class="comment"># ^abc</span></span><br><span class="line"><span class="built_in">echo</span> 123 abcdef</span><br><span class="line">123 abcdef</span><br></pre></td></tr></table></figure>
+<h4 id="13-string1-string2-將上一條命令中的第一個string1替換為string2"><a href="#13-string1-string2-將上一條命令中的第一個string1替換為string2" class="headerlink" title="13. ^string1^string2 將上一條命令中的第一個string1替換為string2"></a>13. ^string1^string2 將上一條命令中的第一個string1替換為string2</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[root@centos7 ~]<span class="comment"># echo abc123 abcdef</span></span><br><span class="line">abc123 abcdef</span><br><span class="line">[root@centos7 ~]<span class="comment"># ^abc^xzy</span></span><br><span class="line"><span class="built_in">echo</span> xzy123 abcdef</span><br><span class="line">xzy123 abcdef</span><br></pre></td></tr></table></figure>
+<h4 id="14-gs-string1-string2-將上一條命令中所有的string1都替換為string2"><a href="#14-gs-string1-string2-將上一條命令中所有的string1都替換為string2" class="headerlink" title="14. !:gs/string1/string2 將上一條命令中所有的string1都替換為string2"></a>14. !:gs/string1/string2 將上一條命令中所有的string1都替換為string2</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[root@centos7 ~]<span class="comment"># echo /dev/sda /dev/sdb</span></span><br><span class="line">/dev/sda /dev/sdb</span><br><span class="line">[root@centos7 ~]<span class="comment"># !:gs/dev/etc</span></span><br><span class="line"><span class="built_in">echo</span> /etc/sda /etc/sdb</span><br><span class="line">/etc/sda /etc/sdb</span><br></pre></td></tr></table></figure>
+<h4 id="15-使用up（向上）和down（向下）鍵來上下瀏覽從前輸入的命令"><a href="#15-使用up（向上）和down（向下）鍵來上下瀏覽從前輸入的命令" class="headerlink" title="15. 使用up（向上）和down（向下）鍵來上下瀏覽從前輸入的命令"></a>15. 使用up（向上）和down（向下）鍵來上下瀏覽從前輸入的命令</h4><h4 id="16-ctrl-r來在命令歷史中搜索命令"><a href="#16-ctrl-r來在命令歷史中搜索命令" class="headerlink" title="16. ctrl+r來在命令歷史中搜索命令"></a>16. ctrl+r來在命令歷史中搜索命令</h4><p>&ensp;&ensp;&ensp;&ensp;(reverse-i-search)`’:   </p>
+<h4 id="17-Ctrl-g-從歷史搜索模式退出"><a href="#17-Ctrl-g-從歷史搜索模式退出" class="headerlink" title="17. Ctrl+g:從歷史搜索模式退出"></a>17. Ctrl+g:從歷史搜索模式退出</h4><h4 id="18-要重新調用前一個命令中最後一個參數"><a href="#18-要重新調用前一個命令中最後一個參數" class="headerlink" title="18. 要重新調用前一個命令中最後一個參數"></a>18. 要重新調用前一個命令中最後一個參數</h4><p>&ensp;&ensp;&ensp;&ensp;!$表示<br>&ensp;&ensp;&ensp;&ensp;Esc,.(點擊Esc鍵后鬆開，然後點擊.鍵)<br>&ensp;&ensp;&ensp;&ensp;Alt+.(按住Alt鍵的同時點擊.鍵)  </p>
+<h4 id="19-command-利用上一個命令的第一個參數做cmd的參數"><a href="#19-command-利用上一個命令的第一個參數做cmd的參數" class="headerlink" title="19. command !^ 利用上一個命令的第一個參數做cmd的參數"></a>19. command !^ 利用上一個命令的第一個參數做cmd的參數</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[root@centos7 ~]<span class="comment"># echo /etc/sda /etc/sdb</span></span><br><span class="line">/etc/sda /etc/sdb</span><br><span class="line">[root@centos7 ~]<span class="comment"># echo !^</span></span><br><span class="line"><span class="built_in">echo</span> /etc/sda</span><br><span class="line">/etc/sda</span><br></pre></td></tr></table></figure>
+<h4 id="20-command-利用上一個命令的最後一個參數做cmd的參數"><a href="#20-command-利用上一個命令的最後一個參數做cmd的參數" class="headerlink" title="20. command !$ 利用上一個命令的最後一個參數做cmd的參數"></a>20. command !$ 利用上一個命令的最後一個參數做cmd的參數</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[root@centos7 ~]<span class="comment"># echo /etc/sda /etc/sdb</span></span><br><span class="line">/etc/sda /etc/sdb</span><br><span class="line">[root@centos7 ~]<span class="comment"># echo !$</span></span><br><span class="line"><span class="built_in">echo</span> /etc/sdb</span><br><span class="line">/etc/sdb</span><br></pre></td></tr></table></figure>
+<h4 id="21-command-利用上一個命令的全部參數做cmd的參數"><a href="#21-command-利用上一個命令的全部參數做cmd的參數" class="headerlink" title="21. command !* 利用上一個命令的全部參數做cmd的參數"></a>21. command !* 利用上一個命令的全部參數做cmd的參數</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[root@centos7 ~]<span class="comment"># echo /etc/sda /etc/sdb</span></span><br><span class="line">/etc/sda /etc/sdb</span><br><span class="line">[root@centos7 ~]<span class="comment"># echo !*</span></span><br><span class="line"><span class="built_in">echo</span> /etc/sda /etc/sdb</span><br><span class="line">/etc/sda /etc/sdb</span><br></pre></td></tr></table></figure>
+<h4 id="22-command-n-利用上一個命令的第n個參數做cmd的參數"><a href="#22-command-n-利用上一個命令的第n個參數做cmd的參數" class="headerlink" title="22. command !:n 利用上一個命令的第n個參數做cmd的參數"></a>22. command !:n 利用上一個命令的第n個參數做cmd的參數</h4><pre><code class="bash">[root@centos7 ~]<span class="comment"># echo /etc/sda /etc/sdb</span>
+/etc/sda /etc/sdb
+[root@centos7 ~]<span class="comment"># echo !:2</span>
+<span class="built_in">echo</span> /etc/sdb
+/etc/sdb
+</code></pre>
+<h4 id="23-command-n-调用第n条命令的第一个参数"><a href="#23-command-n-调用第n条命令的第一个参数" class="headerlink" title="23. command !n:^ 调用第n条命令的第一个参数"></a>23. command !n:^ 调用第n条命令的第一个参数</h4><h4 id="24-command-n-调用第n条命令的最后一个参数"><a href="#24-command-n-调用第n条命令的最后一个参数" class="headerlink" title="24. command !n:$ 调用第n条命令的最后一个参数"></a>24. command !n:$ 调用第n条命令的最后一个参数</h4><h4 id="25-command-n-m调用第n条命令的第m个参数"><a href="#25-command-n-m调用第n条命令的第m个参数" class="headerlink" title="25. command !n:m调用第n条命令的第m个参数"></a>25. command !n:m调用第n条命令的第m个参数</h4><h4 id="26-command-n-调用第n条命令的所有参数"><a href="#26-command-n-调用第n条命令的所有参数" class="headerlink" title="26. command !n:* 调用第n条命令的所有参数"></a>26. command !n:* 调用第n条命令的所有参数</h4><h4 id="27-command-string-从命令历史中搜索以string-开头的命令，并获取它的第一个参数"><a href="#27-command-string-从命令历史中搜索以string-开头的命令，并获取它的第一个参数" class="headerlink" title="27. command !string:^ 从命令历史中搜索以string 开头的命令，并获取它的第一个参数"></a>27. command !string:^ 从命令历史中搜索以string 开头的命令，并获取它的第一个参数</h4><h4 id="28-command-string-从命令历史中搜索以string-开头的命令-并获取它的最后一个参数"><a href="#28-command-string-从命令历史中搜索以string-开头的命令-并获取它的最后一个参数" class="headerlink" title="28. command !string:$ 从命令历史中搜索以string 开头的命令,并获取它的最后一个参数"></a>28. command !string:$ 从命令历史中搜索以string 开头的命令,并获取它的最后一个参数</h4><h4 id="29-command-string-n-从命令历史中搜索以string-开头的命令，并获取它的第n个参数"><a href="#29-command-string-n-从命令历史中搜索以string-开头的命令，并获取它的第n个参数" class="headerlink" title="29. command !string:n 从命令历史中搜索以string 开头的命令，并获取它的第n个参数"></a>29. command !string:n 从命令历史中搜索以string 开头的命令，并获取它的第n个参数</h4><h4 id="30-command-string-从命令历史中搜索以string-开头的命令，并获取它的所有参数"><a href="#30-command-string-从命令历史中搜索以string-开头的命令，并获取它的所有参数" class="headerlink" title="30. command !string:* 从命令历史中搜索以string 开头的命令，并获取它的所有参数"></a>30. command !string:* 从命令历史中搜索以string 开头的命令，并获取它的所有参数</h4>
+  </section>
+
+  <section class="post-comments">
+
+    <!-- 将评论系统（例如Disqus、多说、友言、畅言等）提供的代码片段粘贴在这里 -->
+    
+</section>
+
+
+</article>
+
+
+            <footer class="footer">
+
+    <span class="footer__copyright">&copy; 2014-2015. | 由<a href="https://hexo.io/">Hexo</a>强力驱动 | 主题<a href="https://github.com/someus/huno">Huno</a></span>
+    
+</footer>
+        </div>
+    </div>
+
+    <!-- js files -->
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/scale.fix.js"></script>
+    
+
+    
+
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript"> 
+        $(document).ready(function(){
+            MathJax.Hub.Config({ 
+                tex2jax: {inlineMath: [['[latex]','[/latex]'], ['\\(','\\)']]} 
+            });
+        });
+    </script>
+
+
+    
+
+    <script src="/js/awesome-toc.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $.awesome_toc({
+                overlay: true,
+                contentId: "post-content",
+            });
+        });
+    </script>
+
+
+    
+    
+    <!--kill ie6 -->
+<!--[if IE 6]>
+  <script src="//letskillie6.googlecode.com/svn/trunk/2/zh_CN.js"></script>
+<![endif]-->
+
+</body>
+</html>

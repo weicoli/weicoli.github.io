@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    
+
+    <title>
+      7.20181003堅持不定時更新原則--screen命令--echo命令--字符集和編碼 | Sea crab Fried rice 
+    </title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    
+      <meta name="author" content="Weico Li">
+    
+    
+
+    <meta name="description" content="screen命令創建新screen會話&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;screen -S [SESSION]顯示所有已經打開的screen會話&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;screen -ls加入screen會話&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;screen -x [SESSION]剝離當前screen會話&amp;ensp;&amp;ensp;&amp;ensp;&amp;ens">
+<meta name="keywords" content="基础">
+<meta property="og:type" content="article">
+<meta property="og:title" content="7.20181003堅持不定時更新原則--screen命令--echo命令--字符集和編碼 | Sea crab Fried rice">
+<meta property="og:url" content="http://yoursite.com/2018/11/13/7.20181003堅持不定時更新原則--screen命令--echo命令--字符集和編碼/index.html">
+<meta property="og:site_name" content="Sea crab Fried rice">
+<meta property="og:description" content="screen命令創建新screen會話&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;screen -S [SESSION]顯示所有已經打開的screen會話&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;screen -ls加入screen會話&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;screen -x [SESSION]剝離當前screen會話&amp;ensp;&amp;ensp;&amp;ensp;&amp;ens">
+<meta property="og:locale" content="default">
+<meta property="og:image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1538567052615&di=5c60801aa2b39b34f48c5ea1641ef3d5&imgtype=0&src=http%3A%2F%2Fgss0.baidu.com%2F7Po3dSag_xI4khGko9WTAnF6hhy%2Fzhidao%2Fpic%2Fitem%2F42a98226cffc1e17859a54f64f90f603728de9d4.jpg">
+<meta property="og:updated_time" content="2018-10-03T09:08:46.018Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="7.20181003堅持不定時更新原則--screen命令--echo命令--字符集和編碼 | Sea crab Fried rice">
+<meta name="twitter:description" content="screen命令創建新screen會話&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;screen -S [SESSION]顯示所有已經打開的screen會話&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;screen -ls加入screen會話&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;screen -x [SESSION]剝離當前screen會話&amp;ensp;&amp;ensp;&amp;ensp;&amp;ens">
+<meta name="twitter:image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1538567052615&di=5c60801aa2b39b34f48c5ea1641ef3d5&imgtype=0&src=http%3A%2F%2Fgss0.baidu.com%2F7Po3dSag_xI4khGko9WTAnF6hhy%2Fzhidao%2Fpic%2Fitem%2F42a98226cffc1e17859a54f64f90f603728de9d4.jpg">
+    
+    
+    
+      <link rel="icon" type="image/x-icon" href="/favicon.png">
+    
+    <link rel="stylesheet" href="/css/uno.css">
+    <link rel="stylesheet" href="/css/highlight.css">
+    <link rel="stylesheet" href="/css/archive.css">
+    <link rel="stylesheet" href="/css/china-social-icon.css">
+
+</head>
+<body>
+
+    <span class="mobile btn-mobile-menu">
+        <i class="icon icon-list btn-mobile-menu__icon"></i>
+        <i class="icon icon-x-circle btn-mobile-close__icon hidden"></i>
+    </span>
+
+    
+
+<header class="panel-cover panel-cover--collapsed">
+
+
+  <div class="panel-main">
+
+  
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+
+        
+
+        <h1 class="panel-cover__title panel-title"><a href="/" title="link to homepage">Sea crab Fried rice</a></h1>
+        <hr class="panel-cover__divider">
+
+        
+
+        <div class="navigation-wrapper">
+
+          <nav class="cover-navigation cover-navigation--primary">
+            <ul class="navigation">
+
+              
+                
+                <li class="navigation__item"><a href="/#blog" title="" class="blog-button">首页</a></li>
+              
+                
+                <li class="navigation__item"><a href="/about" title="" class="">关于</a></li>
+              
+                
+                <li class="navigation__item"><a href="/archive" title="" class="">归档</a></li>
+              
+
+            </ul>
+          </nav>
+
+          <!-- ----------------------------
+To add a new social icon simply duplicate one of the list items from below
+and change the class in the <i> tag to match the desired social network
+and then add your link to the <a>. Here is a full list of social network
+classes that you can use:
+
+    icon-social-500px
+    icon-social-behance
+    icon-social-delicious
+    icon-social-designer-news
+    icon-social-deviant-art
+    icon-social-digg
+    icon-social-dribbble
+    icon-social-facebook
+    icon-social-flickr
+    icon-social-forrst
+    icon-social-foursquare
+    icon-social-github
+    icon-social-google-plus
+    icon-social-hi5
+    icon-social-instagram
+    icon-social-lastfm
+    icon-social-linkedin
+    icon-social-medium
+    icon-social-myspace
+    icon-social-path
+    icon-social-pinterest
+    icon-social-rdio
+    icon-social-reddit
+    icon-social-skype
+    icon-social-spotify
+    icon-social-stack-overflow
+    icon-social-steam
+    icon-social-stumbleupon
+    icon-social-treehouse
+    icon-social-tumblr
+    icon-social-twitter
+    icon-social-vimeo
+    icon-social-xbox
+    icon-social-yelp
+    icon-social-youtube
+    icon-social-zerply
+    icon-mail
+
+-------------------------------->
+
+<!-- add social info here -->
+
+
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="panel-cover--overlay"></div>
+  </div>
+</header>
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner entry">
+            
+
+<article class="post-container post-container--single">
+
+  <header class="post-header">
+    
+    <h1 class="post-title">7.20181003堅持不定時更新原則--screen命令--echo命令--字符集和編碼</h1>
+
+    
+
+    <div class="post-meta">
+      <time datetime="2018-11-13" class="post-meta__date date">2018-11-13</time> 
+
+      <span class="post-meta__tags tags">
+
+          
+            <font class="categories">
+            &#8226; 分类:
+            <a class="categories-link" href="/categories/linux/">linux</a>
+            </font>
+          
+
+          
+             &#8226; 标签:
+            <font class="tags">
+              <a class="tags-link" href="/tags/基础/">基础</a>
+            </font>
+          
+
+      </span>
+    </div>
+    
+    
+
+  </header>
+
+  <section id="post-content" class="article-content post">
+    <h1 id="screen命令"><a href="#screen命令" class="headerlink" title="screen命令"></a>screen命令</h1><p><strong>創建新screen會話</strong><br>&ensp;&ensp;&ensp;&ensp;screen -S [SESSION]<br><strong>顯示所有已經打開的screen會話</strong><br>&ensp;&ensp;&ensp;&ensp;screen -ls<br><strong>加入screen會話</strong><br>&ensp;&ensp;&ensp;&ensp;screen -x [SESSION]<br><strong>剝離當前screen會話</strong><br>&ensp;&ensp;&ensp;&ensp;Ctrl+a，b<br><strong>退出并關閉screen會話</strong><br>&ensp;&ensp;&ensp;&ensp;exit<br><strong>恢復某screen會話</strong><br>&ensp;&ensp;&ensp;&ensp;screen -r [SESSION]  </p>
+<h1 id="echo命令"><a href="#echo命令" class="headerlink" title="echo命令"></a>echo命令</h1><p><strong>功能</strong>：顯示字符<br><strong>語法</strong>：echo[-neE][字符串]<br><strong>說明</strong>：echo會將輸入的字符串送往標準輸出。輸出的字符串以空白字符隔開，并在最後加上換行號。<br>選項：<br>&ensp;&ensp;&ensp;&ensp;-E (默認)不支持\解釋功能<br>&ensp;&ensp;&ensp;&ensp;–n 不自動換行<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[root@centos7 ~]<span class="comment"># echo "hello"</span></span><br><span class="line">hello</span><br><span class="line">[root@centos7 ~]<span class="comment"># echo -n "hello"</span></span><br><span class="line">hello[root@centos7 ~]<span class="comment">#</span></span><br></pre></td></tr></table></figure></p>
+<p>&ensp;&ensp;&ensp;&ensp;–e 啟用\字符的解釋功能，启用命令选项-e，若字符串中出现以下字符，则特别加以处理，而不会将它当成一般文字输出<br>&ensp;&ensp;&ensp;&ensp;\a 发出警告声<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@centos7 ~]<span class="comment"># echo -e "\a"</span></span><br></pre></td></tr></table></figure></p>
+<p>&ensp;&ensp;&ensp;&ensp;\b 退格键<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[root@centos7 ~]<span class="comment"># echo -e "abcedf"  </span></span><br><span class="line">abcedf</span><br><span class="line">[root@centos7 ~]<span class="comment"># echo -e "abc\bedf"</span></span><br><span class="line">abedf</span><br></pre></td></tr></table></figure></p>
+<p>&ensp;&ensp;&ensp;&ensp;\c 最后不加上换行符号<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">abc[root@centos7 ~]<span class="comment"># echo -e "abc"  </span></span><br><span class="line">abc</span><br><span class="line">[root@centos7 ~]<span class="comment"># echo -e "abc\c"</span></span><br><span class="line">abc[root@centos7 ~]<span class="comment"># echo -e "abc\cdef"</span></span><br></pre></td></tr></table></figure></p>
+<p>&ensp;&ensp;&ensp;&ensp;\n 换行且光标移至行首<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[root@centos7 ~]<span class="comment"># echo -e "abcdef"</span></span><br><span class="line">abcdef</span><br><span class="line">[root@centos7 ~]<span class="comment"># echo -e "abc\ndef"</span></span><br><span class="line">abc</span><br><span class="line">def</span><br></pre></td></tr></table></figure></p>
+<p>&ensp;&ensp;&ensp;&ensp;\r 回车，即光标移至行首，但不换行<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">[root@centos7 ~]<span class="comment"># echo -e "abc"</span></span><br><span class="line">abc</span><br><span class="line">[root@centos7 ~]<span class="comment"># echo -e "abc\rx"</span></span><br><span class="line">xbc</span><br><span class="line">[root@centos7 ~]<span class="comment"># echo -e "abc\rxy"</span></span><br><span class="line">xyc</span><br><span class="line">[root@centos7 ~]<span class="comment"># echo -e "abc\rxyz"</span></span><br><span class="line">xyz</span><br><span class="line">[root@centos7 ~]<span class="comment"># echo -e "abc\rxyz1"</span></span><br><span class="line">xyz1</span><br></pre></td></tr></table></figure></p>
+<p>&ensp;&ensp;&ensp;&ensp;\t 插入tab<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@centos7 ~]<span class="comment"># echo -e "abc\txyz1"</span></span><br><span class="line">abc     xyz1</span><br></pre></td></tr></table></figure></p>
+<p>&ensp;&ensp;&ensp;&ensp;\\插入\字符<br>&ensp;&ensp;&ensp;&ensp;\0nnn 插入nnn（八进制）所代表的ASCII字符<br>&amp;echo -e ‘\033[43;31;5mmagedu\033[0m’<br>\xHH插入HH（十六进制）所代表的ASCII数字（man 7 ascii）<br>顯示變量：<br>&ensp;&ensp;&ensp;&ensp;echo “$VAR_NAME” 變量會替換，弱引用<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@centos7 ~]<span class="comment"># echo "$PATH"</span></span><br><span class="line">/usr/<span class="built_in">local</span>/sbin:/usr/<span class="built_in">local</span>/bin:/usr/sbin:/usr/bin:/root/bin</span><br></pre></td></tr></table></figure></p>
+<p>&ensp;&ensp;&ensp;&ensp;echo ‘$VAR_NAME’ 變量不會替換，強引用<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@centos7 ~]<span class="comment"># echo '$PATH'</span></span><br><span class="line"><span class="variable">$PATH</span></span><br></pre></td></tr></table></figure></p>
+<h1 id="字符集和編碼"><a href="#字符集和編碼" class="headerlink" title="字符集和編碼"></a>字符集和編碼</h1><p>&ensp;&ensp;&ensp;&ensp;<strong>ASCII碼</strong>：計算機內部，所有信息最終都是一個二進制值。上個世紀60年代，美國制定了一套字符編碼，對英語字符于二進制位之間的關係，做了統一規定。ASCII碼一共規定了128個字符的編碼，佔用了一個字節的後面7位，最前面的一位統一規定為0.<br>&ensp;&ensp;&ensp;&ensp;<strong>Unicode</strong>:用於表示世界上所有語言中的所有字符。每一個符號都給予一個獨一無二的的編碼數字，Unicode是一個很大的集合，現在的規模可以容納100多萬個符號。Unicode僅僅只是一個字符集，規定了每個字符對應的二進制代碼，至於這個二進制代碼如何存儲則沒有規定.  </p>
+<p><strong>Unicode編碼方案</strong>：<br>&ensp;&ensp;&ensp;&ensp;UTF-8:變長，1到4個字節<br>&ensp;&ensp;&ensp;&ensp;UTF-16：變長，2或4個字節<br>&ensp;&ensp;&ensp;&ensp;UTF-32：固定長度，4個字節</p>
+<p>UTF-8是目前互聯網上使用最廣泛的一種Unicode編碼方式，可變長存儲。使用1-4個字節表示一個字符，根據字符的不同變換長度。編碼規則如下：<br>&ensp;&ensp;&ensp;&ensp;1. 對於單個字節的字符，第一位設為0，後面的7位對應這個字符的Unicode碼點。因此，對於英文中的0-127號字符，于ASCII碼完全相同。這意味著ASCII碼的文檔可用UTF-8編碼打開。<br>&ensp;&ensp;&ensp;&ensp;2. 對於需要使用N個字節來表示的字符（N-1），第一個字節的前N位都設為1，第N+1位設為0，剩餘的N-1個字節的前兩位都設為10，剩下的二進制則使用這個字符的Unicode碼點來填充。<br><strong>編碼轉換和查詢</strong>：<br>&ensp;&ensp;&ensp;&ensp;<a href="https://javawind.net/tools/native2ascii.jsp?action=transform" target="_blank" rel="noopener">https://javawind.net/tools/native2ascii.jsp?action=transform</a><br>&ensp;&ensp;&ensp;&ensp;<a href="http://tool.oschina.net/encode" target="_blank" rel="noopener">http://tool.oschina.net/encode</a><br>&ensp;&ensp;&ensp;&ensp;<a href="http://www.chi2ko.com/tool/CJK.htm" target="_blank" rel="noopener">http://www.chi2ko.com/tool/CJK.htm</a>  </p>
+<p><img src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1538567052615&amp;di=5c60801aa2b39b34f48c5ea1641ef3d5&amp;imgtype=0&amp;src=http%3A%2F%2Fgss0.baidu.com%2F7Po3dSag_xI4khGko9WTAnF6hhy%2Fzhidao%2Fpic%2Fitem%2F42a98226cffc1e17859a54f64f90f603728de9d4.jpg" alt="ASCII：American Standard Code for Information Interchange"></p>
+
+  </section>
+
+  <section class="post-comments">
+
+    <!-- 将评论系统（例如Disqus、多说、友言、畅言等）提供的代码片段粘贴在这里 -->
+    
+</section>
+
+
+</article>
+
+
+            <footer class="footer">
+
+    <span class="footer__copyright">&copy; 2014-2015. | 由<a href="https://hexo.io/">Hexo</a>强力驱动 | 主题<a href="https://github.com/someus/huno">Huno</a></span>
+    
+</footer>
+        </div>
+    </div>
+
+    <!-- js files -->
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/scale.fix.js"></script>
+    
+
+    
+
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript"> 
+        $(document).ready(function(){
+            MathJax.Hub.Config({ 
+                tex2jax: {inlineMath: [['[latex]','[/latex]'], ['\\(','\\)']]} 
+            });
+        });
+    </script>
+
+
+    
+
+    <script src="/js/awesome-toc.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $.awesome_toc({
+                overlay: true,
+                contentId: "post-content",
+            });
+        });
+    </script>
+
+
+    
+    
+    <!--kill ie6 -->
+<!--[if IE 6]>
+  <script src="//letskillie6.googlecode.com/svn/trunk/2/zh_CN.js"></script>
+<![endif]-->
+
+</body>
+</html>

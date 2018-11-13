@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    
+
+    <title>
+      11.20181006堅持不定時更新原則--文件系統與目錄結構 | Sea crab Fried rice 
+    </title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    
+      <meta name="author" content="Weico Li">
+    
+    
+
+    <meta name="description" content="文件系統與目錄結構   文件系統結構/boot:引導文件存放目錄，內核文件(vmlinuz)、引導加載器(bootloader,grub)都存放于此目錄/bin:供所有用戶使用的基本命令；不能關聯至獨立分區，OS啟動即會用到的程序/sbin:管理類的基本命令；不能關聯至獨立分區，OS啟動即會用到的程序/lib：啟動時程序依賴的基本共享庫文件以及內核模塊文件(/lib/modules)/lib64:">
+<meta name="keywords" content="基础">
+<meta property="og:type" content="article">
+<meta property="og:title" content="11.20181006堅持不定時更新原則--文件系統與目錄結構 | Sea crab Fried rice">
+<meta property="og:url" content="http://yoursite.com/2018/11/13/11.20181006堅持不定時更新原則--文件系統和目錄結構/index.html">
+<meta property="og:site_name" content="Sea crab Fried rice">
+<meta property="og:description" content="文件系統與目錄結構   文件系統結構/boot:引導文件存放目錄，內核文件(vmlinuz)、引導加載器(bootloader,grub)都存放于此目錄/bin:供所有用戶使用的基本命令；不能關聯至獨立分區，OS啟動即會用到的程序/sbin:管理類的基本命令；不能關聯至獨立分區，OS啟動即會用到的程序/lib：啟動時程序依賴的基本共享庫文件以及內核模塊文件(/lib/modules)/lib64:">
+<meta property="og:locale" content="default">
+<meta property="og:image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1538801955165&di=96cc99b45a148c0ace01f15ddf331a76&imgtype=0&src=http%3A%2F%2Fs6.sinaimg.cn%2Fmiddle%2F51e6f44906dfe5ce2f965%26000">
+<meta property="og:updated_time" content="2018-10-06T02:15:44.245Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="11.20181006堅持不定時更新原則--文件系統與目錄結構 | Sea crab Fried rice">
+<meta name="twitter:description" content="文件系統與目錄結構   文件系統結構/boot:引導文件存放目錄，內核文件(vmlinuz)、引導加載器(bootloader,grub)都存放于此目錄/bin:供所有用戶使用的基本命令；不能關聯至獨立分區，OS啟動即會用到的程序/sbin:管理類的基本命令；不能關聯至獨立分區，OS啟動即會用到的程序/lib：啟動時程序依賴的基本共享庫文件以及內核模塊文件(/lib/modules)/lib64:">
+<meta name="twitter:image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1538801955165&di=96cc99b45a148c0ace01f15ddf331a76&imgtype=0&src=http%3A%2F%2Fs6.sinaimg.cn%2Fmiddle%2F51e6f44906dfe5ce2f965%26000">
+    
+    
+    
+      <link rel="icon" type="image/x-icon" href="/favicon.png">
+    
+    <link rel="stylesheet" href="/css/uno.css">
+    <link rel="stylesheet" href="/css/highlight.css">
+    <link rel="stylesheet" href="/css/archive.css">
+    <link rel="stylesheet" href="/css/china-social-icon.css">
+
+</head>
+<body>
+
+    <span class="mobile btn-mobile-menu">
+        <i class="icon icon-list btn-mobile-menu__icon"></i>
+        <i class="icon icon-x-circle btn-mobile-close__icon hidden"></i>
+    </span>
+
+    
+
+<header class="panel-cover panel-cover--collapsed">
+
+
+  <div class="panel-main">
+
+  
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+
+        
+
+        <h1 class="panel-cover__title panel-title"><a href="/" title="link to homepage">Sea crab Fried rice</a></h1>
+        <hr class="panel-cover__divider">
+
+        
+
+        <div class="navigation-wrapper">
+
+          <nav class="cover-navigation cover-navigation--primary">
+            <ul class="navigation">
+
+              
+                
+                <li class="navigation__item"><a href="/#blog" title="" class="blog-button">首页</a></li>
+              
+                
+                <li class="navigation__item"><a href="/about" title="" class="">关于</a></li>
+              
+                
+                <li class="navigation__item"><a href="/archive" title="" class="">归档</a></li>
+              
+
+            </ul>
+          </nav>
+
+          <!-- ----------------------------
+To add a new social icon simply duplicate one of the list items from below
+and change the class in the <i> tag to match the desired social network
+and then add your link to the <a>. Here is a full list of social network
+classes that you can use:
+
+    icon-social-500px
+    icon-social-behance
+    icon-social-delicious
+    icon-social-designer-news
+    icon-social-deviant-art
+    icon-social-digg
+    icon-social-dribbble
+    icon-social-facebook
+    icon-social-flickr
+    icon-social-forrst
+    icon-social-foursquare
+    icon-social-github
+    icon-social-google-plus
+    icon-social-hi5
+    icon-social-instagram
+    icon-social-lastfm
+    icon-social-linkedin
+    icon-social-medium
+    icon-social-myspace
+    icon-social-path
+    icon-social-pinterest
+    icon-social-rdio
+    icon-social-reddit
+    icon-social-skype
+    icon-social-spotify
+    icon-social-stack-overflow
+    icon-social-steam
+    icon-social-stumbleupon
+    icon-social-treehouse
+    icon-social-tumblr
+    icon-social-twitter
+    icon-social-vimeo
+    icon-social-xbox
+    icon-social-yelp
+    icon-social-youtube
+    icon-social-zerply
+    icon-mail
+
+-------------------------------->
+
+<!-- add social info here -->
+
+
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="panel-cover--overlay"></div>
+  </div>
+</header>
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner entry">
+            
+
+<article class="post-container post-container--single">
+
+  <header class="post-header">
+    
+    <h1 class="post-title">11.20181006堅持不定時更新原則--文件系統與目錄結構</h1>
+
+    
+
+    <div class="post-meta">
+      <time datetime="2018-11-13" class="post-meta__date date">2018-11-13</time> 
+
+      <span class="post-meta__tags tags">
+
+          
+            <font class="categories">
+            &#8226; 分类:
+            <a class="categories-link" href="/categories/linux/">linux</a>
+            </font>
+          
+
+          
+             &#8226; 标签:
+            <font class="tags">
+              <a class="tags-link" href="/tags/基础/">基础</a>
+            </font>
+          
+
+      </span>
+    </div>
+    
+    
+
+  </header>
+
+  <section id="post-content" class="article-content post">
+    <h1 id="文件系統與目錄結構"><a href="#文件系統與目錄結構" class="headerlink" title="文件系統與目錄結構"></a>文件系統與目錄結構</h1><p><img src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1538801955165&amp;di=96cc99b45a148c0ace01f15ddf331a76&amp;imgtype=0&amp;src=http%3A%2F%2Fs6.sinaimg.cn%2Fmiddle%2F51e6f44906dfe5ce2f965%26000" alt="文件系統與目錄結構">  </p>
+<h2 id="文件系統結構"><a href="#文件系統結構" class="headerlink" title="文件系統結構"></a>文件系統結構</h2><p>/boot:引導文件存放目錄，內核文件(vmlinuz)、引導加載器(bootloader,grub)都存放于此目錄<br>/bin:供所有用戶使用的基本命令；不能關聯至獨立分區，OS啟動即會用到的程序<br>/sbin:管理類的基本命令；不能關聯至獨立分區，OS啟動即會用到的程序<br>/lib：啟動時程序依賴的基本共享庫文件以及內核模塊文件(/lib/modules)<br>/lib64:專用于x86_64系統上的輔助共享庫文件存放位置<br>/etc:配置文件目錄<br>/home/USERNAME:普通用戶家目錄<br>/root：管理員的家目錄<br>/media：便攜式移動設備掛載點<br>/mnt:臨時文件系統掛載點<br>/dev：設備文件及特殊文件存儲位置<br>&ensp;&ensp;b:block device,隨機訪問<br>&ensp;&ensp;c:character device,線性訪問<br>/opt:第三方應用程序的安裝位置<br>/srv：系統上運行的服務用到的數據<br>/tmp：臨時存儲位置<br>/usr:universal shared,read-only data<br>&ensp;&ensp;bin:保證系統擁有完整功能而提供的應用程序<br>&ensp;&ensp;sbin:<br>&ensp;&ensp;lib:32位使用<br>&ensp;&ensp;lib64:只存在64位系統<br>&ensp;&ensp;include:C程序的頭文件(header files)<br>&ensp;&ensp;share:結構化獨立的數據，例如doc,man等<br>&ensp;&ensp;local:第三方應用程序的安裝位置<br>&ensp;&ensp;&ensp;&ensp;bin,sbin,lib,lib64,etc,share<br>/var:variable data files<br>&ensp;&ensp;cache:應用程序緩存數據目錄<br>&ensp;&ensp;lib:應用程序狀態信息數據<br>&ensp;&ensp;local:專門于為/usr/local下的應用程序存儲可變數據<br>&ensp;&ensp;lock:鎖文件<br>&ensp;&ensp;log:日誌目錄及文件<br>&ensp;&ensp;opt:專用於為/opt下的應用程序存儲可變數據<br>&ensp;&ensp;run:運行中的進程相關數據，通常用於存儲進程pid文件<br>&ensp;&ensp;spool:應用程序數據池<br>&ensp;&ensp;tmp：保存系統兩次重啟之間產生的臨時數據<br>/proc:用於輸出內核與進程信息相關的虛擬文件系統<br>/sys:用於輸出當前系統上硬件設備相關信息虛擬文件系統<br>/selinux:security enhanced Linux,selinux相關的安全策略等信息的存儲位置  </p>
+<h4 id="Linux上的應用程序的組成部分"><a href="#Linux上的應用程序的組成部分" class="headerlink" title="Linux上的應用程序的組成部分"></a>Linux上的應用程序的組成部分</h4><p>二進制程序：/bin,/sbin,/usr/bin,/usr/sbin,/usr/local/bin,/usr/local/sbin<br>庫文件：/lib,/lib64,/usr/lib,/usr/lib64,/usr/local/lib,/usr/local/lib64<br>配置文件:/etc,/etc/DIRECTORY,/usr/local/etc<br>幫助文件:/usr/share/man,/usr/share/doc,/usr/local/share/man,/usr/local/share/doc  </p>
+<h4 id="文件名規則"><a href="#文件名規則" class="headerlink" title="文件名規則"></a>文件名規則</h4><p>文件名最長255個字節<br>包含路徑在內文件名稱最長4095個字節<br>藍色–&gt;目錄  綠色–&gt;可執行文件  紅色–&gt;壓縮文件  淺藍色–&gt;鏈接文件  灰色–&gt;其它文件<br>除了斜杠和NUL，所有字符都有效，但使用特殊字符的目錄名和文件不推薦使用，有些字符需要用引導來引用它們<br>標準Linux文件系統(如ext4),文件名稱大小寫敏感<br>&ensp;&ensp;&ensp;&ensp;例如：MAIL,Mail,mail,mAiL  </p>
+<h4 id="Linux下的文件類型"><a href="#Linux下的文件類型" class="headerlink" title="Linux下的文件類型"></a>Linux下的文件類型</h4><p>-：普通文件<br>d：目錄文件<br>b：塊設備<br>c：字符設備<br>l：符號鏈接文件<br>p：管道文件pipe<br>s：套接字文件socket  </p>
+<h4 id="文件系統"><a href="#文件系統" class="headerlink" title="文件系統"></a>文件系統</h4><p>文件和目錄被組織成一個單根倒置結構<br>文件系統從根目錄下開始，用”/“表示<br>根文件系統(rootfs):root filesystem<br>文件名稱區分大小寫<br>以.開頭的文件為隱藏文件<br>路徑分隔的/<br>文件有兩類數據：<br>&ensp;&ensp;&ensp;&ensp;元數據: metadata<br>&ensp;&ensp;&ensp;&ensp;數據:data<br>文件系統分層結構：LSB Linux Standard Base<br>FHS:(Filesystem Hierarchy Standard)<br>&ensp;&ensp;&ensp;&ensp;<a href="http://www.pathname.com/fhs/" target="_blank" rel="noopener">http://www.pathname.com/fhs/</a></p>
+
+  </section>
+
+  <section class="post-comments">
+
+    <!-- 将评论系统（例如Disqus、多说、友言、畅言等）提供的代码片段粘贴在这里 -->
+    
+</section>
+
+
+</article>
+
+
+            <footer class="footer">
+
+    <span class="footer__copyright">&copy; 2014-2015. | 由<a href="https://hexo.io/">Hexo</a>强力驱动 | 主题<a href="https://github.com/someus/huno">Huno</a></span>
+    
+</footer>
+        </div>
+    </div>
+
+    <!-- js files -->
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/scale.fix.js"></script>
+    
+
+    
+
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript"> 
+        $(document).ready(function(){
+            MathJax.Hub.Config({ 
+                tex2jax: {inlineMath: [['[latex]','[/latex]'], ['\\(','\\)']]} 
+            });
+        });
+    </script>
+
+
+    
+
+    <script src="/js/awesome-toc.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $.awesome_toc({
+                overlay: true,
+                contentId: "post-content",
+            });
+        });
+    </script>
+
+
+    
+    
+    <!--kill ie6 -->
+<!--[if IE 6]>
+  <script src="//letskillie6.googlecode.com/svn/trunk/2/zh_CN.js"></script>
+<![endif]-->
+
+</body>
+</html>

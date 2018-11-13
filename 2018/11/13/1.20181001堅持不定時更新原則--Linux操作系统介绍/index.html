@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    
+
+    <title>
+      1.操作系统介紹 | Sea crab Fried rice 
+    </title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    
+      <meta name="author" content="Weico Li">
+    
+    
+
+    <meta name="description" content="操作系统OS: Operating System，通用目的的软件程序: 硬件驱动进程管理内存管理网络管理安全管理文件管理      OS分类： 服务器OS：RHEL, CentOS,Windows Server,AIX桌面OS：Windows 10,Windows 7,Mac OS，Fedora移动设备OS：Andriod,IOS,YunOS    开发接口标准：ABI: Application">
+<meta name="keywords" content="基础">
+<meta property="og:type" content="article">
+<meta property="og:title" content="1.操作系统介紹 | Sea crab Fried rice">
+<meta property="og:url" content="http://yoursite.com/2018/11/13/1.20181001堅持不定時更新原則--Linux操作系统介绍/index.html">
+<meta property="og:site_name" content="Sea crab Fried rice">
+<meta property="og:description" content="操作系统OS: Operating System，通用目的的软件程序: 硬件驱动进程管理内存管理网络管理安全管理文件管理      OS分类： 服务器OS：RHEL, CentOS,Windows Server,AIX桌面OS：Windows 10,Windows 7,Mac OS，Fedora移动设备OS：Andriod,IOS,YunOS    开发接口标准：ABI: Application">
+<meta property="og:locale" content="default">
+<meta property="og:image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1537759212660&di=91c5df416a56f8e1289447b7f792c600&imgtype=0&src=http%3A%2F%2Fimage.bubuko.com%2Finfo%2F201711%2F20180111004934065695.png">
+<meta property="og:image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1537759377748&di=971b65586548a5665bc8182d1db6c253&imgtype=jpg&src=http%3A%2F%2Fimg1.imgtn.bdimg.com%2Fit%2Fu%3D2651579446%2C3447075077%26fm%3D214%26gp%3D0.jpg">
+<meta property="og:image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1537760448883&di=fb13fab0f5cb4ad6167abe74a758cfd0&imgtype=0&src=http%3A%2F%2Fwww.cz88.net%2Fimages%2F2014%2F7%2F231605185494.jpg">
+<meta property="og:image" content="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=2844539760,2021960609&fm=15&gp=0.jpg">
+<meta property="og:image" content="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=3502229292,3560294500&fm=26&gp=0.jpg">
+<meta property="og:image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1537887991045&di=c2baa542a06078f53425d91052294921&imgtype=jpg&src=http%3A%2F%2Fimg3.imgtn.bdimg.com%2Fit%2Fu%3D1671897373%2C1175836165%26fm%3D214%26gp%3D0.jpg">
+<meta property="og:image" content="https://gss2.bdstatic.com/9fo3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike180%2C5%2C5%2C180%2C60/sign=61b81db3f4dcd100d991f07313e22c75/9f510fb30f2442a7834c4a1bdd43ad4bd01302c9.jpg">
+<meta property="og:updated_time" content="2018-10-03T06:07:01.449Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="1.操作系统介紹 | Sea crab Fried rice">
+<meta name="twitter:description" content="操作系统OS: Operating System，通用目的的软件程序: 硬件驱动进程管理内存管理网络管理安全管理文件管理      OS分类： 服务器OS：RHEL, CentOS,Windows Server,AIX桌面OS：Windows 10,Windows 7,Mac OS，Fedora移动设备OS：Andriod,IOS,YunOS    开发接口标准：ABI: Application">
+<meta name="twitter:image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1537759212660&di=91c5df416a56f8e1289447b7f792c600&imgtype=0&src=http%3A%2F%2Fimage.bubuko.com%2Finfo%2F201711%2F20180111004934065695.png">
+    
+    
+    
+      <link rel="icon" type="image/x-icon" href="/favicon.png">
+    
+    <link rel="stylesheet" href="/css/uno.css">
+    <link rel="stylesheet" href="/css/highlight.css">
+    <link rel="stylesheet" href="/css/archive.css">
+    <link rel="stylesheet" href="/css/china-social-icon.css">
+
+</head>
+<body>
+
+    <span class="mobile btn-mobile-menu">
+        <i class="icon icon-list btn-mobile-menu__icon"></i>
+        <i class="icon icon-x-circle btn-mobile-close__icon hidden"></i>
+    </span>
+
+    
+
+<header class="panel-cover panel-cover--collapsed">
+
+
+  <div class="panel-main">
+
+  
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+
+        
+
+        <h1 class="panel-cover__title panel-title"><a href="/" title="link to homepage">Sea crab Fried rice</a></h1>
+        <hr class="panel-cover__divider">
+
+        
+
+        <div class="navigation-wrapper">
+
+          <nav class="cover-navigation cover-navigation--primary">
+            <ul class="navigation">
+
+              
+                
+                <li class="navigation__item"><a href="/#blog" title="" class="blog-button">首页</a></li>
+              
+                
+                <li class="navigation__item"><a href="/about" title="" class="">关于</a></li>
+              
+                
+                <li class="navigation__item"><a href="/archive" title="" class="">归档</a></li>
+              
+
+            </ul>
+          </nav>
+
+          <!-- ----------------------------
+To add a new social icon simply duplicate one of the list items from below
+and change the class in the <i> tag to match the desired social network
+and then add your link to the <a>. Here is a full list of social network
+classes that you can use:
+
+    icon-social-500px
+    icon-social-behance
+    icon-social-delicious
+    icon-social-designer-news
+    icon-social-deviant-art
+    icon-social-digg
+    icon-social-dribbble
+    icon-social-facebook
+    icon-social-flickr
+    icon-social-forrst
+    icon-social-foursquare
+    icon-social-github
+    icon-social-google-plus
+    icon-social-hi5
+    icon-social-instagram
+    icon-social-lastfm
+    icon-social-linkedin
+    icon-social-medium
+    icon-social-myspace
+    icon-social-path
+    icon-social-pinterest
+    icon-social-rdio
+    icon-social-reddit
+    icon-social-skype
+    icon-social-spotify
+    icon-social-stack-overflow
+    icon-social-steam
+    icon-social-stumbleupon
+    icon-social-treehouse
+    icon-social-tumblr
+    icon-social-twitter
+    icon-social-vimeo
+    icon-social-xbox
+    icon-social-yelp
+    icon-social-youtube
+    icon-social-zerply
+    icon-mail
+
+-------------------------------->
+
+<!-- add social info here -->
+
+
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="panel-cover--overlay"></div>
+  </div>
+</header>
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner entry">
+            
+
+<article class="post-container post-container--single">
+
+  <header class="post-header">
+    
+    <h1 class="post-title">1.操作系统介紹</h1>
+
+    
+
+    <div class="post-meta">
+      <time datetime="2018-11-13" class="post-meta__date date">2018-11-13</time> 
+
+      <span class="post-meta__tags tags">
+
+          
+            <font class="categories">
+            &#8226; 分类:
+            <a class="categories-link" href="/categories/linux/">linux</a>
+            </font>
+          
+
+          
+             &#8226; 标签:
+            <font class="tags">
+              <a class="tags-link" href="/tags/基础/">基础</a>
+            </font>
+          
+
+      </span>
+    </div>
+    
+    
+
+  </header>
+
+  <section id="post-content" class="article-content post">
+    <h1 id="操作系统"><a href="#操作系统" class="headerlink" title="操作系统"></a>操作系统</h1><h2 id="OS-Operating-System，通用目的的软件程序"><a href="#OS-Operating-System，通用目的的软件程序" class="headerlink" title="OS: Operating System，通用目的的软件程序:"></a>OS: Operating System，通用目的的软件程序:</h2><blockquote>
+<p>硬件驱动<br>进程管理<br>内存管理<br>网络管理<br>安全管理<br>文件管理    </p>
+</blockquote>
+<h2 id="OS分类："><a href="#OS分类：" class="headerlink" title="OS分类："></a>OS分类：</h2><blockquote>
+<p>服务器OS：RHEL, CentOS,Windows Server,AIX<br>桌面OS：Windows 10,Windows 7,Mac OS，Fedora<br>移动设备OS：Andriod,IOS,YunOS  </p>
+</blockquote>
+<h2 id="开发接口标准："><a href="#开发接口标准：" class="headerlink" title="开发接口标准："></a>开发接口标准：</h2><h4 id="ABI-Application-Binary-Interface"><a href="#ABI-Application-Binary-Interface" class="headerlink" title="ABI: Application Binary Interface"></a>ABI: Application Binary Interface</h4><p>&ensp;&ensp;&ensp;&ensp;ABI描述了应用程序与OS之间的底层接口,允许编译好的目标代码在使用兼容ABI的系统中无需改动就能运行。  </p>
+<h4 id="API：Application-Programming-Interface"><a href="#API：Application-Programming-Interface" class="headerlink" title="API：Application Programming Interface"></a>API：Application Programming Interface</h4><p>&ensp;&ensp;&ensp;&ensp;API定义了源代码和库之间的接口，因此同样的源代码可以在支持这个API的任何系统中编译。  </p>
+<h4 id="POSIX-Portable-Operating-System-Interface"><a href="#POSIX-Portable-Operating-System-Interface" class="headerlink" title="POSIX: Portable Operating System Interface"></a>POSIX: Portable Operating System Interface</h4><p>&ensp;&ensp;&ensp;&ensp;IEEE在操作系统上定义的一系列API标准；<br>&ensp;&ensp;&ensp;&ensp;POSIX兼容的程序可在其它POSIX操作系统编译执行。  </p>
+<h4 id="运行程序格式："><a href="#运行程序格式：" class="headerlink" title="运行程序格式："></a>运行程序格式：</h4><p>&ensp;&ensp;&ensp;&ensp;Windows: EXE, .dll(dynamic link library)，.lib；<br>&ensp;&ensp;&ensp;&ensp;Linux: ELF, .so(shared object), .a。   </p>
+<h2 id="系统调用（system-call-和库函数（library-function-的区别："><a href="#系统调用（system-call-和库函数（library-function-的区别：" class="headerlink" title="系统调用（system call)和库函数（library function)的区别："></a>系统调用（system call)和库函数（library function)的区别：</h2><p>&ensp;&ensp;&ensp;&amp;ensp 通俗的讲，内核（kernel)提供的接口称为系统调用（system call)，函数库建立在系统调用之上。<br>&ensp;&ensp;&ensp;&ensp;&amp;enspsystem call执行于内核空间，library function执行于进程空间<br>&ensp;&ensp;&ensp;&ensp;&amp;enspsystem call会出发从内核态到用户态的迁移<br>&ensp;&ensp;&ensp;&ensp;&amp;ensplibrary function很多对system call进行封装以减少对内核的调用<br>&ensp;&ensp;&ensp;&ensp;&amp;ensp一般来说，system call提供最基本的功能，最小的接口，library提供相对复杂的功能  </p>
+<p><img src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1537759212660&amp;di=91c5df416a56f8e1289447b7f792c600&amp;imgtype=0&amp;src=http%3A%2F%2Fimage.bubuko.com%2Finfo%2F201711%2F20180111004934065695.png" alt="系统调用（system call)和库函数（library function)">  </p>
+<h2 id="用户和内核空间"><a href="#用户和内核空间" class="headerlink" title="用户和内核空间"></a>用户和内核空间</h2><h3 id="用户空间：User-space"><a href="#用户空间：User-space" class="headerlink" title="用户空间：User space"></a>用户空间：User space</h3><p>&ensp;&ensp;&ensp;&ensp;用户程序的运行空间。为了安全，它们是隔离的，即使用户的程序崩溃，内核也不受影响<br>&ensp;&ensp;&ensp;只能执行简单的运算，不能直接调用系统资源，必须通过系统接口（ system call），才能向内核发出指令  </p>
+<h3 id="内核空间：Kernel-space"><a href="#内核空间：Kernel-space" class="headerlink" title="内核空间：Kernel space"></a>内核空间：Kernel space</h3><p>&ensp;&ensp;&ensp;&ensp;是 Linux 内核的运行空间<br>&ensp;&ensp;&ensp;&ensp;可以执行任意命令，调用系统的一切资源  </p>
+<h3 id="示例："><a href="#示例：" class="headerlink" title="示例："></a>示例：</h3><p>&ensp;&ensp;&ensp;&ensp;str = “<a href="http://www.magedu.com&quot;" target="_blank" rel="noopener">www.magedu.com&quot;</a> // 用户空间<br>&ensp;&ensp;&ensp;&ensp; = x + 100 // 用户空间<br>&ensp;&ensp;&ensp;&ensp;file.write(str) // 切换到内核空间<br>&ensp;&ensp;&ensp;&ensp;y = x + 200 // 切换回用户空间<br>&ensp;&ensp;&ensp;&ensp;<strong>说明</strong>：第一行和第二行都是简单的赋值运算，在 User space 执行。第三行需要写入文件，就要切换到 Kernel space，因为用户不能直接写文件，必须通过内核安排。第四行又是赋值运算，就切换回 User space<br><img src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1537759377748&amp;di=971b65586548a5665bc8182d1db6c253&amp;imgtype=jpg&amp;src=http%3A%2F%2Fimg1.imgtn.bdimg.com%2Fit%2Fu%3D2651579446%2C3447075077%26fm%3D214%26gp%3D0.jpg" alt="用户和内核空间">  </p>
+<h2 id="编程语言"><a href="#编程语言" class="headerlink" title="编程语言"></a>编程语言</h2><blockquote>
+<p><strong>低级语言</strong>:<br>&ensp;&ensp;&ensp;&ensp;机器语言：0和1<br>&ensp;&ensp;&ensp;&ensp;汇编语言：和机器语言一一对应，与硬件相关的特有代码、&gt; 驱动程序开发<br><strong>中级语言</strong>：C<br>&ensp;&ensp;&ensp;&ensp;系统级应用、驱动程序<br><strong>高级语言</strong>： java，python，go，php，Objective-C，C#<br>&ensp;&ensp;&ensp;&ensp;应用级程序开发  </p>
+</blockquote>
+<h2 id="服务器三大操作系统"><a href="#服务器三大操作系统" class="headerlink" title="服务器三大操作系统"></a>服务器三大操作系统</h2><blockquote>
+<p>Windows：<br>Linux：GNU/Linux<br>Unix：1969年Ken Thompson<br>&ensp;&ensp;&ensp;&ensp;System: Bell Lab<br>&ensp;&ensp;&ensp;&ensp;AIX （IBM）<br>&ensp;&ensp;&ensp;&ensp;Solaris (SUN)<br>&ensp;&ensp;&ensp;&ensp;HP-UX (HP)<br>&ensp;&ensp;&ensp;&ensp;BSD: （BSRG）Berkeley System Distribution<br>&ensp;&ensp;&ensp;&ensp;NetBSD<br>&ensp;&ensp;&ensp;&ensp;OpenBSD<br>&ensp;&ensp;&ensp;&ensp;FreeBSD  </p>
+</blockquote>
+<h2 id="UNIX历史"><a href="#UNIX历史" class="headerlink" title="UNIX历史"></a>UNIX历史</h2><p><img src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1537760448883&amp;di=fb13fab0f5cb4ad6167abe74a758cfd0&amp;imgtype=0&amp;src=http%3A%2F%2Fwww.cz88.net%2Fimages%2F2014%2F7%2F231605185494.jpg" alt="UNIX历史">  </p>
+<h2 id="兼容分时系统"><a href="#兼容分时系统" class="headerlink" title="兼容分时系统"></a>兼容分时系统</h2><p><img src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=2844539760,2021960609&amp;fm=15&amp;gp=0.jpg" alt="兼容分时系统">  </p>
+<h3 id="兼容分时系统Multics"><a href="#兼容分时系统Multics" class="headerlink" title="兼容分时系统Multics"></a>兼容分时系统Multics</h3><p>&ensp;&ensp;&ensp;&ensp;为了进一步强化大型主机的功能，让主机的资源可以提供更多的使用者来利用，所以在1964年， 由贝尔实验室(Bell)、麻省理工学院(MIT)及奇异公司(GE美国通用电气公司)共同发起了Multics（多路信息计算系统）的计划， Multics计划的目的是让大型主机可以同时支持300个以上的终端机连线使用。不过，到了1969年前后，由于计划进度缓慢，资金也短缺，所以该计划虽然继续在研究，但最终贝尔实验室还是选择了退出。  </p>
+<h3 id="Ken-Thompson-一切为了游戏"><a href="#Ken-Thompson-一切为了游戏" class="headerlink" title="Ken Thompson:一切为了游戏"></a>Ken Thompson:一切为了游戏</h3><p>&ensp;&ensp;&ensp;&ensp;1966年从加州大学伯克利分校毕业的Ken Thompson加入了贝尔实验室。参与了Multics系统的研发。他基于Multics开发了“star travel”游戏。不幸的是，1969年由于贝尔实验室退出Multics项目，这同时意味着Ken将没有机器可以再玩这个游戏了。面对此情此景，Ken作为一个创造者的本性立即体现了出来，于是他决定自己写一个操作系统来满足他玩游戏的需要，Ken找到了一台废弃已久的老式PDP-7，并在这台机器上重写了他的游戏。在这个过程中，Ken有了一个主意，要开发一个全新的操作系统。利用PDP-7上的汇编语言，Ken只花了一个月就编写完了操作系统的内核，在这个一个月中，他一周一个内核，一个文件系统，一个编辑器和一个编译程序的完成。  </p>
+<h2 id="Unix历史"><a href="#Unix历史" class="headerlink" title="Unix历史"></a>Unix历史</h2><blockquote>
+<p><strong>1965前后 Multics</strong><br>&ensp;&ensp;&ensp;&ensp;贝尔实验室,麻省理工,通用电气发起<br><strong>1969 Unix雏形UNICS</strong><br>&ensp;&ensp;&ensp;&ensp;Ken Thompson 汇编语言 B语言<br><strong>1973 正式命名为Unix</strong><br>&ensp;&ensp;&ensp;&ensp;Dennis Ritchie C语言<br><strong>1977 BSD</strong><br>&ensp;&ensp;&ensp;&ensp;Berkeley Software Distribution 伯克利大学<br><strong>1979 System V架构 版权声明</strong><br>&ensp;&ensp;&ensp;&ensp;HP-UNIX IBM AIX “不对学生提供源码” 收回版权<br><strong>1984年 Minix操作系统</strong><br>&ensp;&ensp;&ensp;&ensp;Andrew S. Tanenbaum荷兰阿姆斯特丹自由大学计算机科学系  </p>
+</blockquote>
+<h2 id="GNU"><a href="#GNU" class="headerlink" title="GNU"></a>GNU</h2><blockquote>
+<p>GNU（GNU is Not Unix）<br>1984年由Richard Stallman发起并创建<br>目标是编写大量兼容于Unix系统的自由软件<br>官方网站：<a href="http://www.gnu.org" target="_blank" rel="noopener">http://www.gnu.org</a><br>GPL（GNU General Public License）<br>自由软件基金会：Free Software Foundation<br>允许用户任意复制、传递、修改及再发布<br>基于自由软件修改再次发布的软件，仍需遵守GPL<br>LGPL（Lesser General Public License）<br>LGPL相对于GPL较为宽松，允许不公开全部源代码<br>GNU操作系统：Hurd Hird of Unix-Replacing Daemons<br>官网：<a href="http://www.gnu.org/home.html" target="_blank" rel="noopener">http://www.gnu.org/home.html</a>  </p>
+</blockquote>
+<h2 id="Linux起源"><a href="#Linux起源" class="headerlink" title="Linux起源"></a>Linux起源</h2><p>&ensp;&ensp;&ensp;&ensp;1991年的10月5日，Torvalds在comp.os.minix新闻组上发布消息，正式向外宣布他自行编写的完全自由免费的内核诞生（Freeminix-like kernel sources for 386-AT）———FREAX，英文含义是怪诞的、怪物、异想天开.  </p>
+<blockquote>
+<p>类Unix的内核，在GPL下发布<br>官网：<a href="http://www.kernel.org" target="_blank" rel="noopener">www.kernel.org</a><br>Linux操作系统：<br>&ensp;&ensp;&ensp;&ensp;完整的类UNIX操作系统<br>&ensp;&ensp;&ensp;&ensp;Linux内核+ GNU工具<br>&ensp;&ensp;&ensp;&ensp;如：CentOS,Ubuntu,Android  </p>
+</blockquote>
+<h3 id="linux-kernel-开发全家福"><a href="#linux-kernel-开发全家福" class="headerlink" title="linux kernel 开发全家福!"></a>linux kernel 开发全家福!</h3><p><img src="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=3502229292,3560294500&amp;fm=26&amp;gp=0.jpg" alt="linux kernel 开发全家福!">  </p>
+<h3 id="Linux发行版"><a href="#Linux发行版" class="headerlink" title="Linux发行版"></a>Linux发行版</h3><blockquote>
+<p><strong>slackware</strong>:<br>&ensp;&ensp;&ensp;&ensp;SUSE Linux Enterprise Server (SLES)<br>&ensp;&ensp;&ensp;&ensp;OpenSuse桌面<br><strong>debian</strong>:<br>&ensp;&ensp;&ensp;&ensp;ubuntu，mint<br><strong>redhat</strong>：<br>&ensp;&ensp;&ensp;&ensp;RHEL: RedHat Enterprise Linux<br>&ensp;&ensp;&ensp;&ensp;每18个月发行一个新版本<br>&ensp;&ensp;&ensp;&ensp;CentOS：兼容RHEL的格式<br>&ensp;&ensp;&ensp;&ensp;中标麒麟：中标软件<br>&ensp;&ensp;&ensp;&ensp;Fedora：每6个月发行一个新版本<br><strong>ArchLinux</strong>：<br>&ensp;&ensp;&ensp;&ensp;轻量简洁<br><strong>Gentoo</strong>：<br>&ensp;&ensp;&ensp;&ensp;极致性能，不提供传统意义的安装程序<br><strong>LFS</strong>:<br>&ensp;&ensp;&ensp;&ensp;Linux From scratch 自制Linux<br><strong>Android</strong>:<br>&ensp;&ensp;&ensp;&ensp;kernel+busybox（工具集）+java虚拟机<br><strong>Linux分支参考网站</strong>：<br>&ensp;&ensp;&ensp;&ensp;<a href="http://futurist.se/gldt/" target="_blank" rel="noopener">http://futurist.se/gldt/</a><br>&ensp;&ensp;&ensp;&ensp;<a href="http://www.mindpin.com/d3js-demo/linux/" target="_blank" rel="noopener">http://www.mindpin.com/d3js-demo/linux/</a>  </p>
+</blockquote>
+<h3 id="REDHAT红帽公司"><a href="#REDHAT红帽公司" class="headerlink" title="REDHAT红帽公司"></a>REDHAT红帽公司</h3><p>&ensp;&ensp;&ensp;&ensp;Marc Ewing早在卡内基梅隆大学读书的时候就戴着他祖父的红色曲球帽. Marc在Marc Ewing大学常把自己的软件命名为Red Hat — Red hat 1, Red Hat 2 用来区别他人的软件. 所以当他开始自己的Linux项目, 自然就会命名为Red Hat Linux。Ewing非常乐于帮助同学解决计算机问题 “你的朋友可能会说, 去跟我的朋友Marc交流. 谁是Marc? 他是红帽男孩. ” 所以, 至少在他们最亲密的朋友当中, 红帽子成为了技术专家的同义词。<br>&ensp;&ensp;&ensp;&ensp;1993年，Bob Young 建立了ACC公司，营销Linux和UNIX的支持软件和书籍杂志。<br>&ensp;&ensp;&ensp;&ensp;1995年，Bob Young 收购了Marc Ewing的业务，合并后的ACC公司成为新的Red Hat软件公司，发布了Red Hat Linux 2.0。  </p>
+<h3 id="Linux内核"><a href="#Linux内核" class="headerlink" title="Linux内核"></a>Linux内核</h3><p><strong>Linux的内核版本由3部分组成:</strong><br>&ensp;&ensp;&ensp;&ensp;主版本号<br>&ensp;&ensp;&ensp;&ensp;次版本号<br>&ensp;&ensp;&ensp;&ensp;末版本号<br>&ensp;&ensp;&ensp;&ensp;打包版本号<br>&ensp;&ensp;&ensp;&ensp;厂商版本  </p>
+<h3 id="linux内核基础"><a href="#linux内核基础" class="headerlink" title="linux内核基础"></a>linux内核基础</h3><p><img src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1537887991045&amp;di=c2baa542a06078f53425d91052294921&amp;imgtype=jpg&amp;src=http%3A%2F%2Fimg3.imgtn.bdimg.com%2Fit%2Fu%3D1671897373%2C1175836165%26fm%3D214%26gp%3D0.jpg" alt="linux内核基础">  </p>
+<h3 id="Linux发行版本"><a href="#Linux发行版本" class="headerlink" title="Linux发行版本"></a>Linux发行版本</h3><p>Linux发行版的名称和版本号是由发行版的维护者决定的<br><strong>RedHat Enterprise Linux 7.3</strong><br>&ensp;&ensp;&ensp;&ensp;由Red Hat公司发布<br><strong>SUSE Linux Enterprise Server 12 SP2</strong><br>&ensp;&ensp;&ensp;&ensp;由Novell公司发布<br><strong>Debian Linux 9</strong><br>&ensp;&ensp;&ensp;&ensp;由Debian维护社区发布<br><strong>Android 8.0</strong><br>&ensp;&ensp;&ensp;&ensp;由Google公司发布  </p>
+<h3 id="开源-Open-Source"><a href="#开源-Open-Source" class="headerlink" title="开源 Open Source"></a>开源 Open Source</h3><h4 id="开源：-Open-Source-，软件和源代码提供给所有人"><a href="#开源：-Open-Source-，软件和源代码提供给所有人" class="headerlink" title="开源： Open Source ，软件和源代码提供给所有人"></a>开源： Open Source ，软件和源代码提供给所有人</h4><p>&ensp;&ensp;&ensp;&ensp;自由分发软件和源代码<br>&ensp;&ensp;&ensp;&ensp;能够修改和创建衍生作品  </p>
+<h4 id="软件分类："><a href="#软件分类：" class="headerlink" title="软件分类："></a>软件分类：</h4><p>&ensp;&ensp;&ensp;&ensp;商业<br>&ensp;&ensp;&ensp;&ensp;共享<br>&ensp;&ensp;&ensp;&ensp;自由 free  </p>
+<h3 id="开源协议"><a href="#开源协议" class="headerlink" title="开源协议"></a>开源协议</h3><h4 id="世界上的开源许可证，大概有上百种"><a href="#世界上的开源许可证，大概有上百种" class="headerlink" title="世界上的开源许可证，大概有上百种"></a>世界上的开源许可证，大概有上百种</h4><p>&ensp;&ensp;&ensp;&ensp;GPLv2, GPLv3, LGPL(lesser) ：通用公共许可 copyleft<br>&ensp;&ensp;&ensp;&ensp;Apache: apache<br>&ensp;&ensp;&ensp;&ensp;BSD: bsd<br>&ensp;&ensp;&ensp;&ensp;Mozilla<br>&ensp;&ensp;&ensp;&ensp;MIT<br><img src="https://gss2.bdstatic.com/9fo3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike180%2C5%2C5%2C180%2C60/sign=61b81db3f4dcd100d991f07313e22c75/9f510fb30f2442a7834c4a1bdd43ad4bd01302c9.jpg" alt="开源协议">  </p>
+<h3 id="Linux哲学思想"><a href="#Linux哲学思想" class="headerlink" title="Linux哲学思想"></a>Linux哲学思想</h3><blockquote>
+<p>一切都是一个文件（包括硬件）<br>小型，单一用途的程序<br>链接程序，共同完成复杂的任务<br>避免令人困惑的用户界面<br>配置数据存储在文本中  </p>
+</blockquote>
+<h3 id="Centos获取发行版"><a href="#Centos获取发行版" class="headerlink" title="Centos获取发行版"></a>Centos获取发行版</h3><blockquote>
+<p><a href="https://wiki.centos.org/Download" target="_blank" rel="noopener">https://wiki.centos.org/Download</a><br><a href="http://mirrors.aliyun.com" target="_blank" rel="noopener">http://mirrors.aliyun.com</a><br><a href="http://mirrors.sohu.com" target="_blank" rel="noopener">http://mirrors.sohu.com</a><br><a href="http://mirrors.163.com" target="_blank" rel="noopener">http://mirrors.163.com</a>  </p>
+</blockquote>
+
+  </section>
+
+  <section class="post-comments">
+
+    <!-- 将评论系统（例如Disqus、多说、友言、畅言等）提供的代码片段粘贴在这里 -->
+    
+</section>
+
+
+</article>
+
+
+            <footer class="footer">
+
+    <span class="footer__copyright">&copy; 2014-2015. | 由<a href="https://hexo.io/">Hexo</a>强力驱动 | 主题<a href="https://github.com/someus/huno">Huno</a></span>
+    
+</footer>
+        </div>
+    </div>
+
+    <!-- js files -->
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/scale.fix.js"></script>
+    
+
+    
+
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript"> 
+        $(document).ready(function(){
+            MathJax.Hub.Config({ 
+                tex2jax: {inlineMath: [['[latex]','[/latex]'], ['\\(','\\)']]} 
+            });
+        });
+    </script>
+
+
+    
+
+    <script src="/js/awesome-toc.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $.awesome_toc({
+                overlay: true,
+                contentId: "post-content",
+            });
+        });
+    </script>
+
+
+    
+    
+    <!--kill ie6 -->
+<!--[if IE 6]>
+  <script src="//letskillie6.googlecode.com/svn/trunk/2/zh_CN.js"></script>
+<![endif]-->
+
+</body>
+</html>

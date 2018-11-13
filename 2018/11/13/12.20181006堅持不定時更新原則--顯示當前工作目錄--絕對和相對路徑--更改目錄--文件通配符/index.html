@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    
+
+    <title>
+      12.20181006堅持不定時更新原則--顯示當前工作目錄--絕對和相對路徑--更改目錄--文件通配符 | Sea crab Fried rice 
+    </title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    
+      <meta name="author" content="Weico Li">
+    
+    
+
+    <meta name="description" content="顯示當前工作目錄每個Shell和系統進程都有一個當前的工作目錄CWD:current work directory顯示當前shell CWD 的絕對路徑pwd：printing working directory-P 顯示真實物理路徑-L 顯示鏈接路徑(默認)12345678[root@centos7 ~]# ll -d /usr/bin /binlrwxrwxrwx. 1 root root">
+<meta name="keywords" content="基础">
+<meta property="og:type" content="article">
+<meta property="og:title" content="12.20181006堅持不定時更新原則--顯示當前工作目錄--絕對和相對路徑--更改目錄--文件通配符 | Sea crab Fried rice">
+<meta property="og:url" content="http://yoursite.com/2018/11/13/12.20181006堅持不定時更新原則--顯示當前工作目錄--絕對和相對路徑--更改目錄--文件通配符/index.html">
+<meta property="og:site_name" content="Sea crab Fried rice">
+<meta property="og:description" content="顯示當前工作目錄每個Shell和系統進程都有一個當前的工作目錄CWD:current work directory顯示當前shell CWD 的絕對路徑pwd：printing working directory-P 顯示真實物理路徑-L 顯示鏈接路徑(默認)12345678[root@centos7 ~]# ll -d /usr/bin /binlrwxrwxrwx. 1 root root">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-10-06T08:04:40.831Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="12.20181006堅持不定時更新原則--顯示當前工作目錄--絕對和相對路徑--更改目錄--文件通配符 | Sea crab Fried rice">
+<meta name="twitter:description" content="顯示當前工作目錄每個Shell和系統進程都有一個當前的工作目錄CWD:current work directory顯示當前shell CWD 的絕對路徑pwd：printing working directory-P 顯示真實物理路徑-L 顯示鏈接路徑(默認)12345678[root@centos7 ~]# ll -d /usr/bin /binlrwxrwxrwx. 1 root root">
+    
+    
+    
+      <link rel="icon" type="image/x-icon" href="/favicon.png">
+    
+    <link rel="stylesheet" href="/css/uno.css">
+    <link rel="stylesheet" href="/css/highlight.css">
+    <link rel="stylesheet" href="/css/archive.css">
+    <link rel="stylesheet" href="/css/china-social-icon.css">
+
+</head>
+<body>
+
+    <span class="mobile btn-mobile-menu">
+        <i class="icon icon-list btn-mobile-menu__icon"></i>
+        <i class="icon icon-x-circle btn-mobile-close__icon hidden"></i>
+    </span>
+
+    
+
+<header class="panel-cover panel-cover--collapsed">
+
+
+  <div class="panel-main">
+
+  
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+
+        
+
+        <h1 class="panel-cover__title panel-title"><a href="/" title="link to homepage">Sea crab Fried rice</a></h1>
+        <hr class="panel-cover__divider">
+
+        
+
+        <div class="navigation-wrapper">
+
+          <nav class="cover-navigation cover-navigation--primary">
+            <ul class="navigation">
+
+              
+                
+                <li class="navigation__item"><a href="/#blog" title="" class="blog-button">首页</a></li>
+              
+                
+                <li class="navigation__item"><a href="/about" title="" class="">关于</a></li>
+              
+                
+                <li class="navigation__item"><a href="/archive" title="" class="">归档</a></li>
+              
+
+            </ul>
+          </nav>
+
+          <!-- ----------------------------
+To add a new social icon simply duplicate one of the list items from below
+and change the class in the <i> tag to match the desired social network
+and then add your link to the <a>. Here is a full list of social network
+classes that you can use:
+
+    icon-social-500px
+    icon-social-behance
+    icon-social-delicious
+    icon-social-designer-news
+    icon-social-deviant-art
+    icon-social-digg
+    icon-social-dribbble
+    icon-social-facebook
+    icon-social-flickr
+    icon-social-forrst
+    icon-social-foursquare
+    icon-social-github
+    icon-social-google-plus
+    icon-social-hi5
+    icon-social-instagram
+    icon-social-lastfm
+    icon-social-linkedin
+    icon-social-medium
+    icon-social-myspace
+    icon-social-path
+    icon-social-pinterest
+    icon-social-rdio
+    icon-social-reddit
+    icon-social-skype
+    icon-social-spotify
+    icon-social-stack-overflow
+    icon-social-steam
+    icon-social-stumbleupon
+    icon-social-treehouse
+    icon-social-tumblr
+    icon-social-twitter
+    icon-social-vimeo
+    icon-social-xbox
+    icon-social-yelp
+    icon-social-youtube
+    icon-social-zerply
+    icon-mail
+
+-------------------------------->
+
+<!-- add social info here -->
+
+
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="panel-cover--overlay"></div>
+  </div>
+</header>
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner entry">
+            
+
+<article class="post-container post-container--single">
+
+  <header class="post-header">
+    
+    <h1 class="post-title">12.20181006堅持不定時更新原則--顯示當前工作目錄--絕對和相對路徑--更改目錄--文件通配符</h1>
+
+    
+
+    <div class="post-meta">
+      <time datetime="2018-11-13" class="post-meta__date date">2018-11-13</time> 
+
+      <span class="post-meta__tags tags">
+
+          
+            <font class="categories">
+            &#8226; 分类:
+            <a class="categories-link" href="/categories/linux/">linux</a>
+            </font>
+          
+
+          
+             &#8226; 标签:
+            <font class="tags">
+              <a class="tags-link" href="/tags/基础/">基础</a>
+            </font>
+          
+
+      </span>
+    </div>
+    
+    
+
+  </header>
+
+  <section id="post-content" class="article-content post">
+    <h1 id="顯示當前工作目錄"><a href="#顯示當前工作目錄" class="headerlink" title="顯示當前工作目錄"></a>顯示當前工作目錄</h1><p>每個Shell和系統進程都有一個當前的工作目錄<br>CWD:current work directory<br>顯示當前shell CWD 的絕對路徑<br>pwd：printing working directory<br>-P 顯示真實物理路徑<br>-L 顯示鏈接路徑(默認)<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">[root@centos7 ~]<span class="comment"># ll -d /usr/bin /bin</span></span><br><span class="line">lrwxrwxrwx. 1 root root     7 Sep 18 23:21 /bin -&gt; usr/bin</span><br><span class="line">dr-xr-xr-x. 2 root root 45056 Oct  3 15:47 /usr/bin</span><br><span class="line">[root@centos7 ~]<span class="comment"># cd /bin</span></span><br><span class="line">[root@centos7 bin]<span class="comment"># pwd -L</span></span><br><span class="line">/bin</span><br><span class="line">[root@centos7 bin]<span class="comment"># pwd -P</span></span><br><span class="line">/usr/bin</span><br></pre></td></tr></table></figure></p>
+<h1 id="絕對和相對路徑"><a href="#絕對和相對路徑" class="headerlink" title="絕對和相對路徑"></a>絕對和相對路徑</h1><p>絕對路徑<br>&ensp;&ensp;&ensp;&ensp;以正斜杠開始<br>&ensp;&ensp;&ensp;&ensp;完整的文件的位置路徑<br>&ensp;&ensp;&ensp;&ensp;可用於任何像指定一個文件名的時候<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@centos7 bin]<span class="comment"># ll /etc/sysconfig/network-scripts/ifcfg-ens33 </span></span><br><span class="line">-rw-r--r--. 1 root root 347 Sep 19 00:23 /etc/sysconfig/network-scripts/ifcfg-ens33</span><br></pre></td></tr></table></figure></p>
+<p>相對路徑名<br>&ensp;&ensp;&ensp;&ensp;不以斜線開始<br>&ensp;&ensp;&ensp;&ensp;指定相對於當前工作目錄或某目錄的位置<br>&ensp;&ensp;&ensp;&ensp;可以作為一個簡短的形式指定一個文件名<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[root@centos7 network-scripts]<span class="comment"># ll ../network</span></span><br><span class="line">-rw-r--r--. 1 root root 22 Sep 18 23:41 ../network</span><br><span class="line">[root@centos7 network-scripts]<span class="comment"># ll ./ifcfg-lo</span></span><br><span class="line">-rw-r--r--. 1 root root 254 Jan  3  2018 ./ifcfg-lo</span><br></pre></td></tr></table></figure></p>
+<p>基名：basename<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@centos7 network-scripts]<span class="comment"># basename /etc/sysconfig/network-scripts/</span></span><br><span class="line">network-scripts</span><br></pre></td></tr></table></figure></p>
+<p>目錄名：dirname<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@centos7 network-scripts]<span class="comment"># dirname /etc/sysconfig/network-scripts/    </span></span><br><span class="line">/etc/sysconfig</span><br></pre></td></tr></table></figure></p>
+<h1 id="更改目錄"><a href="#更改目錄" class="headerlink" title="更改目錄"></a>更改目錄</h1><p>cd 改變目錄<br>使用絕對和相對路徑：<br>&ensp;&ensp;&ensp;&ensp;cd /home/weico/<br>&ensp;&ensp;&ensp;&ensp;cd home/weico<br>切換至父目錄：           cd..<br>切換到當前用戶主目錄：    cd<br>切換至以前的工作目錄：    cd-<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[root@centos7 ~]<span class="comment"># cd /etc/</span></span><br><span class="line">[root@centos7 etc]<span class="comment"># cd -</span></span><br><span class="line">/root</span><br><span class="line">[root@centos7 ~]<span class="comment">#</span></span><br></pre></td></tr></table></figure></p>
+<p>選項：-P<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[root@centos7 ~]<span class="comment"># cd -P /bin</span></span><br><span class="line">[root@centos7 bin]<span class="comment"># pwd</span></span><br><span class="line">/usr/bin</span><br></pre></td></tr></table></figure></p>
+<p>相關的環境變量：<br>&ensp;&ensp;&ensp;&ensp;PWD：當前目錄路徑<br>&ensp;&ensp;&ensp;&ensp;OLDPWD：上一次目錄路徑<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@centos7 bin]<span class="comment"># echo $OLDPWD</span></span><br><span class="line">/root</span><br></pre></td></tr></table></figure></p>
+<h1 id="列出目錄內容"><a href="#列出目錄內容" class="headerlink" title="列出目錄內容"></a>列出目錄內容</h1><p>列出當前目錄的內容或指定目錄<br>用法：ls [options] [files_or_dirs]<br>示例：<br>ls -a 包含隱藏文件<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">[root@centos7 ~]<span class="comment"># ls -a</span></span><br><span class="line">.                .bash_profile  .dbus      .ICEauthority         Pictures</span><br><span class="line">..               .bashrc        Desktop    initial-setup-ks.cfg  Public</span><br><span class="line">anaconda-ks.cfg  .cache         Documents  .lesshst              .tcshrc</span><br><span class="line">.bash_history    .config        Downloads  .<span class="built_in">local</span>                Templates</span><br><span class="line">.bash_logout     .cshrc         .esd_auth  Music                 Videos</span><br></pre></td></tr></table></figure></p>
+<p>ls -l 顯示額外的信息<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">[root@centos7 ~]<span class="comment"># ls -l</span></span><br><span class="line">total 8</span><br><span class="line">-rw-------. 1 root root 1896 Sep 18 23:43 anaconda-ks.cfg</span><br><span class="line">drwxr-xr-x. 2 root root    6 Sep 18 23:49 Desktop</span><br><span class="line">drwxr-xr-x. 2 root root    6 Sep 18 23:49 Documents</span><br><span class="line">drwxr-xr-x. 2 root root    6 Sep 18 23:49 Downloads</span><br><span class="line">-rw-r--r--. 1 root root 1927 Sep 18 23:48 initial-setup-ks.cfg</span><br><span class="line">drwxr-xr-x. 2 root root    6 Sep 18 23:49 Music</span><br><span class="line">drwxr-xr-x. 2 root root    6 Sep 18 23:49 Pictures</span><br><span class="line">drwxr-xr-x. 2 root root    6 Sep 18 23:49 Public</span><br><span class="line">drwxr-xr-x. 2 root root    6 Sep 18 23:49 Templates</span><br><span class="line">drwxr-xr-x. 2 root root    6 Sep 18 23:49 Videos</span><br></pre></td></tr></table></figure></p>
+<p>ls -R 目錄遞歸通過<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">[root@centos7 ~]<span class="comment"># ls -R</span></span><br><span class="line">.:</span><br><span class="line">anaconda-ks.cfg  Documents  initial-setup-ks.cfg  Pictures  Templates</span><br><span class="line">Desktop          Downloads  Music                 Public    Videos</span><br><span class="line"></span><br><span class="line">./Desktop:</span><br><span class="line"></span><br><span class="line">./Documents:</span><br><span class="line"></span><br><span class="line">./Downloads:</span><br><span class="line"></span><br><span class="line">./Music:</span><br><span class="line"></span><br><span class="line">./Pictures:</span><br><span class="line"></span><br><span class="line">./Public:</span><br><span class="line"></span><br><span class="line">./Templates:</span><br><span class="line"></span><br><span class="line">./Videos:</span><br></pre></td></tr></table></figure></p>
+<p>ls -r 反向排序<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[root@centos7 ~]<span class="comment"># ls -r /data</span></span><br><span class="line">Z  Y  X  W  V  U  T  S  R  Q  P  O  N  M  L  K  J  I  H  G  F  E  D  C  B  A</span><br><span class="line">z  y  x  w  v  u  t  s  r  q  p  o  n  m  l  k  j  i  h  g  f  e  d  c  b  a</span><br></pre></td></tr></table></figure></p>
+<p>ls -ld 目錄和符號鏈接信息<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@centos7 ~]<span class="comment"># ls -ld</span></span><br><span class="line">dr-xr-x---. 14 root root 4096 Oct  6 13:58 .</span><br></pre></td></tr></table></figure></p>
+<p>ls -l 文件分行顯示<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">[root@centos7 ~]<span class="comment"># ls -1</span></span><br><span class="line">anaconda-ks.cfg</span><br><span class="line">Desktop</span><br><span class="line">Documents</span><br><span class="line">Downloads</span><br><span class="line">initial-setup-ks.cfg</span><br><span class="line">Music</span><br><span class="line">Pictures</span><br><span class="line">Public</span><br><span class="line">Templates</span><br><span class="line">Videos</span><br></pre></td></tr></table></figure></p>
+<p>ls -S 按從大到小排序<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[root@centos7 data]<span class="comment"># ls -r</span></span><br><span class="line">Z  Y  X  W  V  U  T  S  R  Q  P  O  N  M  L  K  J  I  H  G  F  E  D  C  B  A</span><br><span class="line">z  y  x  w  v  u  t  s  r  q  p  o  n  m  l  k  j  i  h  g  f  e  d  c  b  a</span><br></pre></td></tr></table></figure></p>
+<p>ls -t 按mtime(文件的修改時間)排序<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">[root@centos7 ~]<span class="comment"># ls -tl</span></span><br><span class="line">total 8</span><br><span class="line">drwxr-xr-x. 2 root root    6 Sep 18 23:49 Pictures</span><br><span class="line">drwxr-xr-x. 2 root root    6 Sep 18 23:49 Videos</span><br><span class="line">drwxr-xr-x. 2 root root    6 Sep 18 23:49 Desktop</span><br><span class="line">drwxr-xr-x. 2 root root    6 Sep 18 23:49 Documents</span><br><span class="line">drwxr-xr-x. 2 root root    6 Sep 18 23:49 Downloads</span><br><span class="line">drwxr-xr-x. 2 root root    6 Sep 18 23:49 Music</span><br><span class="line">drwxr-xr-x. 2 root root    6 Sep 18 23:49 Public</span><br><span class="line">drwxr-xr-x. 2 root root    6 Sep 18 23:49 Templates</span><br><span class="line">-rw-r--r--. 1 root root 1927 Sep 18 23:48 initial-setup-ks.cfg</span><br><span class="line">-rw-------. 1 root root 1896 Sep 18 23:43 anaconda-ks.cfg</span><br></pre></td></tr></table></figure></p>
+<p>ls -u 配合-t選項，顯示并按atime從新到舊排序  </p>
+<p>ls -U 按目錄存放順序顯示  </p>
+<p>ls -X 按文件後綴排序  </p>
+<h1 id="文件通配符"><a href="#文件通配符" class="headerlink" title="文件通配符"></a>文件通配符</h1><p>&ensp;&ensp;&ensp;&ensp;* 匹配零個或多個字符<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">[root@centos7 data]<span class="comment"># ls f*.conf</span></span><br><span class="line">fa.conf  fd.conf  fg.conf  fj.conf  fm.conf  fp.conf  fs.conf  fv.conf  fy.conf</span><br><span class="line">fb.conf  fe.conf  fh.conf  fk.conf  fn.conf  fq.conf  ft.conf  fw.conf  fz.conf</span><br><span class="line">fc.conf  ff.conf  fi.conf  fl.conf  fo.conf  fr.conf  fu.conf  fx.conf</span><br><span class="line">[root@centos7 data]<span class="comment"># ls *h*</span></span><br><span class="line">fh.conf  fh.txt</span><br></pre></td></tr></table></figure></p>
+<p>&ensp;&ensp;&ensp;&ensp;? 匹配任何單個字符<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[root@centos7 data]<span class="comment"># ls f?.conf </span></span><br><span class="line">fa.conf  fd.conf  fg.conf  fj.conf  fm.conf  fp.conf  fs.conf  fv.conf  fy.conf</span><br><span class="line">fb.conf  fe.conf  fh.conf  fk.conf  fn.conf  fq.conf  ft.conf  fw.conf  fz.conf</span><br><span class="line">fc.conf  ff.conf  fi.conf  fl.conf  fo.conf  fr.conf  fu.conf  fx.conf</span><br></pre></td></tr></table></figure></p>
+<p>&ensp;&ensp;&ensp;&ensp;~ 當前用戶家目錄<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[root@centos7 data]<span class="comment"># ls ~</span></span><br><span class="line">anaconda-ks.cfg  Documents  initial-setup-ks.cfg  Pictures  Templates</span><br><span class="line">Desktop          Downloads  Music                 Public    Videos</span><br></pre></td></tr></table></figure></p>
+<p>&ensp;&ensp;&ensp;&ensp;~weico 用戶weico家目錄<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@centos7 data]<span class="comment"># ls ~weico</span></span><br><span class="line">Desktop  Documents  Downloads  Music  Pictures  Public  Templates  Videos</span><br></pre></td></tr></table></figure></p>
+<p>&ensp;&ensp;&ensp;&ensp;~+ 當前工作目錄<br>&ensp;&ensp;&ensp;&ensp;~- 前一個工作目錄<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[root@centos7 data]<span class="comment"># ls ~-</span></span><br><span class="line">anaconda-ks.cfg  Documents  initial-setup-ks.cfg  Pictures  Templates</span><br><span class="line">Desktop          Downloads  Music                 Public    Videos</span><br></pre></td></tr></table></figure></p>
+<p>&ensp;&ensp;&ensp;&ensp;[0-9] 匹配數字範圍<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@centos7 data]<span class="comment"># ls f[0-9]</span></span><br><span class="line">f0  f1  f2  f3  f4  f5  f6  f7  f8  f9</span><br></pre></td></tr></table></figure></p>
+<p>&ensp;&ensp;&ensp;&ensp;[a-z] 字母<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[root@centos7 data]<span class="comment"># ls f[a-z]</span></span><br><span class="line">fa  fB  fd  fE  <span class="built_in">fg</span>  fH  fj  fK  fm  fN  fp  fQ  fs  fT  fv  fW  fy</span><br><span class="line">fA  <span class="built_in">fc</span>  fD  ff  fG  <span class="keyword">fi</span>  fJ  fl  fM  fo  fP  fr  fS  fu  fV  fx  fY</span><br><span class="line">fb  fC  fe  fF  fh  fI  fk  fL  fn  fO  fq  fR  ft  fU  fw  fX  fz</span><br></pre></td></tr></table></figure></p>
+<p>&ensp;&ensp;&ensp;&ensp;[A-Z] 字母<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[root@centos7 data]<span class="comment"># ls f[A-Z]</span></span><br><span class="line">fA  <span class="built_in">fc</span>  fD  ff  fG  <span class="keyword">fi</span>  fJ  fl  fM  fo  fP  fr  fS  fu  fV  fx  fY</span><br><span class="line">fb  fC  fe  fF  fh  fI  fk  fL  fn  fO  fq  fR  ft  fU  fw  fX  fz</span><br><span class="line">fB  fd  fE  <span class="built_in">fg</span>  fH  fj  fK  fm  fN  fp  fQ  fs  fT  fv  fW  fy  fZ</span><br></pre></td></tr></table></figure></p>
+<p>&ensp;&ensp;&ensp;&ensp;[weico] 匹配列表中的任何的一個字符<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@centos7 data]<span class="comment"># ls f[weico]</span></span><br><span class="line"><span class="built_in">fc</span>  fe  <span class="keyword">fi</span>  fo  fw</span><br></pre></td></tr></table></figure></p>
+<p>&ensp;&ensp;&ensp;&ensp;[^weico] 匹配列表中的所有字符以外的字符<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[root@centos7 data]<span class="comment"># ls f[^weico]</span></span><br><span class="line">f0  f3  f6  f9  fb  fd  ff  fG  fI  fk  fL  fn  fp  fQ  fs  fT  fv  fx  fY</span><br><span class="line">f1  f4  f7  fa  fB  fD  fF  fh  fj  fK  fm  fN  fP  fr  fS  fu  fV  fX  fz</span><br><span class="line">f2  f5  f8  fA  fC  fE  <span class="built_in">fg</span>  fH  fJ  fl  fM  fO  fq  fR  ft  fU  fW  fy  fZ</span><br></pre></td></tr></table></figure></p>
+<p>預定義的字符類：man 7 glob<br>&ensp;&ensp;&ensp;&ensp;[:digit:]:任意數字，相當於0-9<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@centos7 data]<span class="comment"># ls f[[:digit:]]</span></span><br><span class="line">f0  f1  f2  f3  f4  f5  f6  f7  f8  f9</span><br></pre></td></tr></table></figure></p>
+<p>&ensp;&ensp;&ensp;&ensp;[:lower:]:任意小寫字母<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[root@centos7 data]<span class="comment"># ls f[[:lower:]]</span></span><br><span class="line">fa  <span class="built_in">fc</span>  fe  <span class="built_in">fg</span>  <span class="keyword">fi</span>  fk  fm  fo  fq  fs  fu  fw  fy</span><br><span class="line">fb  fd  ff  fh  fj  fl  fn  fp  fr  ft  fv  fx  fz</span><br></pre></td></tr></table></figure></p>
+<p>&ensp;&ensp;&ensp;&ensp;[:upper:]:任意大寫字母<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[root@centos7 data]<span class="comment"># ls f[[:upper:]]</span></span><br><span class="line">fA  fC  fE  fG  fI  fK  fM  fO  fQ  fS  fU  fW  fY</span><br><span class="line">fB  fD  fF  fH  fJ  fL  fN  fP  fR  fT  fV  fX  fZ</span><br></pre></td></tr></table></figure></p>
+<p>&ensp;&ensp;&ensp;&ensp;[:alpha:]:任意大小寫字母<br>&ensp;&ensp;&ensp;&ensp;[:alnum:]:任意數字或字母<br>&ensp;&ensp;&ensp;&ensp;[:blank:]:水平空白字符<br>&ensp;&ensp;&ensp;&ensp;[:space:]:水平或垂直空白字符<br>&ensp;&ensp;&ensp;&ensp;[:punct:]:標點符號<br>&ensp;&ensp;&ensp;&ensp;[:print:]:可打印字符<br>&ensp;&ensp;&ensp;&ensp;[:cntrl:]:控制(非打印)字符<br>&ensp;&ensp;&ensp;&ensp;[:graph:]:圖形字符<br>&ensp;&ensp;&ensp;&ensp;[:xdigit:]:十六進制字符  </p>
+<p>只顯示隱藏文件–》<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">[root@centos7 ~]<span class="comment"># ls -d .[^.]*</span></span><br><span class="line">.bash_history  .bash_profile  .cache   .cshrc  .esd_auth      .lesshst  .tcshrc</span><br><span class="line">.bash_logout   .bashrc        .config  .dbus   .ICEauthority  .<span class="built_in">local</span></span><br><span class="line">[root@centos7 ~]<span class="comment"># ls -d .*    </span></span><br><span class="line">.              .bash_logout   .cache   .dbus          .lesshst</span><br><span class="line">..             .bash_profile  .config  .esd_auth      .<span class="built_in">local</span></span><br><span class="line">.bash_history  .bashrc        .cshrc   .ICEauthority  .tcshrc</span><br><span class="line">[root@centos7 ~]<span class="comment"># ls -aI "[^.]*"</span></span><br><span class="line">.              .bash_logout   .cache   .dbus          .lesshst</span><br><span class="line">..             .bash_profile  .config  .esd_auth      .<span class="built_in">local</span></span><br><span class="line">.bash_history  .bashrc        .cshrc   .ICEauthority  .tcshrc</span><br></pre></td></tr></table></figure></p>
+<h1 id="練習："><a href="#練習：" class="headerlink" title="練習："></a>練習：</h1><p>1、显示/var目录下所有以l开头，以一个小写字母结尾，且中间出现至少一位数字的文件或目录<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@centos7 ~]<span class="comment"># ls /var/l*[[:digit:]]*[[:lower:]]</span></span><br></pre></td></tr></table></figure></p>
+<p>2、显示/etc目录下以任意一位数字开头，且以非数字结尾的文件或目录<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@centos7 ~]<span class="comment"># ls /etc/[[:digit:]]*[^[:digit:]]</span></span><br></pre></td></tr></table></figure></p>
+<p>3、显示/etc/目录下以非字母开头，后面跟了一个字母及其它任意长度任意字符的文件或目录<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@centos7 ~]<span class="comment"># ls /etc/[^[:alpha:]][[:alpha:]]*</span></span><br></pre></td></tr></table></figure></p>
+<p>4、显示/etc/目录下所有以rc开头，并后面是0-6之间的数字，其它为任意字符的文件或目录<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@centos7 ~]<span class="comment"># ls /etc/[rc][0-6]*</span></span><br></pre></td></tr></table></figure></p>
+
+  </section>
+
+  <section class="post-comments">
+
+    <!-- 将评论系统（例如Disqus、多说、友言、畅言等）提供的代码片段粘贴在这里 -->
+    
+</section>
+
+
+</article>
+
+
+            <footer class="footer">
+
+    <span class="footer__copyright">&copy; 2014-2015. | 由<a href="https://hexo.io/">Hexo</a>强力驱动 | 主题<a href="https://github.com/someus/huno">Huno</a></span>
+    
+</footer>
+        </div>
+    </div>
+
+    <!-- js files -->
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/scale.fix.js"></script>
+    
+
+    
+
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript"> 
+        $(document).ready(function(){
+            MathJax.Hub.Config({ 
+                tex2jax: {inlineMath: [['[latex]','[/latex]'], ['\\(','\\)']]} 
+            });
+        });
+    </script>
+
+
+    
+
+    <script src="/js/awesome-toc.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $.awesome_toc({
+                overlay: true,
+                contentId: "post-content",
+            });
+        });
+    </script>
+
+
+    
+    
+    <!--kill ie6 -->
+<!--[if IE 6]>
+  <script src="//letskillie6.googlecode.com/svn/trunk/2/zh_CN.js"></script>
+<![endif]-->
+
+</body>
+</html>
