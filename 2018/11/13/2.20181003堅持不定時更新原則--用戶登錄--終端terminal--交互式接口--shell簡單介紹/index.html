@@ -2,21 +2,21 @@
 <html>
 <head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="utf-8">
-  <title>2.20181003堅持不定時更新原則--用戶登錄--終端terminal--交互式接口--shell簡單介紹 | Sea crab Fried rice</title>
+  <title>2.用戶登錄--終端terminal--交互式接口--shell簡單介紹 | Sea crab Fried rice</title>
   <meta name="keywords" content=" 基础 ">
-  <meta name="description" content="2.20181003堅持不定時更新原則--用戶登錄--終端terminal--交互式接口--shell簡單介紹 | Sea crab Fried rice">
+  <meta name="description" content="2.用戶登錄--終端terminal--交互式接口--shell簡單介紹 | Sea crab Fried rice">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="命令行擴展、被括起來的集合命令行擴展：$( )或把一個命令的輸出打印給另一個命令的參數1234[root@centos7 ~]# echo &quot;This system&apos;s name is $(hostname)&quot;        This system&apos;s name is centos7.weico.com[root@centos7 ~]# echo &quot;I am `whoami`&quot;">
 <meta name="keywords" content="基础">
 <meta property="og:type" content="article">
-<meta property="og:title" content="8.20181004堅持不定時更新原則--命令行擴展、被括起來的集合--tab键--獲取幫助">
+<meta property="og:title" content="8.命令行擴展、被括起來的集合--tab键--獲取幫助">
 <meta property="og:url" content="http://yoursite.com/2018/11/13/8.20181004堅持不定時更新原則--命令行擴展、被括起來的集合--tab键--獲取幫助--命令幫助/index.html">
 <meta property="og:site_name" content="Sea crab Fried rice">
 <meta property="og:description" content="命令行擴展、被括起來的集合命令行擴展：$( )或把一個命令的輸出打印給另一個命令的參數1234[root@centos7 ~]# echo &quot;This system&apos;s name is $(hostname)&quot;        This system&apos;s name is centos7.weico.com[root@centos7 ~]# echo &quot;I am `whoami`&quot;">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-10-04T06:15:27.089Z">
+<meta property="og:updated_time" content="2018-11-13T04:50:35.060Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="8.20181004堅持不定時更新原則--命令行擴展、被括起來的集合--tab键--獲取幫助">
+<meta name="twitter:title" content="8.命令行擴展、被括起來的集合--tab键--獲取幫助">
 <meta name="twitter:description" content="命令行擴展、被括起來的集合命令行擴展：$( )或把一個命令的輸出打印給另一個命令的參數1234[root@centos7 ~]# echo &quot;This system&apos;s name is $(hostname)&quot;        This system&apos;s name is centos7.weico.com[root@centos7 ~]# echo &quot;I am `whoami`&quot;">
 
 
@@ -103,7 +103,7 @@
     </div>
     <div><a style="border-right: 1px solid #fff; width: 49%" class="about site_url" href="/about">关于</a><a style="width: 50%" class="friends">友链</a></div>
 </div>
-<input type="hidden" id="yelog_site_posts_number" value="16">
+<input type="hidden" id="yelog_site_posts_number" value="15">
 
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
@@ -146,57 +146,52 @@
     <nav id="title-list-nav">
         
         <a class="linux " href="/2018/11/13/10.20181004堅持不定時更新原則--history命令--bash快捷鍵/" data-tag="基础" data-author="">
-            <span class="post-title" title="10.20181004堅持不定時更新原則--history命令--bash快捷鍵">10.20181004堅持不定時更新原則--history命令--bash快捷鍵</span>
+            <span class="post-title" title="10.history命令--bash快捷鍵">10.history命令--bash快捷鍵</span>
             <span class="post-date" title="2018-11-13 11:26:44">2018/11/13</span>
         </a>
         
         <a class="linux " href="/2018/11/13/11.20181006堅持不定時更新原則--文件系統和目錄結構/" data-tag="基础" data-author="">
-            <span class="post-title" title="11.20181006堅持不定時更新原則--文件系統與目錄結構">11.20181006堅持不定時更新原則--文件系統與目錄結構</span>
+            <span class="post-title" title="11.文件系統與目錄結構">11.文件系統與目錄結構</span>
             <span class="post-date" title="2018-11-13 11:26:44">2018/11/13</span>
         </a>
         
         <a class="linux " href="/2018/11/13/13.20181006堅持不定時更新原則--查看文件狀態--創建空文件和刷新時間/" data-tag="基础" data-author="">
-            <span class="post-title" title="13.20181006堅持不定時更新原則--查看文件狀態--創建空文件和刷新時間">13.20181006堅持不定時更新原則--查看文件狀態--創建空文件和刷新時間</span>
-            <span class="post-date" title="2018-11-13 11:26:44">2018/11/13</span>
-        </a>
-        
-        <a class="linux " href="/2018/11/13/14.20181006堅持不定時更新原則--複製文件和目錄cp/" data-tag="基础" data-author="">
-            <span class="post-title" title="14.20181006堅持不定時更新原則--複製文件和目錄cp">14.20181006堅持不定時更新原則--複製文件和目錄cp</span>
+            <span class="post-title" title="13.查看文件狀態--創建空文件和刷新時間">13.查看文件狀態--創建空文件和刷新時間</span>
             <span class="post-date" title="2018-11-13 11:26:44">2018/11/13</span>
         </a>
         
         <a class="linux " href="/2018/11/13/3.20181003堅持不定時更新原則--命令提示符PS1/" data-tag="基础" data-author="">
-            <span class="post-title" title="3.20181003堅持不定時更新原則--命令提示符">3.20181003堅持不定時更新原則--命令提示符</span>
+            <span class="post-title" title="3.命令提示符">3.命令提示符</span>
             <span class="post-date" title="2018-11-13 11:26:44">2018/11/13</span>
         </a>
         
         <a class="linux " href="/2018/11/13/2.20181003堅持不定時更新原則--用戶登錄--終端terminal--交互式接口--shell簡單介紹/" data-tag="基础" data-author="">
-            <span class="post-title" title="2.20181003堅持不定時更新原則--用戶登錄--終端terminal--交互式接口--shell簡單介紹">2.20181003堅持不定時更新原則--用戶登錄--終端terminal--交互式接口--shell簡單介紹</span>
+            <span class="post-title" title="2.用戶登錄--終端terminal--交互式接口--shell簡單介紹">2.用戶登錄--終端terminal--交互式接口--shell簡單介紹</span>
             <span class="post-date" title="2018-11-13 11:26:44">2018/11/13</span>
         </a>
         
         <a class="linux " href="/2018/11/13/4.20181003堅持不定時更新原則--執行命令--Hash命令/" data-tag="基础" data-author="">
-            <span class="post-title" title="4.20181003堅持不定時更新原則--執行命令">4.20181003堅持不定時更新原則--執行命令</span>
+            <span class="post-title" title="4.執行命令">4.執行命令</span>
             <span class="post-date" title="2018-11-13 11:26:44">2018/11/13</span>
         </a>
         
         <a class="linux " href="/2018/11/13/5.20181003堅持不定時更新原則--命名別名--命令格式/" data-tag="基础" data-author="">
-            <span class="post-title" title="5.20181003堅持不定時更新原則--命名別名--命令格式">5.20181003堅持不定時更新原則--命名別名--命令格式</span>
+            <span class="post-title" title="5.命名別名--命令格式">5.命名別名--命令格式</span>
             <span class="post-date" title="2018-11-13 11:26:44">2018/11/13</span>
         </a>
         
         <a class="linux " href="/2018/11/13/6.20181003堅持不定時更新原則--日期和時間--關機命令--用戶登錄信息/" data-tag="基础" data-author="">
-            <span class="post-title" title="6.20181003堅持不定時更新原則--日期和時間--關機命令--用戶登錄信息">6.20181003堅持不定時更新原則--日期和時間--關機命令--用戶登錄信息</span>
+            <span class="post-title" title="6.日期和時間--關機命令--用戶登錄信息">6.日期和時間--關機命令--用戶登錄信息</span>
             <span class="post-date" title="2018-11-13 11:26:44">2018/11/13</span>
         </a>
         
         <a class="linux " href="/2018/11/13/7.20181003堅持不定時更新原則--screen命令--echo命令--字符集和編碼/" data-tag="基础" data-author="">
-            <span class="post-title" title="7.20181003堅持不定時更新原則--screen命令--echo命令--字符集和編碼">7.20181003堅持不定時更新原則--screen命令--echo命令--字符集和編碼</span>
+            <span class="post-title" title="7.screen命令--echo命令--字符集和編碼">7.screen命令--echo命令--字符集和編碼</span>
             <span class="post-date" title="2018-11-13 11:26:44">2018/11/13</span>
         </a>
         
         <a class="linux " href="/2018/11/13/9.20181003堅持不定時更新原則--命令行歷史/" data-tag="基础" data-author="">
-            <span class="post-title" title="9.20181003堅持不定時更新原則--命令行歷史">9.20181003堅持不定時更新原則--命令行歷史</span>
+            <span class="post-title" title="9.命令行歷史">9.命令行歷史</span>
             <span class="post-date" title="2018-11-13 11:26:44">2018/11/13</span>
         </a>
         
@@ -206,12 +201,12 @@
         </a>
         
         <a class="linux " href="/2018/11/13/12.20181006堅持不定時更新原則--顯示當前工作目錄--絕對和相對路徑--更改目錄--文件通配符/" data-tag="基础" data-author="">
-            <span class="post-title" title="12.20181006堅持不定時更新原則--顯示當前工作目錄--絕對和相對路徑--更改目錄--文件通配符">12.20181006堅持不定時更新原則--顯示當前工作目錄--絕對和相對路徑--更改目錄--文件通配符</span>
+            <span class="post-title" title="12.顯示當前工作目錄--絕對和相對路徑--更改目錄--文件通配符">12.顯示當前工作目錄--絕對和相對路徑--更改目錄--文件通配符</span>
             <span class="post-date" title="2018-11-13 11:26:44">2018/11/13</span>
         </a>
         
         <a class="linux " href="/2018/11/13/8.20181004堅持不定時更新原則--命令行擴展、被括起來的集合--tab键--獲取幫助--命令幫助/" data-tag="基础" data-author="">
-            <span class="post-title" title="8.20181004堅持不定時更新原則--命令行擴展、被括起來的集合--tab键--獲取幫助">8.20181004堅持不定時更新原則--命令行擴展、被括起來的集合--tab键--獲取幫助</span>
+            <span class="post-title" title="8.命令行擴展、被括起來的集合--tab键--獲取幫助">8.命令行擴展、被括起來的集合--tab键--獲取幫助</span>
             <span class="post-date" title="2018-11-13 11:26:44">2018/11/13</span>
         </a>
         
@@ -239,7 +234,7 @@
     <div class="pjax">
         <article id="post-2.20181003堅持不定時更新原則--用戶登錄--終端terminal--交互式接口--shell簡單介紹" class="article article-type-post" itemscope="" itemprop="blogPost">
     
-        <h1 class="article-title">2.20181003堅持不定時更新原則--用戶登錄--終端terminal--交互式接口--shell簡單介紹</h1>
+        <h1 class="article-title">2.用戶登錄--終端terminal--交互式接口--shell簡單介紹</h1>
     
     <div class="article-meta">
         
@@ -261,7 +256,7 @@
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title="更新时间: 2018-10-03 14:13:40">2018-11-13 11:26</time>
+        创建时间:<time class="date" title="更新时间: 2018-11-13 12:49:49">2018-11-13 11:26</time>
         
     </div>
     <div class="article-meta">
@@ -325,12 +320,12 @@
 
 
 <div class="article_copyright">
-    <p><span>文章标题:</span>2.20181003堅持不定時更新原則--用戶登錄--終端terminal--交互式接口--shell簡單介紹</p>
+    <p><span>文章标题:</span>2.用戶登錄--終端terminal--交互式接口--shell簡單介紹</p>
     
     <p><span>本文作者:</span><a href="javascript:void(0)" title="Weico Li">Weico Li</a></p>
     <p><span>发布时间:</span>2018-11-13, 11:26:44</p>
-    <p><span>最后更新:</span>2018-10-03, 14:13:40</p>
-    <span>原始链接:</span><a class="post-url" href="/2018/11/13/2.20181003堅持不定時更新原則--用戶登錄--終端terminal--交互式接口--shell簡單介紹/" title="2.20181003堅持不定時更新原則--用戶登錄--終端terminal--交互式接口--shell簡單介紹">http://yoursite.com/2018/11/13/2.20181003堅持不定時更新原則--用戶登錄--終端terminal--交互式接口--shell簡單介紹/</a>
+    <p><span>最后更新:</span>2018-11-13, 12:49:49</p>
+    <span>原始链接:</span><a class="post-url" href="/2018/11/13/2.20181003堅持不定時更新原則--用戶登錄--終端terminal--交互式接口--shell簡單介紹/" title="2.用戶登錄--終端terminal--交互式接口--shell簡單介紹">http://yoursite.com/2018/11/13/2.20181003堅持不定時更新原則--用戶登錄--終端terminal--交互式接口--shell簡單介紹/</a>
     <p>
         <span>版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target="_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
     </p>
